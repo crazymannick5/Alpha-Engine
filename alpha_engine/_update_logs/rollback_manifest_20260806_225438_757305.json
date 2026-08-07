@@ -1,0 +1,1155 @@
+{
+  "format": "update-package-rollback-manifest-v1",
+  "timestamp": "20260806_225438_757305",
+  "package_folder": "C:\\Users\\nicol\\Downloads\\Alpha_Engine_Central_Hub_Draft_2026-08-06\\Alpha_Engine_Central_Hub_Draft_2026-08-06\\APPLY_PACKAGE",
+  "app_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+  "backup_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine\\_update_backups\\20260806_225438_757305",
+  "update_mode": {
+    "number": "2",
+    "name": "Complete package update",
+    "include_new_files_in_existing_folders": true,
+    "include_new_files_requiring_folders": true
+  },
+  "rollback_guidance": [
+    "Restore each successful replaced_file record from its backup path.",
+    "Delete successful created_file records only after confirming they were created by this update.",
+    "Remove successful created_directory records only when they are empty.",
+    "Never delete unlisted files or directories during rollback."
+  ],
+  "operations": [
+    {
+      "action": "created_directory",
+      "relative_path": "docs",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "scripts",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "tests",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "docs\\architecture",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "docs\\contracts",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "docs\\decisions",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "scripts\\verify",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\api",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\artifacts",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\audit",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\bootstrap",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\budgets",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\cli",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\config",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\contracts",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\data_queries",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\desktop",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\evaluation",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\evidence",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\health",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\kernel",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\learning",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\notifications",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\observations",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\operations",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\opportunities",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\outcomes",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\permissions",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\plugin_host",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\providers",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\radar",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\ranking",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\reference_loop",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\registries",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\reviews",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\signals",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\simulation",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "src\\alpha_engine\\storage",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "pyproject.toml",
+      "status": "success",
+      "source_sha256": "bb20a167311faf83ec5f5cf0f661e7a934661880995ae89d5cdc3e96916ff87f",
+      "destination_sha256": "bb20a167311faf83ec5f5cf0f661e7a934661880995ae89d5cdc3e96916ff87f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "README.md",
+      "status": "success",
+      "source_sha256": "d80acdfe8fd9daa5dbca96cc3b02fa15bcd083caaed0855d95531a109449e6e9",
+      "destination_sha256": "d80acdfe8fd9daa5dbca96cc3b02fa15bcd083caaed0855d95531a109449e6e9",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "docs\\architecture\\CYLINDER_CONNECTION_GUIDE.md",
+      "status": "success",
+      "source_sha256": "01e0b9d499c5004bf8edcb4624c81aa6688fe6764cea526bfe61dac3a331b001",
+      "destination_sha256": "01e0b9d499c5004bf8edcb4624c81aa6688fe6764cea526bfe61dac3a331b001",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "docs\\contracts\\CORE_DESIGN_CONTRACT_1.0_DRAFT.md",
+      "status": "success",
+      "source_sha256": "307d9cce5c850fe4a384c3c149b1ad6aca90b791f1aa7b0f3a4a46224a3bcbca",
+      "destination_sha256": "307d9cce5c850fe4a384c3c149b1ad6aca90b791f1aa7b0f3a4a46224a3bcbca",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "docs\\contracts\\PLUGIN_DEVELOPMENT_KIT_1.0_DRAFT.md",
+      "status": "success",
+      "source_sha256": "1f765a3bc1b54ec5d939d5b86ddb6ac43c04cf3732e56ceb0d04c17588aa3bf3",
+      "destination_sha256": "1f765a3bc1b54ec5d939d5b86ddb6ac43c04cf3732e56ceb0d04c17588aa3bf3",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "docs\\decisions\\ADR-0001-implementation-freeze.md",
+      "status": "success",
+      "source_sha256": "4b9ca5d604f0634bcafc9e202a929f3c58a839e3f65e64f9aa23ebf1821d1a65",
+      "destination_sha256": "4b9ca5d604f0634bcafc9e202a929f3c58a839e3f65e64f9aa23ebf1821d1a65",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "scripts\\verify\\verify_all.py",
+      "status": "success",
+      "source_sha256": "90088349ff8a7300053459e769d88937a51b94f0887cee960a7b4d201be58dd8",
+      "destination_sha256": "90088349ff8a7300053459e769d88937a51b94f0887cee960a7b4d201be58dd8",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\__init__.py",
+      "status": "success",
+      "source_sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+      "destination_sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\api\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\api\\server.py",
+      "status": "success",
+      "source_sha256": "1d915a74ce8661d0cecca6ba11cab303f26969a08675ff1726de1a3c9857b614",
+      "destination_sha256": "1d915a74ce8661d0cecca6ba11cab303f26969a08675ff1726de1a3c9857b614",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\artifacts\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\artifacts\\store.py",
+      "status": "success",
+      "source_sha256": "c1bf7ef1331742ecd6eb1623da092bdfcdf411bfcc257a616bdfeb4572045b73",
+      "destination_sha256": "c1bf7ef1331742ecd6eb1623da092bdfcdf411bfcc257a616bdfeb4572045b73",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\audit\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\bootstrap\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\bootstrap\\profile.py",
+      "status": "success",
+      "source_sha256": "80a4fbeb1cda8ad2e21873fbd9704f891faa71856fdad8a3d9691638d97228ba",
+      "destination_sha256": "80a4fbeb1cda8ad2e21873fbd9704f891faa71856fdad8a3d9691638d97228ba",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\budgets\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\budgets\\service.py",
+      "status": "success",
+      "source_sha256": "cd4937bee9ea65c806c46f7767c1a63ea2991f9cd84b91feb2e3f96ea57d55b9",
+      "destination_sha256": "cd4937bee9ea65c806c46f7767c1a63ea2991f9cd84b91feb2e3f96ea57d55b9",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\cli\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\cli\\main.py",
+      "status": "success",
+      "source_sha256": "d4c60eac28e0680bae2ae75524c850b15290ecb1d03feaecc023f7dd37cac558",
+      "destination_sha256": "d4c60eac28e0680bae2ae75524c850b15290ecb1d03feaecc023f7dd37cac558",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\config\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\config\\service.py",
+      "status": "success",
+      "source_sha256": "d57420b47b8c2279bdb6d37c3ec3f7726be68c7c6846a50cf76526f8a4f22984",
+      "destination_sha256": "d57420b47b8c2279bdb6d37c3ec3f7726be68c7c6846a50cf76526f8a4f22984",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\contracts\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\contracts\\plugin.py",
+      "status": "success",
+      "source_sha256": "0e0c0ae170d09dfabb7c2c1befd3f6567705affe7adf9c005d533c528ad30d93",
+      "destination_sha256": "0e0c0ae170d09dfabb7c2c1befd3f6567705affe7adf9c005d533c528ad30d93",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\data_queries\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\data_queries\\gateway.py",
+      "status": "success",
+      "source_sha256": "eda22e9d7cbaebb03d85cbca8a48d8cd77a99f3d42f5424d8bd5947467e6dae3",
+      "destination_sha256": "eda22e9d7cbaebb03d85cbca8a48d8cd77a99f3d42f5424d8bd5947467e6dae3",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\desktop\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\desktop\\main.py",
+      "status": "success",
+      "source_sha256": "90671c77743dbb4f56c16ee00c99cf56a59e38fbe41881308f6d4cba239035a6",
+      "destination_sha256": "90671c77743dbb4f56c16ee00c99cf56a59e38fbe41881308f6d4cba239035a6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\evaluation\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\evaluation\\service.py",
+      "status": "success",
+      "source_sha256": "60e3bb7cc6984fd56ea8ad462e58c41cdcb53839efcb4e25100a10cf3e21eeb0",
+      "destination_sha256": "60e3bb7cc6984fd56ea8ad462e58c41cdcb53839efcb4e25100a10cf3e21eeb0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\evidence\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\evidence\\service.py",
+      "status": "success",
+      "source_sha256": "8ef901c20e88e2109a66687920ac06ea9330abeaf6217879e45996215ed239a6",
+      "destination_sha256": "8ef901c20e88e2109a66687920ac06ea9330abeaf6217879e45996215ed239a6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\health\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\health\\service.py",
+      "status": "success",
+      "source_sha256": "ac1af9f278da63e1e85bff4888acf677cdabb5444c1157ed96bb628908429d27",
+      "destination_sha256": "ac1af9f278da63e1e85bff4888acf677cdabb5444c1157ed96bb628908429d27",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\kernel\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\kernel\\errors.py",
+      "status": "success",
+      "source_sha256": "75787d8c6419680e9bc8b07e74328987a8192c7354ef6ab9f357d7c6393f78ef",
+      "destination_sha256": "75787d8c6419680e9bc8b07e74328987a8192c7354ef6ab9f357d7c6393f78ef",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\kernel\\ids.py",
+      "status": "success",
+      "source_sha256": "9467f56e28ba21c5b802a382ad7c2bac132f5b09a50fb87fe8e2fe8402009da6",
+      "destination_sha256": "9467f56e28ba21c5b802a382ad7c2bac132f5b09a50fb87fe8e2fe8402009da6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\kernel\\serialization.py",
+      "status": "success",
+      "source_sha256": "c0b5c3effcaf5730119d54fafd9fe84080dd571728b60876e3074ce079e10173",
+      "destination_sha256": "c0b5c3effcaf5730119d54fafd9fe84080dd571728b60876e3074ce079e10173",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\kernel\\time.py",
+      "status": "success",
+      "source_sha256": "662a5d98849f58280784c1cb011fa08489bf6937ee6e723042c0271b2088e13f",
+      "destination_sha256": "662a5d98849f58280784c1cb011fa08489bf6937ee6e723042c0271b2088e13f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\kernel\\values.py",
+      "status": "success",
+      "source_sha256": "922e170f14468c181131bb5883aa311798de7b3a024f97b59de75ddef3253244",
+      "destination_sha256": "922e170f14468c181131bb5883aa311798de7b3a024f97b59de75ddef3253244",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\learning\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\learning\\service.py",
+      "status": "success",
+      "source_sha256": "ffa97bd85c01dae600973030f9a375925b5453ef55d422fc1fc72d2e48a99b90",
+      "destination_sha256": "ffa97bd85c01dae600973030f9a375925b5453ef55d422fc1fc72d2e48a99b90",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\notifications\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\notifications\\service.py",
+      "status": "success",
+      "source_sha256": "c9908edd53d3656cbc1c3a63185f362fd74728884028c5456f6acc09cdf82fb2",
+      "destination_sha256": "c9908edd53d3656cbc1c3a63185f362fd74728884028c5456f6acc09cdf82fb2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\observations\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\observations\\service.py",
+      "status": "success",
+      "source_sha256": "f08feaeea2a176aff39da0c8a1823f500bf737302b582395a7ed19dcce7513af",
+      "destination_sha256": "f08feaeea2a176aff39da0c8a1823f500bf737302b582395a7ed19dcce7513af",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\operations\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\operations\\outbox.py",
+      "status": "success",
+      "source_sha256": "6c05efbea3d68809ed28a5d0dd9019a37dbfe495a6029ab665208a6fb7163d83",
+      "destination_sha256": "6c05efbea3d68809ed28a5d0dd9019a37dbfe495a6029ab665208a6fb7163d83",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\operations\\scheduler.py",
+      "status": "success",
+      "source_sha256": "914f7c63227d0993b462691127b482049d7e500c29e4dd95b43a1e6f0f8f3e41",
+      "destination_sha256": "914f7c63227d0993b462691127b482049d7e500c29e4dd95b43a1e6f0f8f3e41",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\operations\\service.py",
+      "status": "success",
+      "source_sha256": "9d4a4d2ad78c7dfb1233e68dabe87ddc28b5f6b5aa3fe0d2f0854d53cefcec6d",
+      "destination_sha256": "9d4a4d2ad78c7dfb1233e68dabe87ddc28b5f6b5aa3fe0d2f0854d53cefcec6d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\opportunities\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\opportunities\\service.py",
+      "status": "success",
+      "source_sha256": "8ea1bfd02b925a9c2d498efe66bb65899a851c6685d23e3e6115c4804c7a8d93",
+      "destination_sha256": "8ea1bfd02b925a9c2d498efe66bb65899a851c6685d23e3e6115c4804c7a8d93",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\outcomes\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\outcomes\\service.py",
+      "status": "success",
+      "source_sha256": "dc6ee2447eead8bd96123555c804cf60ef7f02a29905516a72106856914aa0d6",
+      "destination_sha256": "dc6ee2447eead8bd96123555c804cf60ef7f02a29905516a72106856914aa0d6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\permissions\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\permissions\\service.py",
+      "status": "success",
+      "source_sha256": "d0421695e3f2168df3a9e2f25cd3913eaace245e16d803f341b05885da5d4f7e",
+      "destination_sha256": "d0421695e3f2168df3a9e2f25cd3913eaace245e16d803f341b05885da5d4f7e",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\plugin_host\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\plugin_host\\pdk.py",
+      "status": "success",
+      "source_sha256": "5ff90a6dae396cc78c70d286c506ee3df0ad0b90fe168c755eac43bf18d8cce1",
+      "destination_sha256": "5ff90a6dae396cc78c70d286c506ee3df0ad0b90fe168c755eac43bf18d8cce1",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\plugin_host\\registry.py",
+      "status": "success",
+      "source_sha256": "120086c1666bf923b501af63fee0c7c8bf1083d5e84dfe55c4c3e77c5ca2e499",
+      "destination_sha256": "120086c1666bf923b501af63fee0c7c8bf1083d5e84dfe55c4c3e77c5ca2e499",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\providers\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\providers\\registry.py",
+      "status": "success",
+      "source_sha256": "398cbb2fe2512f09a2b28d5c6f7523db2a9e36de710b39b6e5c822f35205e806",
+      "destination_sha256": "398cbb2fe2512f09a2b28d5c6f7523db2a9e36de710b39b6e5c822f35205e806",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\radar\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\radar\\service.py",
+      "status": "success",
+      "source_sha256": "c6058ea64ea30223a5935e2362df74583d2f4451f0557aab3cba01df788b980e",
+      "destination_sha256": "c6058ea64ea30223a5935e2362df74583d2f4451f0557aab3cba01df788b980e",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\ranking\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\ranking\\service.py",
+      "status": "success",
+      "source_sha256": "8fbe2da393a60004012aae8f91c104705e71d9966804fbbe15c9c76b7d7f867b",
+      "destination_sha256": "8fbe2da393a60004012aae8f91c104705e71d9966804fbbe15c9c76b7d7f867b",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\reference_loop\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\reference_loop\\fixture.py",
+      "status": "success",
+      "source_sha256": "de7cc2e8c21a08925409e3f6d7745cded23f1e45cb334e30786ce7f5372d7d4f",
+      "destination_sha256": "de7cc2e8c21a08925409e3f6d7745cded23f1e45cb334e30786ce7f5372d7d4f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\reference_loop\\runner.py",
+      "status": "success",
+      "source_sha256": "5f72d9ba8946b75b569e69c662dd0f73c6d4eadd765641e4f91dfd242225a782",
+      "destination_sha256": "5f72d9ba8946b75b569e69c662dd0f73c6d4eadd765641e4f91dfd242225a782",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\registries\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\registries\\service.py",
+      "status": "success",
+      "source_sha256": "c1fcfbb6bbd6f05e47394d995f02aca90053225b24a513e622d19f800664a230",
+      "destination_sha256": "c1fcfbb6bbd6f05e47394d995f02aca90053225b24a513e622d19f800664a230",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\reviews\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\reviews\\service.py",
+      "status": "success",
+      "source_sha256": "d9e0be276924b65c22e9eda0e973fe068ca0c6f3afd383baf6d31e4af9d19a23",
+      "destination_sha256": "d9e0be276924b65c22e9eda0e973fe068ca0c6f3afd383baf6d31e4af9d19a23",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\signals\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\signals\\service.py",
+      "status": "success",
+      "source_sha256": "11a25f2a230444619252f7744179ffe27b7bff9f23b6136362229185ce20ce58",
+      "destination_sha256": "11a25f2a230444619252f7744179ffe27b7bff9f23b6136362229185ce20ce58",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\simulation\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\simulation\\service.py",
+      "status": "success",
+      "source_sha256": "78da99a6243e1fa68af079a9ffe87320b988a312ab8d1834c3118c0d44716473",
+      "destination_sha256": "78da99a6243e1fa68af079a9ffe87320b988a312ab8d1834c3118c0d44716473",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\storage\\__init__.py",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\storage\\bootstrap.py",
+      "status": "success",
+      "source_sha256": "b635bb751df605d5d36beb0dc20b18b9a426c2c95e4863a7b9a4eb9849d586e0",
+      "destination_sha256": "b635bb751df605d5d36beb0dc20b18b9a426c2c95e4863a7b9a4eb9849d586e0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\storage\\db.py",
+      "status": "success",
+      "source_sha256": "f97bb70fa7c87dfce6b1447beab531d3e73d21d8adcb932f88569a4fb2265f8d",
+      "destination_sha256": "f97bb70fa7c87dfce6b1447beab531d3e73d21d8adcb932f88569a4fb2265f8d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\storage\\models.py",
+      "status": "success",
+      "source_sha256": "3148c2942c2904b0d45589c71e924d5c04eb465a0780c53c3eb01cd8dbc3701e",
+      "destination_sha256": "3148c2942c2904b0d45589c71e924d5c04eb465a0780c53c3eb01cd8dbc3701e",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "src\\alpha_engine\\storage\\uow.py",
+      "status": "success",
+      "source_sha256": "66efef1186a97a53dca3fa3e597abc01d499951302b4381265f7ee93bc729a21",
+      "destination_sha256": "66efef1186a97a53dca3fa3e597abc01d499951302b4381265f7ee93bc729a21",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "tests\\test_kernel.py",
+      "status": "success",
+      "source_sha256": "cd520fc7c78e3b79fa3ebf1e20f661c8d63490776795181e0672b82127bc0248",
+      "destination_sha256": "cd520fc7c78e3b79fa3ebf1e20f661c8d63490776795181e0672b82127bc0248",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "tests\\test_operations.py",
+      "status": "success",
+      "source_sha256": "fdb1f6d038cef5ed05c5fac02a2d43a01a50f4ffe4809ca087a40c48035e5eed",
+      "destination_sha256": "fdb1f6d038cef5ed05c5fac02a2d43a01a50f4ffe4809ca087a40c48035e5eed",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "tests\\test_permissions_budget.py",
+      "status": "success",
+      "source_sha256": "8f50d9fde094d6adfd181a82c82daa743f7064a9b6afaa9559e5bb5073dab305",
+      "destination_sha256": "8f50d9fde094d6adfd181a82c82daa743f7064a9b6afaa9559e5bb5073dab305",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "tests\\test_plugin_contract.py",
+      "status": "success",
+      "source_sha256": "3fc78d63fea1428ef5769a12ddc4c8c4ababf456cdcf6350465c781de8134d36",
+      "destination_sha256": "3fc78d63fea1428ef5769a12ddc4c8c4ababf456cdcf6350465c781de8134d36",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "tests\\test_reference_loop.py",
+      "status": "success",
+      "source_sha256": "bb074e90d6ce9f563a889c1ff484b5450cd9a8e7981c8eca5d50c776ee7dbc77",
+      "destination_sha256": "bb074e90d6ce9f563a889c1ff484b5450cd9a8e7981c8eca5d50c776ee7dbc77",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "tests\\test_scheduler_outbox_notifications.py",
+      "status": "success",
+      "source_sha256": "c8a589f39e86191e842f6c7fde697987d1bdd2f66d5c7637683bb918fd31a968",
+      "destination_sha256": "c8a589f39e86191e842f6c7fde697987d1bdd2f66d5c7637683bb918fd31a968",
+      "backup_relative_path": null,
+      "details": null
+    }
+  ]
+}

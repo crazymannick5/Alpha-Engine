@@ -1,0 +1,141 @@
+LISS AR App Update Log
+Timestamp: 20260806_225438_757305
+Package folder: C:\Users\nicol\Downloads\Alpha_Engine_Central_Hub_Draft_2026-08-06\Alpha_Engine_Central_Hub_Draft_2026-08-06\APPLY_PACKAGE
+App folder: C:\Users\nicol\Documents\Alpha Engine\alpha_engine
+Backup folder: C:\Users\nicol\Documents\Alpha Engine\alpha_engine\_update_backups\20260806_225438_757305
+Update mode: 2 - Complete package update
+Copy verification: size and SHA-256
+Destination installation: verified temporary file plus atomic replace
+
+CREATED DIRECTORY: docs
+CREATED DIRECTORY: scripts
+CREATED DIRECTORY: src
+CREATED DIRECTORY: tests
+CREATED DIRECTORY: docs\architecture
+CREATED DIRECTORY: docs\contracts
+CREATED DIRECTORY: docs\decisions
+CREATED DIRECTORY: scripts\verify
+CREATED DIRECTORY: src\alpha_engine
+CREATED DIRECTORY: src\alpha_engine\api
+CREATED DIRECTORY: src\alpha_engine\artifacts
+CREATED DIRECTORY: src\alpha_engine\audit
+CREATED DIRECTORY: src\alpha_engine\bootstrap
+CREATED DIRECTORY: src\alpha_engine\budgets
+CREATED DIRECTORY: src\alpha_engine\cli
+CREATED DIRECTORY: src\alpha_engine\config
+CREATED DIRECTORY: src\alpha_engine\contracts
+CREATED DIRECTORY: src\alpha_engine\data_queries
+CREATED DIRECTORY: src\alpha_engine\desktop
+CREATED DIRECTORY: src\alpha_engine\evaluation
+CREATED DIRECTORY: src\alpha_engine\evidence
+CREATED DIRECTORY: src\alpha_engine\health
+CREATED DIRECTORY: src\alpha_engine\kernel
+CREATED DIRECTORY: src\alpha_engine\learning
+CREATED DIRECTORY: src\alpha_engine\notifications
+CREATED DIRECTORY: src\alpha_engine\observations
+CREATED DIRECTORY: src\alpha_engine\operations
+CREATED DIRECTORY: src\alpha_engine\opportunities
+CREATED DIRECTORY: src\alpha_engine\outcomes
+CREATED DIRECTORY: src\alpha_engine\permissions
+CREATED DIRECTORY: src\alpha_engine\plugin_host
+CREATED DIRECTORY: src\alpha_engine\providers
+CREATED DIRECTORY: src\alpha_engine\radar
+CREATED DIRECTORY: src\alpha_engine\ranking
+CREATED DIRECTORY: src\alpha_engine\reference_loop
+CREATED DIRECTORY: src\alpha_engine\registries
+CREATED DIRECTORY: src\alpha_engine\reviews
+CREATED DIRECTORY: src\alpha_engine\signals
+CREATED DIRECTORY: src\alpha_engine\simulation
+CREATED DIRECTORY: src\alpha_engine\storage
+CREATED: pyproject.toml
+CREATED: README.md
+CREATED: docs\architecture\CYLINDER_CONNECTION_GUIDE.md
+CREATED: docs\contracts\CORE_DESIGN_CONTRACT_1.0_DRAFT.md
+CREATED: docs\contracts\PLUGIN_DEVELOPMENT_KIT_1.0_DRAFT.md
+CREATED: docs\decisions\ADR-0001-implementation-freeze.md
+CREATED: scripts\verify\verify_all.py
+CREATED: src\alpha_engine\__init__.py
+CREATED: src\alpha_engine\api\__init__.py
+CREATED: src\alpha_engine\api\server.py
+CREATED: src\alpha_engine\artifacts\__init__.py
+CREATED: src\alpha_engine\artifacts\store.py
+CREATED: src\alpha_engine\audit\__init__.py
+CREATED: src\alpha_engine\bootstrap\__init__.py
+CREATED: src\alpha_engine\bootstrap\profile.py
+CREATED: src\alpha_engine\budgets\__init__.py
+CREATED: src\alpha_engine\budgets\service.py
+CREATED: src\alpha_engine\cli\__init__.py
+CREATED: src\alpha_engine\cli\main.py
+CREATED: src\alpha_engine\config\__init__.py
+CREATED: src\alpha_engine\config\service.py
+CREATED: src\alpha_engine\contracts\__init__.py
+CREATED: src\alpha_engine\contracts\plugin.py
+CREATED: src\alpha_engine\data_queries\__init__.py
+CREATED: src\alpha_engine\data_queries\gateway.py
+CREATED: src\alpha_engine\desktop\__init__.py
+CREATED: src\alpha_engine\desktop\main.py
+CREATED: src\alpha_engine\evaluation\__init__.py
+CREATED: src\alpha_engine\evaluation\service.py
+CREATED: src\alpha_engine\evidence\__init__.py
+CREATED: src\alpha_engine\evidence\service.py
+CREATED: src\alpha_engine\health\__init__.py
+CREATED: src\alpha_engine\health\service.py
+CREATED: src\alpha_engine\kernel\__init__.py
+CREATED: src\alpha_engine\kernel\errors.py
+CREATED: src\alpha_engine\kernel\ids.py
+CREATED: src\alpha_engine\kernel\serialization.py
+CREATED: src\alpha_engine\kernel\time.py
+CREATED: src\alpha_engine\kernel\values.py
+CREATED: src\alpha_engine\learning\__init__.py
+CREATED: src\alpha_engine\learning\service.py
+CREATED: src\alpha_engine\notifications\__init__.py
+CREATED: src\alpha_engine\notifications\service.py
+CREATED: src\alpha_engine\observations\__init__.py
+CREATED: src\alpha_engine\observations\service.py
+CREATED: src\alpha_engine\operations\__init__.py
+CREATED: src\alpha_engine\operations\outbox.py
+CREATED: src\alpha_engine\operations\scheduler.py
+CREATED: src\alpha_engine\operations\service.py
+CREATED: src\alpha_engine\opportunities\__init__.py
+CREATED: src\alpha_engine\opportunities\service.py
+CREATED: src\alpha_engine\outcomes\__init__.py
+CREATED: src\alpha_engine\outcomes\service.py
+CREATED: src\alpha_engine\permissions\__init__.py
+CREATED: src\alpha_engine\permissions\service.py
+CREATED: src\alpha_engine\plugin_host\__init__.py
+CREATED: src\alpha_engine\plugin_host\pdk.py
+CREATED: src\alpha_engine\plugin_host\registry.py
+CREATED: src\alpha_engine\providers\__init__.py
+CREATED: src\alpha_engine\providers\registry.py
+CREATED: src\alpha_engine\radar\__init__.py
+CREATED: src\alpha_engine\radar\service.py
+CREATED: src\alpha_engine\ranking\__init__.py
+CREATED: src\alpha_engine\ranking\service.py
+CREATED: src\alpha_engine\reference_loop\__init__.py
+CREATED: src\alpha_engine\reference_loop\fixture.py
+CREATED: src\alpha_engine\reference_loop\runner.py
+CREATED: src\alpha_engine\registries\__init__.py
+CREATED: src\alpha_engine\registries\service.py
+CREATED: src\alpha_engine\reviews\__init__.py
+CREATED: src\alpha_engine\reviews\service.py
+CREATED: src\alpha_engine\signals\__init__.py
+CREATED: src\alpha_engine\signals\service.py
+CREATED: src\alpha_engine\simulation\__init__.py
+CREATED: src\alpha_engine\simulation\service.py
+CREATED: src\alpha_engine\storage\__init__.py
+CREATED: src\alpha_engine\storage\bootstrap.py
+CREATED: src\alpha_engine\storage\db.py
+CREATED: src\alpha_engine\storage\models.py
+CREATED: src\alpha_engine\storage\uow.py
+CREATED: tests\test_kernel.py
+CREATED: tests\test_operations.py
+CREATED: tests\test_permissions_budget.py
+CREATED: tests\test_plugin_contract.py
+CREATED: tests\test_reference_loop.py
+CREATED: tests\test_scheduler_outbox_notifications.py
+
+Rollback safety notes:
+- Restore replaced files only from this update's backup folder.
+- Delete created files only when listed in the rollback manifest.
+- Remove created folders only when they are empty.
+- Never delete unlisted files or folders.
