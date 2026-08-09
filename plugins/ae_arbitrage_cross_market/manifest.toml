@@ -1,0 +1,43 @@
+plugin_id = "ae.arbitrage_cross_market"
+name = "Arbitrage and Cross-Market Comparison"
+version = "0.9.0-dev"
+workstream_mode = "PLUGIN"
+capability_ceiling = "LEVEL_2_PAPER"
+core_contract = "1.0-draft-compatible"
+pdk_range = ">=1.0,<2.0"
+migration_namespace = "plugin.ae_arbitrage_cross_market"
+default_enabled = false
+requires_live_credentials = false
+supports_fixture_mode = true
+
+capabilities = [
+  "arb.relationship.resolve.v1",
+  "arb.compare.normalized.v1",
+  "arb.signal.detect.v1",
+  "arb.opportunity.detect.v1",
+  "arb.scoring_features.v1",
+  "arb.paper_plan.translate.v1",
+  "arb.paper_plan.preview_simulate.v1",
+  "arb.outcome.evaluate.v1",
+  "arb.learning.recommend.v1",
+  "arb.dashboard.contribute.v1",
+  "arb.cli.contribute.v1",
+]
+
+required_host_capabilities = [
+  "core.canonical_projection.read",
+  "core.evidence.register",
+  "core.operations.admit",
+  "core.budgets.reserve",
+  "core.permissions.evaluate",
+  "core.plugin.persistence.namespace",
+]
+
+forbidden_capabilities = [
+  "live_order_submit",
+  "live_order_cancel",
+  "fund_transfer",
+  "withdrawal",
+  "direct_core_db",
+  "direct_email",
+]

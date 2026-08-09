@@ -1,0 +1,23 @@
+from __future__ import annotations
+
+from typing import Any, Mapping, Protocol, Sequence
+
+from .models import OpportunityCandidate, OutcomeCandidate, SignalCandidate
+from .scoring import ScoringFeatureResult
+
+
+class CoreHostBridge(Protocol):
+    """Narrow host bridge expected from the Central Hub/PDK.
+
+    This is a plugin-owned protocol, not a replacement core contract.  The
+    central adapter must map these calls to frozen PDK DTOs/services once
+    Primary Development freezes them.
+    """
+
+    def register_artifact(self, *, media_type: str, payload: bytes, source: Mapping[str, Any]) -> str: ...
+    def submit_observation(self, *, domain_type: str, payload: Mapping[str, Any], evidence_refs: Sequence[str]) -> str: ...
+    def submit_signal(self, candidate: SignalCandidate) -> str: ...
+    def submit_opportunity(self, candidate: OpportunityCandidate) -> str: ...
+    def submit_scoring_features(self, opportunity_ref: str, features: Sequence[ScoringFeatureResult]) -> None: ...
+    def submit_paper_action(self, payload: Mapping[str, Any]) -> str: ...
+    def submit_outcome(self, candidate: OutcomeCandidate) -> str: ...

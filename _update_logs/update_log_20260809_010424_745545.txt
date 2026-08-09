@@ -1,0 +1,532 @@
+LISS AR App Update Log
+Timestamp: 20260809_010424_745545
+Package folder: C:\Users\nicol\Downloads\Alpha_Engine_All_Apply_Overlays_Combined_2026-08-09
+App folder: C:\Users\nicol\Documents\Alpha Engine
+Backup folder: C:\Users\nicol\Documents\Alpha Engine\_update_backups\20260809_010424_745545
+Update mode: 2 - Complete package update
+Copy verification: size and SHA-256
+Destination installation: verified temporary file plus atomic replace
+
+CREATED DIRECTORY: plugins
+CREATED DIRECTORY: src
+CREATED DIRECTORY: tests
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market
+CREATED DIRECTORY: plugins\ae_prediction_markets
+CREATED DIRECTORY: plugins\ae_public_markets_quant_options
+CREATED DIRECTORY: plugins\ae_retail_resale_flip
+CREATED DIRECTORY: src\alpha_engine
+CREATED DIRECTORY: src\alpha_engine_plugins
+CREATED DIRECTORY: src\alpha_engine_prediction_markets
+CREATED DIRECTORY: tests\plugins
+CREATED DIRECTORY: tests\prediction_markets
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\docs
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\migrations
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests
+CREATED DIRECTORY: plugins\ae_prediction_markets\docs
+CREATED DIRECTORY: plugins\ae_prediction_markets\scripts
+CREATED DIRECTORY: plugins\ae_prediction_markets\src
+CREATED DIRECTORY: plugins\ae_prediction_markets\tests
+CREATED DIRECTORY: plugins\ae_public_markets_quant_options\fixtures
+CREATED DIRECTORY: plugins\ae_public_markets_quant_options\src
+CREATED DIRECTORY: plugins\ae_public_markets_quant_options\tests
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\scripts
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\tests
+CREATED DIRECTORY: src\alpha_engine\plugins
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery
+CREATED DIRECTORY: src\alpha_engine_prediction_markets\migrations
+CREATED DIRECTORY: src\alpha_engine_prediction_markets\providers
+CREATED DIRECTORY: tests\plugins\political_insider_institutional
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests\compatibility
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests\failure_injection
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests\integration
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests\migration
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests\resource
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests\security
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\tests\unit
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets
+CREATED DIRECTORY: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\tests\contract
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\tests\failure
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\tests\fixtures
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\tests\integration
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\tests\security
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\tests\unit
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\adapters
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\alignment
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\cli
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\diagnostics
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\discovery
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\evidence
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\fixtures
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\graph
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\identity
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\lifecycle
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\model_assist
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\operations
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\opportunities
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\outcomes
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\paper
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\persistence
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\scoring
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\tests
+CREATED DIRECTORY: src\alpha_engine_plugins\meta_opportunity_discovery\ui
+CREATED DIRECTORY: tests\plugins\political_insider_institutional\fixtures
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\application
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\contracts
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\detectors
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\diagnostics
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\learning
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\normalization
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\outcomes
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\paper
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\persistence
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\presentation
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\providers
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\resolution
+CREATED DIRECTORY: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\scoring
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\application
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\cli
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\config
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\detectors
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\diagnostics
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\domain
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\fixtures
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\integration
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\normalization
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\operations
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\paper
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\persistence
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\providers
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\resolution
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\scoring
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\settlement
+CREATED DIRECTORY: plugins\ae_prediction_markets\src\ae_prediction_markets\ui
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\cli
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\diagnostics
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\domain
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\identity
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\integration
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\normalization
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\operations
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\opportunities
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\outcomes
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\paper
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\persistence
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\providers
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\scoring
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\signals
+CREATED DIRECTORY: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\ui
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\application
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\domain
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\normalization
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\opportunities
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\outcomes
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\paper
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\persistence
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\presentation
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\providers
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\scoring
+CREATED DIRECTORY: src\alpha_engine\plugins\political_insider_institutional\signals
+CREATED: plugins\ae_arbitrage_cross_market\docs\CENTRAL_HUB_INTEGRATION_REQUESTS.md
+CREATED: plugins\ae_arbitrage_cross_market\docs\FILE_OWNERSHIP.md
+CREATED: plugins\ae_arbitrage_cross_market\docs\IMPLEMENTATION_NOTES.md
+CREATED: plugins\ae_arbitrage_cross_market\manifest.toml
+CREATED: plugins\ae_arbitrage_cross_market\migrations\0001_arbitrage_namespace.sql
+CREATED: plugins\ae_arbitrage_cross_market\pyproject.toml
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\application\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\application\operations.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\application\service.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\canonical.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\configuration.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\contracts\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\contracts\dto.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\contracts\host.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\detectors\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\detectors\arbitrage.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\diagnostics\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\diagnostics\health.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\costs.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\legs.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\liquidity.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\payoff.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\relationships.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\settlement.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\domain\states.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\learning\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\learning\recommendations.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\normalization\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\normalization\fx.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\normalization\quotes.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\normalization\terms.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\outcomes\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\outcomes\evaluator.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\paper\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\paper\simulator.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\paper\translator.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\persistence\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\persistence\memory.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\persistence\repositories.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\presentation\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\presentation\descriptors.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\presentation\matrix.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\providers\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\providers\base.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\providers\fixture.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\registration.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\resolution\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\resolution\resolver.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\scoring\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\scoring\features.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\compatibility\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\compatibility\test_boundary.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\failure_injection\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\failure_injection\test_negative_invariants.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\helpers.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\integration\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\integration\test_fixtures.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\integration\test_operations_matrix.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\migration\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\migration\test_migration.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\resource\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\resource\test_resource.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\security\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\security\test_security.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\unit\__init__.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\unit\test_canonical.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\unit\test_configuration_learning.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\unit\test_costs_liquidity.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\unit\test_payoff_persistence.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\unit\test_provider_normalizer.py
+CREATED: plugins\ae_arbitrage_cross_market\tests\unit\test_resolution.py
+CREATED: plugins\ae_prediction_markets\CENTRAL_HUB_INTEGRATION_REQUESTS.md
+CREATED: plugins\ae_prediction_markets\docs\IMPLEMENTATION_NOTES.md
+CREATED: plugins\ae_prediction_markets\FILE_HASHES.sha256
+CREATED: plugins\ae_prediction_markets\OWNERSHIP_MANIFEST.json
+CREATED: plugins\ae_prediction_markets\plugin.toml
+CREATED: plugins\ae_prediction_markets\pyproject.toml
+CREATED: plugins\ae_prediction_markets\README_BATCH.txt
+CREATED: plugins\ae_prediction_markets\scripts\verify.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\application\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\application\reference_loop.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\cli\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\cli\descriptors.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\config\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\config\schema.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\contracts.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\detectors\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\detectors\opportunities.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\detectors\signals.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\diagnostics\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\diagnostics\health.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\domain\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\domain\enums.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\domain\models.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\domain\pricing.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\errors.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\fixtures\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\fixtures\reference.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\integration\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\integration\central.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\manifest.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\normalization\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\normalization\kalshi.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\normalization\rules.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\operations\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\operations\handlers.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\paper\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\paper\fill_policy.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\paper\translator.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\persistence\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\persistence\memory.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\persistence\ports.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\plugin.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\providers\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\providers\base.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\providers\fixture.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\providers\kalshi.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\resolution\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\resolution\relations.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\scoring\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\scoring\features.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\serialization.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\settlement\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\settlement\evaluator.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\ui\__init__.py
+CREATED: plugins\ae_prediction_markets\src\ae_prediction_markets\ui\descriptors.py
+CREATED: plugins\ae_prediction_markets\tests\test_config_persistence.py
+CREATED: plugins\ae_prediction_markets\tests\test_contracts.py
+CREATED: plugins\ae_prediction_markets\tests\test_detectors.py
+CREATED: plugins\ae_prediction_markets\tests\test_domain.py
+CREATED: plugins\ae_prediction_markets\tests\test_extended_capabilities.py
+CREATED: plugins\ae_prediction_markets\tests\test_no_core_private_imports.py
+CREATED: plugins\ae_prediction_markets\tests\test_normalization.py
+CREATED: plugins\ae_prediction_markets\tests\test_paper.py
+CREATED: plugins\ae_prediction_markets\tests\test_provider_security.py
+CREATED: plugins\ae_prediction_markets\tests\test_reference_loop.py
+CREATED: plugins\ae_prediction_markets\tests\test_relations.py
+CREATED: plugins\ae_prediction_markets\tests\test_resource_bounds.py
+CREATED: plugins\ae_prediction_markets\tests\test_settlement.py
+CREATED: plugins\ae_public_markets_quant_options\fixtures\README.md
+CREATED: plugins\ae_public_markets_quant_options\pyproject.toml
+CREATED: plugins\ae_public_markets_quant_options\README.md
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\__init__.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\cli.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\config.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\contracts.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\contributions.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\corporate_actions.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\detectors.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\diagnostics.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\errors.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\features.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\fixtures.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\manifest.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\models.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\normalization.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\operations.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\options.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\outcomes.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\paper.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\persistence.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\point_in_time.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\providers.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\qualification.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\research.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\rights.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\scoring.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\security_master.py
+CREATED: plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\service.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_config_persistence_contracts.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_contributions_operations_qualification.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_corporate_actions.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_detectors_scoring.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_features.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_normalization.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_options.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_paper_outcomes.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_point_in_time.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_research.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_rights_provider.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_security_master.py
+CREATED: plugins\ae_public_markets_quant_options\tests\test_service_manifest_diagnostics.py
+CREATED: plugins\ae_retail_resale_flip\plugin.yaml
+CREATED: plugins\ae_retail_resale_flip\pyproject.toml
+CREATED: plugins\ae_retail_resale_flip\README.md
+CREATED: plugins\ae_retail_resale_flip\scripts\verify_retail_plugin.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\cli\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\cli\descriptors.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\config.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\contracts.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\diagnostics\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\diagnostics\health.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\domain\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\domain\economics.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\domain\lifecycle.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\domain\models.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\identity\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\identity\gtin.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\identity\resolver.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\integration\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\integration\host_bridge.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\manifest.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\normalization\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\normalization\normalizer.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\operations\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\operations\descriptors.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\operations\handlers.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\opportunities\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\opportunities\detector.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\outcomes\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\outcomes\evaluator.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\paper\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\paper\simulation.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\persistence\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\persistence\repositories.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\providers\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\providers\base.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\providers\fixture.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\providers\manual_import.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\scoring\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\scoring\features.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\serialization.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\signals\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\signals\detectors.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\ui\__init__.py
+CREATED: plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\ui\descriptors.py
+CREATED: plugins\ae_retail_resale_flip\tests\conftest.py
+CREATED: plugins\ae_retail_resale_flip\tests\contract\test_manifest_boundaries.py
+CREATED: plugins\ae_retail_resale_flip\tests\contract\test_operation_descriptors.py
+CREATED: plugins\ae_retail_resale_flip\tests\failure\test_provider_fail_closed.py
+CREATED: plugins\ae_retail_resale_flip\tests\fixtures\golden_scenarios.json
+CREATED: plugins\ae_retail_resale_flip\tests\integration\test_golden_scenarios.py
+CREATED: plugins\ae_retail_resale_flip\tests\integration\test_operations_checkpoint.py
+CREATED: plugins\ae_retail_resale_flip\tests\integration\test_pipeline.py
+CREATED: plugins\ae_retail_resale_flip\tests\security\test_untrusted_inputs.py
+CREATED: plugins\ae_retail_resale_flip\tests\unit\test_config_serialization.py
+CREATED: plugins\ae_retail_resale_flip\tests\unit\test_economics.py
+CREATED: plugins\ae_retail_resale_flip\tests\unit\test_gtin_identity.py
+CREATED: plugins\ae_retail_resale_flip\tests\unit\test_normalization.py
+CREATED: plugins\ae_retail_resale_flip\tests\unit\test_opportunity_scoring.py
+CREATED: plugins\ae_retail_resale_flip\tests\unit\test_paper_outcomes.py
+CREATED: plugins\ae_retail_resale_flip\tests\unit\test_signals_lifecycle.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\application\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\application\pipeline.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\canonical.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\CENTRAL_HUB_INTEGRATION_REQUESTS.md
+CREATED: src\alpha_engine\plugins\political_insider_institutional\config.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\contracts.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\diagnostics.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\domain\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\domain\identity.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\domain\rules.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\IMPLEMENTATION_STATUS.md
+CREATED: src\alpha_engine\plugins\political_insider_institutional\manifest.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\normalization\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\normalization\public_records.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\normalization\sec_13f.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\normalization\sec_ownership.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\normalization\xmlsafe.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\opportunities\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\opportunities\detectors.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\outcomes\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\outcomes\evaluator.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\paper\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\paper\translator.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\persistence\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\persistence\ports.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\presentation\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\presentation\dashboard.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\providers\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\providers\base.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\providers\sec_edgar.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\README.md
+CREATED: src\alpha_engine\plugins\political_insider_institutional\scoring\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\scoring\features.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\signals\__init__.py
+CREATED: src\alpha_engine\plugins\political_insider_institutional\signals\detectors.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\__main__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\adapters\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\adapters\core_boundary.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\alignment\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\alignment\normalize.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\alignment\temporal.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\alignment\units.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\CENTRAL_HUB_INTEGRATION_REQUESTS.md
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\cli\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\cli\descriptors.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\config.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\contracts.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\diagnostics\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\diagnostics\health.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\discovery\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\discovery\engine.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\discovery\statistics.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\discovery\templates.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\evidence\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\evidence\independence.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\fixtures\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\fixtures\catalog.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\fixtures\fake_data.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\fixtures\runner.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\graph\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\graph\builder.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\graph\cycle_guard.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\graph\domain.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\hashing.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\identity\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\identity\linker.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\lifecycle\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\lifecycle\reevaluate.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\manifest.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\model_assist\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\model_assist\validator.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\operations\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\operations\service.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\opportunities\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\opportunities\candidates.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\outcomes\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\outcomes\evaluator.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\paper\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\paper\plan.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\persistence\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\persistence\repository.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\py.typed
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\scoring\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\scoring\features.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\tests\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\tests\test_boundary_and_outcomes.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\tests\test_fixture_catalog.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\tests\test_identity_paper_model_lifecycle.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\tests\test_meta_discovery.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\tests\test_operations_and_statistics.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\ui\__init__.py
+CREATED: src\alpha_engine_plugins\meta_opportunity_discovery\ui\descriptors.py
+CREATED: src\alpha_engine_prediction_markets\__init__.py
+CREATED: src\alpha_engine_prediction_markets\CENTRAL_HUB_INTEGRATION_REQUESTS.md
+CREATED: src\alpha_engine_prediction_markets\config.py
+CREATED: src\alpha_engine_prediction_markets\contracts.py
+CREATED: src\alpha_engine_prediction_markets\diagnostics.py
+CREATED: src\alpha_engine_prediction_markets\domain.py
+CREATED: src\alpha_engine_prediction_markets\engine.py
+CREATED: src\alpha_engine_prediction_markets\errors.py
+CREATED: src\alpha_engine_prediction_markets\fixtures.py
+CREATED: src\alpha_engine_prediction_markets\learning.py
+CREATED: src\alpha_engine_prediction_markets\manifest.py
+CREATED: src\alpha_engine_prediction_markets\migrations\001_initial.sql
+CREATED: src\alpha_engine_prediction_markets\normalization.py
+CREATED: src\alpha_engine_prediction_markets\operations.py
+CREATED: src\alpha_engine_prediction_markets\opportunities.py
+CREATED: src\alpha_engine_prediction_markets\paper.py
+CREATED: src\alpha_engine_prediction_markets\persistence.py
+CREATED: src\alpha_engine_prediction_markets\plugin.py
+CREATED: src\alpha_engine_prediction_markets\presentation.py
+CREATED: src\alpha_engine_prediction_markets\providers\base.py
+CREATED: src\alpha_engine_prediction_markets\providers\fixture.py
+CREATED: src\alpha_engine_prediction_markets\providers\kalshi.py
+CREATED: src\alpha_engine_prediction_markets\py.typed
+CREATED: src\alpha_engine_prediction_markets\relations.py
+CREATED: src\alpha_engine_prediction_markets\resolution.py
+CREATED: src\alpha_engine_prediction_markets\scoring.py
+CREATED: src\alpha_engine_prediction_markets\settlement.py
+CREATED: src\alpha_engine_prediction_markets\signals.py
+CREATED: src\alpha_engine_prediction_markets\utils.py
+CREATED: tests\plugins\political_insider_institutional\conftest.py
+CREATED: tests\plugins\political_insider_institutional\fixtures\sec_13f.xml
+CREATED: tests\plugins\political_insider_institutional\fixtures\sec_form4.xml
+CREATED: tests\plugins\political_insider_institutional\test_detectors.py
+CREATED: tests\plugins\political_insider_institutional\test_identity.py
+CREATED: tests\plugins\political_insider_institutional\test_models_rules.py
+CREATED: tests\plugins\political_insider_institutional\test_normalization.py
+CREATED: tests\plugins\political_insider_institutional\test_outcomes_diagnostics.py
+CREATED: tests\plugins\political_insider_institutional\test_persistence.py
+CREATED: tests\plugins\political_insider_institutional\test_pipeline_paper.py
+CREATED: tests\plugins\political_insider_institutional\test_provider_and_boundary.py
+CREATED: tests\plugins\political_insider_institutional\test_public_records.py
+CREATED: tests\prediction_markets\conftest.py
+CREATED: tests\prediction_markets\test_domain_and_config.py
+CREATED: tests\prediction_markets\test_fixture_catalog.py
+CREATED: tests\prediction_markets\test_integration_contracts.py
+CREATED: tests\prediction_markets\test_kalshi_adapter.py
+CREATED: tests\prediction_markets\test_normalization.py
+CREATED: tests\prediction_markets\test_paper_settlement.py
+CREATED: tests\prediction_markets\test_relations_signals_scoring.py
+CREATED: tests\prediction_markets\test_resolution_learning_schedule.py
+
+Rollback safety notes:
+- Restore replaced files only from this update's backup folder.
+- Delete created files only when listed in the rollback manifest.
+- Remove created folders only when they are empty.
+- Never delete unlisted files or folders.

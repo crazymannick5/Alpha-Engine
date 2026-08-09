@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ae-retail-resale-flip"
+version = "0.9.0"
+description = "Personal Alpha Engine retail deals, resale, and flip opportunities cylinder"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.entry-points."alpha_engine.plugins"]
+ae_retail_resale_flip = "ae_retail_resale_flip.manifest:plugin_bundle"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
