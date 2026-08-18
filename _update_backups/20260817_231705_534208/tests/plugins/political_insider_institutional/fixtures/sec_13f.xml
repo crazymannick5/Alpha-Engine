@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<informationTable xmlns="http://www.sec.gov/edgar/document/thirteenf/informationtable">
+  <infoTable><nameOfIssuer>EXAMPLE CORP</nameOfIssuer><cusip>123456789</cusip><value>250</value><shrsOrPrnAmt><sshPrnamt>20000</sshPrnamt></shrsOrPrnAmt></infoTable>
+  <infoTable><nameOfIssuer>OTHER CORP</nameOfIssuer><cusip>987654321</cusip><value>100</value><shrsOrPrnAmt><sshPrnamt>10000</sshPrnamt></shrsOrPrnAmt></infoTable>
+</informationTable>

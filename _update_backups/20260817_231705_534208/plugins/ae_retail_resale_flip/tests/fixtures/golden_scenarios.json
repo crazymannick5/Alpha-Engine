@@ -1,0 +1,14 @@
+{
+  "FX-RETAIL-001": {"scenario": "out_of_stock", "expected": "opportunity invalidated; no paper buy"},
+  "FX-RETAIL-002": {"scenario": "variant_mismatch", "expected": "resolver mismatch; comp excluded"},
+  "FX-RETAIL-003": {"scenario": "invalid_coupon", "expected": "coupon benefit zero"},
+  "FX-RETAIL-004": {"scenario": "shipping_surprise", "expected": "landed cost superseded"},
+  "FX-RETAIL-005": {"scenario": "tax_difference", "expected": "landed cost corrected"},
+  "FX-RETAIL-006": {"scenario": "return_restriction", "expected": "return path blocked or warned"},
+  "FX-RETAIL-007": {"scenario": "counterfeit_warning", "expected": "policy warning/block"},
+  "FX-RETAIL-008": {"scenario": "cancelled_order", "expected": "paper lot cancelled; capital released"},
+  "FX-RETAIL-009": {"scenario": "unsold_inventory", "expected": "aging/write-down evaluation"},
+  "FX-RETAIL-010": {"scenario": "partial_resale", "expected": "remaining inventory persists"},
+  "FX-RETAIL-011": {"scenario": "price_collapse", "expected": "negative/write-down outcome"},
+  "FX-RETAIL-012": {"scenario": "successful_close_out", "expected": "fees/proceeds reconcile; final outcome"}
+}

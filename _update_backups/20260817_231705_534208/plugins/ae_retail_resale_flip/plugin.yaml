@@ -1,0 +1,25 @@
+plugin_id: ae.retail_resale_flip
+name: Retail Deals, Resale, and Flip Opportunities
+version: 0.9.0
+workstream_mode: PLUGIN
+core_contract: "1.0"
+pdk_range: ">=1.0,<2.0"
+migration_namespace: plugin.ae_retail_resale_flip
+default_enabled: false
+requires_live_credentials: false
+supports_fixture_mode: true
+capabilities:
+  - retail.provider_adapter.manual
+  - retail.provider_adapter.fixture
+  - retail.normalizer
+  - retail.product_resolution
+  - retail.signal_detector
+  - retail.opportunity_detector
+  - retail.scoring_features
+  - retail.paper_plan_proposal
+  - retail.outcome_evaluator
+  - retail.dashboard_descriptor
+  - retail.cli_descriptor
+notes:
+  - Live network providers are intentionally not activated until central provider/terms qualification is available.
+  - Paper output is proposal-only until the central paper translator contract is frozen.
