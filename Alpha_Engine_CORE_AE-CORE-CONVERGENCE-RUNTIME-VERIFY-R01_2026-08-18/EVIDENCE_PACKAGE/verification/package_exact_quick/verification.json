@@ -1,0 +1,210 @@
+{
+  "acceptance_authority": "builder-evidence-only",
+  "blockers": [],
+  "build_version": "0.1.0",
+  "feature_id": null,
+  "finished_at": "2026-08-19T02:36:44.390501+00:00",
+  "project": "Personal Alpha Engine",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "readiness": "READY",
+  "repository_root": "/mnt/data/ae_package_validation_repo",
+  "results": [
+    {
+      "check_id": "V00-VERIFIER-SELFTEST",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/verification/test_verifier.py"
+      ],
+      "cwd": "/mnt/data/ae_package_validation_repo/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 5.255191,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-015",
+        "AE-FTR-QA-009"
+      ],
+      "finished_at": "2026-08-19T02:36:23.587725+00:00",
+      "layer": "qa-infrastructure",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:36:18.332547+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V00-VERIFIER-SELFTEST.stderr.txt",
+      "stdout_path": "raw/V00-VERIFIER-SELFTEST.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Verifier anti-false-green self-tests"
+    },
+    {
+      "check_id": "V01-IMPORT-SANITY",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-c",
+        "from alpha_engine.runtime import build_runtime; from alpha_engine.cli.main import main; print('IMPORT_OK')"
+      ],
+      "cwd": "/mnt/data/ae_package_validation_repo/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 1.014215,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-PURPOSE-GAP-002",
+        "AE-GAP-001"
+      ],
+      "finished_at": "2026-08-19T02:36:24.602051+00:00",
+      "layer": "package",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:36:23.587853+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V01-IMPORT-SANITY.stderr.txt",
+      "stdout_path": "raw/V01-IMPORT-SANITY.stdout.txt",
+      "timeout_seconds": 30,
+      "title": "Core import and composition sanity"
+    },
+    {
+      "check_id": "V03-CORE-TESTS",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "/mnt/data/ae_package_validation_repo/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 12.961806,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-FTR-QA-005",
+        "AE-VER-004"
+      ],
+      "finished_at": "2026-08-19T02:36:37.563953+00:00",
+      "layer": "unit-integration",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:36:24.602165+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V03-CORE-TESTS.stderr.txt",
+      "stdout_path": "raw/V03-CORE-TESTS.stdout.txt",
+      "timeout_seconds": 180,
+      "title": "Core deterministic pytest suite"
+    },
+    {
+      "check_id": "V12-REFERENCE-LOOP",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_runtime_reference.py::test_composed_reference_loop_is_idempotent"
+      ],
+      "cwd": "/mnt/data/ae_package_validation_repo/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 1.356905,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-006",
+        "AE-RUN-002",
+        "AE-FTR-QA-005"
+      ],
+      "finished_at": "2026-08-19T02:36:38.920964+00:00",
+      "layer": "e2e",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:36:37.564076+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V12-REFERENCE-LOOP.stderr.txt",
+      "stdout_path": "raw/V12-REFERENCE-LOOP.stdout.txt",
+      "timeout_seconds": 90,
+      "title": "Deterministic reference loop through composed authorities"
+    },
+    {
+      "check_id": "V13-LIFECYCLE",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_runtime_lifecycle.py",
+        "tests/test_runtime_server_smoke.py"
+      ],
+      "cwd": "/mnt/data/ae_package_validation_repo/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 4.872463,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-RUN-003",
+        "AE-VER-005"
+      ],
+      "finished_at": "2026-08-19T02:36:43.793519+00:00",
+      "layer": "lifecycle",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:36:38.921074+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V13-LIFECYCLE.stderr.txt",
+      "stdout_path": "raw/V13-LIFECYCLE.stdout.txt",
+      "timeout_seconds": 90,
+      "title": "Runtime startup/status/second-instance/shutdown lifecycle"
+    },
+    {
+      "check_id": "V18-TRACEABILITY",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "alpha_engine.verification.traceability_check"
+      ],
+      "cwd": "/mnt/data/ae_package_validation_repo/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 0.596608,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-003",
+        "AE-PURPOSE-GAP-001",
+        "AE-PURPOSE-GAP-033"
+      ],
+      "finished_at": "2026-08-19T02:36:44.390216+00:00",
+      "layer": "traceability",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:36:43.793627+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V18-TRACEABILITY.stderr.txt",
+      "stdout_path": "raw/V18-TRACEABILITY.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Feature acceptance registry integrity"
+    }
+  ],
+  "run_id": "20260819T023618.332344Z",
+  "schema_version": 1,
+  "started_at": "2026-08-19T02:36:18.332547+00:00",
+  "tier": "quick",
+  "totals": {
+    "BLOCKED": 0,
+    "FAILED": 0,
+    "INCOMPLETE": 0,
+    "PASS": 6,
+    "SKIPPED": 0
+  }
+}

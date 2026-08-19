@@ -1,0 +1,15 @@
+{
+  "project": "Personal Alpha Engine",
+  "source_repository_description": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+  "source_identity_basis": "AI-readable repository export reconstructed byte-for-byte for readable live files; no authoritative owner Git history supplied",
+  "repo_context_index_sha256": "5b489c18bbf37e9a9101ec20049c9f57275431f7e6f3f32d3bddad73b63ae27c",
+  "repo_context_part_001_sha256": "771fc03371ddffcf618ef221aad455a79b7dfa8768d82a7ca0dfaa8fa3183bb0",
+  "reconstructed_live_file_count": 539,
+  "reconstructed_baseline_tree_sha256": "8c09a31ef0e2ff40b9b45a8a03f90bbb157600f7ee87e8e8802f76e0faf87775",
+  "temporary_builder_git_baseline": "03a064fb91be2b4106303e2e3396ec689432fee3",
+  "temporary_builder_git_is_authoritative": false,
+  "source_export_generated_at": "2026-08-17 23:21:31",
+  "source_dirty_state": "unknown in owner repository; export does not carry authoritative Git status",
+  "governing_design_contract": "alpha_engine/docs/contracts/CORE_DESIGN_CONTRACT_1.0_DRAFT.md (source baseline; draft)",
+  "governing_pdk": "alpha_engine/docs/contracts/PLUGIN_DEVELOPMENT_KIT_1.0_DRAFT.md (source baseline; draft)"
+}

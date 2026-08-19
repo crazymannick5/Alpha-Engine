@@ -1,0 +1,10 @@
+WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Processing /mnt/data/ae_package_validation_repo
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: personal-alpha-engine-workspace
+  Building wheel for personal-alpha-engine-workspace (pyproject.toml): started
+  Building wheel for personal-alpha-engine-workspace (pyproject.toml): finished with status 'done'
+  Created wheel for personal-alpha-engine-workspace: filename=personal_alpha_engine_workspace-0.1.0-py3-none-any.whl size=191221 sha256=900558e1e0b19f4303bc11dcc999c6da389e82827057bb38a939a07528c75ad1
+  Stored in directory: /tmp/pip-ephem-wheel-cache-uwb7zmqu/wheels/45/4f/d9/f0a9bf4c13a97e22daf454f747c8c0976c03d8d2d755a18ec0
+Successfully built personal-alpha-engine-workspace

@@ -1,0 +1,87 @@
+{
+  "acceptance_authority": "builder-evidence-only",
+  "blockers": [],
+  "build_version": "0.1.0",
+  "feature_id": "AE-RUN-003",
+  "finished_at": "2026-08-19T02:30:59.513278+00:00",
+  "project": "Personal Alpha Engine",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "readiness": "READY",
+  "repository_root": "/mnt/data/ae_working",
+  "results": [
+    {
+      "check_id": "V01-IMPORT-SANITY",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-c",
+        "from alpha_engine.runtime import build_runtime; from alpha_engine.cli.main import main; print('IMPORT_OK')"
+      ],
+      "cwd": "/mnt/data/ae_working/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 0.976042,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-PURPOSE-GAP-002",
+        "AE-GAP-001"
+      ],
+      "finished_at": "2026-08-19T02:30:54.757246+00:00",
+      "layer": "package",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:30:53.781218+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V01-IMPORT-SANITY.stderr.txt",
+      "stdout_path": "raw/V01-IMPORT-SANITY.stdout.txt",
+      "timeout_seconds": 30,
+      "title": "Core import and composition sanity"
+    },
+    {
+      "check_id": "V13-LIFECYCLE",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_runtime_lifecycle.py",
+        "tests/test_runtime_server_smoke.py"
+      ],
+      "cwd": "/mnt/data/ae_working/alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 4.755567,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-RUN-003",
+        "AE-VER-005"
+      ],
+      "finished_at": "2026-08-19T02:30:59.512966+00:00",
+      "layer": "lifecycle",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T02:30:54.757418+00:00",
+      "status": "PASS",
+      "stderr_path": "raw/V13-LIFECYCLE.stderr.txt",
+      "stdout_path": "raw/V13-LIFECYCLE.stdout.txt",
+      "timeout_seconds": 90,
+      "title": "Runtime startup/status/second-instance/shutdown lifecycle"
+    }
+  ],
+  "run_id": "20260819T023053.781075Z",
+  "schema_version": 1,
+  "started_at": "2026-08-19T02:30:53.781218+00:00",
+  "tier": "feature",
+  "totals": {
+    "BLOCKED": 0,
+    "FAILED": 0,
+    "INCOMPLETE": 0,
+    "PASS": 2,
+    "SKIPPED": 0
+  }
+}

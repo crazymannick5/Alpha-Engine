@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "package": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18",
+  "milestones": [
+    {
+      "id": "START-01",
+      "name": "source/import/bootstrap",
+      "status": "PASS",
+      "evidence": "verification/quick"
+    },
+    {
+      "id": "START-02",
+      "name": "central composition construction",
+      "status": "PASS",
+      "evidence": "verification/full"
+    },
+    {
+      "id": "START-03",
+      "name": "storage/artifact readiness",
+      "status": "PASS",
+      "evidence": "test_results/startup_status.txt"
+    },
+    {
+      "id": "START-04",
+      "name": "loopback API socket bound before READY",
+      "status": "PASS",
+      "evidence": "AE-CORE-RUN-D007 regression / verification/feature_AE-RUN-003"
+    },
+    {
+      "id": "START-05",
+      "name": "status query through live runtime",
+      "status": "PASS",
+      "evidence": "test_results/startup_status.txt"
+    },
+    {
+      "id": "START-06",
+      "name": "second-instance refusal",
+      "status": "PASS",
+      "evidence": "test_results/startup_second_instance.txt"
+    },
+    {
+      "id": "START-07",
+      "name": "graceful shutdown cleanup",
+      "status": "PASS",
+      "evidence": "test_results/startup_stop.txt"
+    },
+    {
+      "id": "START-08",
+      "name": "forced termination stale-lock reconciliation",
+      "status": "PASS",
+      "evidence": "verification/feature_AE-RUN-003"
+    },
+    {
+      "id": "START-09",
+      "name": "desktop target-environment smoke",
+      "status": "BLOCKED",
+      "reason": "PySide6/target desktop environment not available in builder sandbox; qualification V13."
+    },
+    {
+      "id": "START-10",
+      "name": "worker supervisor startup",
+      "status": "BLOCKED",
+      "reason": "Worker supervision not implemented; qualification V06."
+    },
+    {
+      "id": "START-11",
+      "name": "frozen-PDK plugin activation",
+      "status": "BLOCKED",
+      "reason": "Canonical plugin activation/frozen PDK incomplete; qualification V10."
+    }
+  ]
+}

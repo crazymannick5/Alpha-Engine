@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "authority_note": "Historical provider names are candidates, not mandatory vendors. Data-provider activation requires fresh official terms/pricing/rights qualification.",
+  "decisions": [
+    {"candidate":"Polygon","status":"EVALUATE_NOW","scope":"read-only market data candidate","precondition":"fresh official terms/pricing/retention review"},
+    {"candidate":"Alpha Vantage","status":"EVALUATE_NOW","scope":"read-only market data candidate","precondition":"fresh official terms/pricing/retention review"},
+    {"candidate":"FMP","status":"EVALUATE_NOW","scope":"read-only fundamentals candidate","precondition":"fresh official terms/pricing/retention review"},
+    {"candidate":"NewsAPI","status":"DEFERRED","scope":"Narrative cylinder source candidate","precondition":"Narrative cylinder + rights policy"},
+    {"candidate":"Reddit","status":"DEFERRED","scope":"Narrative/community source candidate","precondition":"Narrative cylinder + current API/terms review"},
+    {"candidate":"FRED","status":"DEFERRED","scope":"Macro/Foresight official-data candidate","precondition":"Events/Facts + Macro cylinder"},
+    {"candidate":"PostgreSQL","status":"SUPERSEDED","scope":"scale-path persistence","reason":"SQLite-first local baseline remains governing until a scale decision promotes PostgreSQL."},
+    {"candidate":"Redis","status":"SUPERSEDED","scope":"scale-path cache/infrastructure","reason":"Not a baseline local-first requirement."},
+    {"candidate":"Alpaca","status":"DEFERRED","scope":"broker/live execution","reason":"Outside initial Levels 0-2 live-action boundary; read-only data may be separately evaluated."},
+    {"candidate":"IBKR","status":"DEFERRED","scope":"broker/live execution","reason":"Outside initial Levels 0-2 live-action boundary; read-only data may be separately evaluated."},
+    {"candidate":"Twilio","status":"DEFERRED","scope":"notification channel","reason":"Email is the accepted first external notification target."},
+    {"candidate":"Discord","status":"DEFERRED","scope":"notification channel","reason":"Email is the accepted first external notification target."}
+  ]
+}

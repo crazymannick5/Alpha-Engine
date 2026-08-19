@@ -1,0 +1,18 @@
+{
+  "PROJECT": "Personal Alpha Engine",
+  "ROLE": "BUILDER",
+  "WORKSTREAM_MODE": "CORE",
+  "ROUND_ID": "AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01",
+  "ROUND_ID_AUTHORITY": "builder-local package identifier; no owner-assigned stable round ID was supplied",
+  "SOURCE_BASELINE": {
+    "repo_context_index_sha256": "5b489c18bbf37e9a9101ec20049c9f57275431f7e6f3f32d3bddad73b63ae27c",
+    "repo_context_part_001_sha256": "771fc03371ddffcf618ef221aad455a79b7dfa8768d82a7ca0dfaa8fa3183bb0",
+    "reconstructed_baseline_tree_sha256": "8c09a31ef0e2ff40b9b45a8a03f90bbb157600f7ee87e8e8802f76e0faf87775"
+  },
+  "GOVERNING_STATE_PACKET": "No separately versioned state packet supplied; bound cumulatively to Builder Kernel v0.1, current repository export, 392-feature ledger, supplemental purpose-gap plan, runtime/verification addendum, and owner convergence prompt.",
+  "GOVERNING_DESIGN_CONTRACT": "CORE_DESIGN_CONTRACT_1.0_DRAFT.md from source baseline; draft/not represented as frozen acceptance.",
+  "AUTHORIZED_PATHS": "Repository-root source-development packaging/runbook plus central alpha_engine runtime/bootstrap/API/CLI/desktop/health/operations/reference-loop/verification/docs/tests needed for this convergence pass.",
+  "PROHIBITED_PATHS": "Plugin-owned production source/tests/manifests except read-only verification; backups/update logs/user data/secrets; live real-money execution; mandatory cloud/LLM; unrelated cylinder implementation.",
+  "INITIAL_DECLARATION": "READY_TO_IMPLEMENT",
+  "NOTE": "Exact authoritative Git branch/commit/tree were unavailable, so work is bound to snapshot hashes rather than invented ancestry."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "requests": [
+    {
+      "id": "CENTRAL_HUB_INTEGRATION_REQUEST-PDK-001",
+      "status": "OPEN",
+      "required_shared_change": "Freeze and implement one canonical plugin manifest/contribution/activation/quarantine contract and lifecycle through the Central Hub plugin host.",
+      "reason": "Standalone cylinders use incompatible draft/exact manifest shapes; isolated tests cannot prove host activation.",
+      "expected_interface_contract": "Versioned PDK manifest range, contribution descriptors, activation/disable/quarantine health, migration compatibility and public registration surface.",
+      "likely_affected_files": [
+        "alpha_engine/src/alpha_engine/contracts/plugin.py",
+        "alpha_engine/src/alpha_engine/plugin_host/pdk.py",
+        "alpha_engine/src/alpha_engine/plugin_host/registry.py",
+        "alpha_engine/docs/contracts/PLUGIN_DEVELOPMENT_KIT_1.0_DRAFT.md"
+      ],
+      "cylinder_expectation_afterward": "Each canonical plugin can be discovered and activated through public host contracts without private-core imports; incompatible plugins are blocked/quarantined truthfully."
+    },
+    {
+      "id": "CENTRAL_HUB_INTEGRATION_REQUEST-PREDICTION-002",
+      "status": "OPEN",
+      "required_shared_change": "Select/re-home one canonical ae.prediction_markets implementation and retire/supersede the duplicate legacy package through an explicit repository decision.",
+      "reason": "Two materially different Prediction Markets implementations share the same conceptual/stable identity; installing both would create ambiguous authority.",
+      "expected_interface_contract": "One canonical package identity and manifest wired to the frozen PDK, with compatibility/migration disposition for the superseded implementation.",
+      "likely_affected_files": [
+        "plugins/ae_prediction_markets/**",
+        "src/alpha_engine_prediction_markets/**",
+        "alpha_engine/src/alpha_engine/plugin_host/**"
+      ],
+      "cylinder_expectation_afterward": "Qualification detects exactly one production candidate for ae.prediction_markets and can activate it through the host."
+    },
+    {
+      "id": "CENTRAL_HUB_INTEGRATION_REQUEST-MIGRATIONS-003",
+      "status": "OPEN",
+      "required_shared_change": "Provide numbered core migration authority plus plugin-namespaced migration admission/ordering and upgrade-state reporting.",
+      "reason": "Current core still relies on development bootstrap/create_all and qualification cannot prove supported upgrade/recovery or safe plugin activation.",
+      "expected_interface_contract": "Versioned migration registry/runner with current schema identity, fresh-install/upgrade state, failure quarantine/recovery and namespaced plugin migration hooks.",
+      "likely_affected_files": [
+        "alpha_engine/src/alpha_engine/storage/**",
+        "alpha_engine/src/alpha_engine/plugin_host/**"
+      ],
+      "cylinder_expectation_afterward": "Plugin migrations participate in the central lifecycle and qualification without direct ad-hoc schema mutation."
+    }
+  ]
+}

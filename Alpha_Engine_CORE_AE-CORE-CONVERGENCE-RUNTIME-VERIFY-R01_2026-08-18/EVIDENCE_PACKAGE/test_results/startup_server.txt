@@ -1,0 +1,6 @@
+{
+  "mode": "normal",
+  "port": 8877,
+  "profile": "/mnt/data/ae_start_smoke",
+  "status": "STARTING"
+}

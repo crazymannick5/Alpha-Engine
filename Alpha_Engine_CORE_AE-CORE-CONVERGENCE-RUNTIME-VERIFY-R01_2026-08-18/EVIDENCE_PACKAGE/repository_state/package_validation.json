@@ -1,0 +1,30 @@
+{
+  "validated_zip_apply_identity": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18.zip",
+  "method": "Extract ZIP; validate single-root structure and all apply_manifest source hashes; reconstruct clean baseline from builder snapshot; overlay APPLY_PACKAGE bytes; parse outgoing Python/JSON/TOML; build root wheel; run canonical quick and full verification.",
+  "zip_structure_and_apply_hashes": "PASS",
+  "assembled_overlay_parse": "PASS",
+  "root_wheel": "PASS",
+  "quick": {
+    "status": "PASS",
+    "totals": {
+      "PASS": 6,
+      "FAILED": 0,
+      "BLOCKED": 0,
+      "INCOMPLETE": 0,
+      "SKIPPED": 0
+    },
+    "evidence": "verification/package_exact_quick"
+  },
+  "full": {
+    "status": "PASS",
+    "totals": {
+      "PASS": 11,
+      "FAILED": 0,
+      "BLOCKED": 0,
+      "INCOMPLETE": 0,
+      "SKIPPED": 0
+    },
+    "evidence": "verification/package_exact_full"
+  },
+  "note": "The first combined wheel+quick+full validation invocation exceeded its outer sandbox command window after wheel and quick completed; no process remained. Full was rerun independently on the same clean assembled packaged result and passed."
+}
