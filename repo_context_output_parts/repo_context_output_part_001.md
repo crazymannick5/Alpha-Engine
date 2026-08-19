@@ -11,12 +11,12 @@ Only the output format changed: instead of one Markdown file, it writes multiple
 
 ## Export Metadata
 
-- Generated at: `2026-08-17 23:21:31`
+- Generated at: `2026-08-18 23:27:47`
 - Repository root: `C:\Users\nicol\Documents\Alpha Engine`
 - Part hard limit: `6.00 MB`
 - Part target size: `5.44 MB`
-- Total discovered files: `875`
-- Candidate readable/code files: `873`
+- Total discovered files: `962`
+- Candidate readable/code files: `960`
 - Pre-excluded files: `2`
 
 ## Important Instruction For The AI Reading This
@@ -29,546 +29,628 @@ Some files may be omitted due to per-file size limits, generated-file exclusions
 
 ## Included File Type Counts
 
-- `.py`: 802
-- `.md`: 31
-- `.toml`: 13
-- `.json`: 5
-- `.txt`: 5
+- `.py`: 825
+- `.txt`: 58
+- `.md`: 35
+- `.toml`: 14
+- `.json`: 10
 - `.sql`: 4
 - `.typed`: 4
 - `.xml`: 4
 - `.sha256`: 2
 - `.yaml`: 2
+- `PKG-INFO`: 1
 - `text1`: 1
 
 ## Folder Tree
 
 ```text
 Alpha Engine/
+├── .alpha_verification_evidence
+│   ├── 20260819T032252.064299Z
+│   │   ├── raw
+│   │   │   ├── V00-VERIFIER-SELFTEST.stderr.txt
+│   │   │   ├── V00-VERIFIER-SELFTEST.stdout.txt
+│   │   │   ├── V01-IMPORT-SANITY.stderr.txt
+│   │   │   ├── V01-IMPORT-SANITY.stdout.txt
+│   │   │   ├── V03-CORE-TESTS.stderr.txt
+│   │   │   ├── V03-CORE-TESTS.stdout.txt
+│   │   │   ├── V10-PLUGIN-DISCOVERY.stderr.txt
+│   │   │   ├── V10-PLUGIN-DISCOVERY.stdout.txt
+│   │   │   ├── V11-ARBITRAGE.stderr.txt
+│   │   │   ├── V11-ARBITRAGE.stdout.txt
+│   │   │   ├── V11-PREDICTION.stderr.txt
+│   │   │   ├── V11-PREDICTION.stdout.txt
+│   │   │   ├── V11-PUBLIC-MARKETS.stderr.txt
+│   │   │   ├── V11-PUBLIC-MARKETS.stdout.txt
+│   │   │   ├── V11-RETAIL.stderr.txt
+│   │   │   ├── V11-RETAIL.stdout.txt
+│   │   │   ├── V12-REFERENCE-LOOP.stderr.txt
+│   │   │   ├── V12-REFERENCE-LOOP.stdout.txt
+│   │   │   ├── V13-LIFECYCLE.stderr.txt
+│   │   │   ├── V13-LIFECYCLE.stdout.txt
+│   │   │   ├── V18-TRACEABILITY.stderr.txt
+│   │   │   └── V18-TRACEABILITY.stdout.txt
+│   │   ├── verification.json
+│   │   └── VERIFICATION_REPORT.md
+│   └── 20260819T032341.571603Z
+│       ├── raw
+│       │   ├── V00-VERIFIER-SELFTEST.stderr.txt
+│       │   ├── V00-VERIFIER-SELFTEST.stdout.txt
+│       │   ├── V01-IMPORT-SANITY.stderr.txt
+│       │   ├── V01-IMPORT-SANITY.stdout.txt
+│       │   ├── V03-CORE-TESTS.stderr.txt
+│       │   ├── V03-CORE-TESTS.stdout.txt
+│       │   ├── V10-PLUGIN-DISCOVERY.stderr.txt
+│       │   ├── V10-PLUGIN-DISCOVERY.stdout.txt
+│       │   ├── V11-ARBITRAGE.stderr.txt
+│       │   ├── V11-ARBITRAGE.stdout.txt
+│       │   ├── V11-PREDICTION.stderr.txt
+│       │   ├── V11-PREDICTION.stdout.txt
+│       │   ├── V11-PUBLIC-MARKETS.stderr.txt
+│       │   ├── V11-PUBLIC-MARKETS.stdout.txt
+│       │   ├── V11-RETAIL.stderr.txt
+│       │   ├── V11-RETAIL.stdout.txt
+│       │   ├── V12-REFERENCE-LOOP.stderr.txt
+│       │   ├── V12-REFERENCE-LOOP.stdout.txt
+│       │   ├── V13-LIFECYCLE.stderr.txt
+│       │   ├── V13-LIFECYCLE.stdout.txt
+│       │   ├── V16-ROOT-PACKAGE.stderr.txt
+│       │   ├── V16-ROOT-PACKAGE.stdout.txt
+│       │   ├── V18-TRACEABILITY.stderr.txt
+│       │   └── V18-TRACEABILITY.stdout.txt
+│       ├── verification.json
+│       └── VERIFICATION_REPORT.md
 ├── _update_backups
-│   └── 20260817_231705_534208
-│       ├── plugins
-│       │   ├── ae_arbitrage_cross_market
-│       │   │   ├── docs
-│       │   │   │   ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
-│       │   │   │   ├── FILE_OWNERSHIP.md
-│       │   │   │   └── IMPLEMENTATION_NOTES.md
-│       │   │   ├── migrations
-│       │   │   │   └── 0001_arbitrage_namespace.sql
-│       │   │   ├── src
-│       │   │   │   └── ae_arbitrage_cross_market
-│       │   │   │       ├── application
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── operations.py
-│       │   │   │       │   └── service.py
-│       │   │   │       ├── contracts
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── dto.py
-│       │   │   │       │   └── host.py
-│       │   │   │       ├── detectors
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── arbitrage.py
-│       │   │   │       ├── diagnostics
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── health.py
-│       │   │   │       ├── domain
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── costs.py
-│       │   │   │       │   ├── legs.py
-│       │   │   │       │   ├── liquidity.py
-│       │   │   │       │   ├── payoff.py
-│       │   │   │       │   ├── relationships.py
-│       │   │   │       │   ├── settlement.py
-│       │   │   │       │   └── states.py
-│       │   │   │       ├── learning
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── recommendations.py
-│       │   │   │       ├── normalization
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── fx.py
-│       │   │   │       │   ├── quotes.py
-│       │   │   │       │   └── terms.py
-│       │   │   │       ├── outcomes
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── evaluator.py
-│       │   │   │       ├── paper
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── simulator.py
-│       │   │   │       │   └── translator.py
-│       │   │   │       ├── persistence
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── memory.py
-│       │   │   │       │   └── repositories.py
-│       │   │   │       ├── presentation
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── descriptors.py
-│       │   │   │       │   └── matrix.py
-│       │   │   │       ├── providers
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── base.py
-│       │   │   │       │   └── fixture.py
-│       │   │   │       ├── resolution
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── resolver.py
-│       │   │   │       ├── scoring
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── features.py
-│       │   │   │       ├── __init__.py
-│       │   │   │       ├── canonical.py
-│       │   │   │       ├── configuration.py
-│       │   │   │       └── registration.py
-│       │   │   ├── tests
-│       │   │   │   ├── compatibility
-│       │   │   │   │   ├── __init__.py
-│       │   │   │   │   └── test_boundary.py
-│       │   │   │   ├── failure_injection
-│       │   │   │   │   ├── __init__.py
-│       │   │   │   │   └── test_negative_invariants.py
-│       │   │   │   ├── integration
-│       │   │   │   │   ├── __init__.py
-│       │   │   │   │   ├── test_fixtures.py
-│       │   │   │   │   └── test_operations_matrix.py
-│       │   │   │   ├── migration
-│       │   │   │   │   ├── __init__.py
-│       │   │   │   │   └── test_migration.py
-│       │   │   │   ├── resource
-│       │   │   │   │   ├── __init__.py
-│       │   │   │   │   └── test_resource.py
-│       │   │   │   ├── security
-│       │   │   │   │   ├── __init__.py
-│       │   │   │   │   └── test_security.py
-│       │   │   │   ├── unit
-│       │   │   │   │   ├── __init__.py
-│       │   │   │   │   ├── test_canonical.py
-│       │   │   │   │   ├── test_configuration_learning.py
-│       │   │   │   │   ├── test_costs_liquidity.py
-│       │   │   │   │   ├── test_payoff_persistence.py
-│       │   │   │   │   ├── test_provider_normalizer.py
-│       │   │   │   │   └── test_resolution.py
-│       │   │   │   ├── __init__.py
-│       │   │   │   └── helpers.py
-│       │   │   ├── manifest.toml
-│       │   │   └── pyproject.toml
-│       │   ├── ae_prediction_markets
-│       │   │   ├── docs
-│       │   │   │   └── IMPLEMENTATION_NOTES.md
-│       │   │   ├── scripts
-│       │   │   │   └── verify.py
-│       │   │   ├── src
-│       │   │   │   └── ae_prediction_markets
-│       │   │   │       ├── application
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── reference_loop.py
-│       │   │   │       ├── cli
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── descriptors.py
-│       │   │   │       ├── config
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── schema.py
-│       │   │   │       ├── detectors
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── opportunities.py
-│       │   │   │       │   └── signals.py
-│       │   │   │       ├── diagnostics
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── health.py
-│       │   │   │       ├── domain
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── enums.py
-│       │   │   │       │   ├── models.py
-│       │   │   │       │   └── pricing.py
-│       │   │   │       ├── fixtures
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── reference.py
-│       │   │   │       ├── integration
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── central.py
-│       │   │   │       ├── normalization
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── kalshi.py
-│       │   │   │       │   └── rules.py
-│       │   │   │       ├── operations
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── handlers.py
-│       │   │   │       ├── paper
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── fill_policy.py
-│       │   │   │       │   └── translator.py
-│       │   │   │       ├── persistence
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── memory.py
-│       │   │   │       │   └── ports.py
-│       │   │   │       ├── providers
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   ├── base.py
-│       │   │   │       │   ├── fixture.py
-│       │   │   │       │   └── kalshi.py
-│       │   │   │       ├── resolution
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── relations.py
-│       │   │   │       ├── scoring
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── features.py
-│       │   │   │       ├── settlement
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── evaluator.py
-│       │   │   │       ├── ui
-│       │   │   │       │   ├── __init__.py
-│       │   │   │       │   └── descriptors.py
-│       │   │   │       ├── __init__.py
-│       │   │   │       ├── contracts.py
-│       │   │   │       ├── errors.py
-│       │   │   │       ├── manifest.py
-│       │   │   │       ├── plugin.py
-│       │   │   │       └── serialization.py
-│       │   │   ├── tests
-│       │   │   │   ├── test_config_persistence.py
-│       │   │   │   ├── test_contracts.py
-│       │   │   │   ├── test_detectors.py
-│       │   │   │   ├── test_domain.py
-│       │   │   │   ├── test_extended_capabilities.py
-│       │   │   │   ├── test_no_core_private_imports.py
-│       │   │   │   ├── test_normalization.py
-│       │   │   │   ├── test_paper.py
-│       │   │   │   ├── test_provider_security.py
-│       │   │   │   ├── test_reference_loop.py
-│       │   │   │   ├── test_relations.py
-│       │   │   │   ├── test_resource_bounds.py
-│       │   │   │   └── test_settlement.py
-│       │   │   ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
-│       │   │   ├── FILE_HASHES.sha256
-│       │   │   ├── OWNERSHIP_MANIFEST.json
-│       │   │   ├── plugin.toml
-│       │   │   ├── pyproject.toml
-│       │   │   └── README_BATCH.txt
-│       │   ├── ae_public_markets_quant_options
-│       │   │   ├── fixtures
-│       │   │   │   └── README.md
-│       │   │   ├── src
-│       │   │   │   └── ae_public_markets_quant_options
-│       │   │   │       ├── __init__.py
-│       │   │   │       ├── cli.py
-│       │   │   │       ├── config.py
-│       │   │   │       ├── contracts.py
-│       │   │   │       ├── contributions.py
-│       │   │   │       ├── corporate_actions.py
-│       │   │   │       ├── detectors.py
-│       │   │   │       ├── diagnostics.py
-│       │   │   │       ├── errors.py
-│       │   │   │       ├── features.py
-│       │   │   │       ├── fixtures.py
-│       │   │   │       ├── manifest.py
-│       │   │   │       ├── models.py
-│       │   │   │       ├── normalization.py
-│       │   │   │       ├── operations.py
-│       │   │   │       ├── options.py
-│       │   │   │       ├── outcomes.py
-│       │   │   │       ├── paper.py
-│       │   │   │       ├── persistence.py
-│       │   │   │       ├── point_in_time.py
-│       │   │   │       ├── providers.py
-│       │   │   │       ├── qualification.py
-│       │   │   │       ├── research.py
-│       │   │   │       ├── rights.py
-│       │   │   │       ├── scoring.py
-│       │   │   │       ├── security_master.py
-│       │   │   │       └── service.py
-│       │   │   ├── tests
-│       │   │   │   ├── test_config_persistence_contracts.py
-│       │   │   │   ├── test_contributions_operations_qualification.py
-│       │   │   │   ├── test_corporate_actions.py
-│       │   │   │   ├── test_detectors_scoring.py
-│       │   │   │   ├── test_features.py
-│       │   │   │   ├── test_normalization.py
-│       │   │   │   ├── test_options.py
-│       │   │   │   ├── test_paper_outcomes.py
-│       │   │   │   ├── test_point_in_time.py
-│       │   │   │   ├── test_research.py
-│       │   │   │   ├── test_rights_provider.py
-│       │   │   │   ├── test_security_master.py
-│       │   │   │   └── test_service_manifest_diagnostics.py
-│       │   │   ├── pyproject.toml
-│       │   │   └── README.md
-│       │   └── ae_retail_resale_flip
-│       │       ├── scripts
-│       │       │   └── verify_retail_plugin.py
-│       │       ├── src
-│       │       │   └── ae_retail_resale_flip
-│       │       │       ├── cli
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── descriptors.py
-│       │       │       ├── diagnostics
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── health.py
-│       │       │       ├── domain
-│       │       │       │   ├── __init__.py
-│       │       │       │   ├── economics.py
-│       │       │       │   ├── lifecycle.py
-│       │       │       │   └── models.py
-│       │       │       ├── identity
-│       │       │       │   ├── __init__.py
-│       │       │       │   ├── gtin.py
-│       │       │       │   └── resolver.py
-│       │       │       ├── integration
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── host_bridge.py
-│       │       │       ├── normalization
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── normalizer.py
-│       │       │       ├── operations
-│       │       │       │   ├── __init__.py
-│       │       │       │   ├── descriptors.py
-│       │       │       │   └── handlers.py
-│       │       │       ├── opportunities
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── detector.py
-│       │       │       ├── outcomes
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── evaluator.py
-│       │       │       ├── paper
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── simulation.py
-│       │       │       ├── persistence
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── repositories.py
-│       │       │       ├── providers
-│       │       │       │   ├── __init__.py
-│       │       │       │   ├── base.py
-│       │       │       │   ├── fixture.py
-│       │       │       │   └── manual_import.py
-│       │       │       ├── scoring
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── features.py
-│       │       │       ├── signals
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── detectors.py
-│       │       │       ├── ui
-│       │       │       │   ├── __init__.py
-│       │       │       │   └── descriptors.py
-│       │       │       ├── __init__.py
-│       │       │       ├── config.py
-│       │       │       ├── contracts.py
-│       │       │       ├── manifest.py
-│       │       │       └── serialization.py
-│       │       ├── tests
-│       │       │   ├── contract
-│       │       │   │   ├── test_manifest_boundaries.py
-│       │       │   │   └── test_operation_descriptors.py
-│       │       │   ├── failure
-│       │       │   │   └── test_provider_fail_closed.py
-│       │       │   ├── fixtures
-│       │       │   │   └── golden_scenarios.json
-│       │       │   ├── integration
-│       │       │   │   ├── test_golden_scenarios.py
-│       │       │   │   ├── test_operations_checkpoint.py
-│       │       │   │   └── test_pipeline.py
-│       │       │   ├── security
-│       │       │   │   └── test_untrusted_inputs.py
-│       │       │   ├── unit
-│       │       │   │   ├── test_config_serialization.py
-│       │       │   │   ├── test_economics.py
-│       │       │   │   ├── test_gtin_identity.py
-│       │       │   │   ├── test_normalization.py
-│       │       │   │   ├── test_opportunity_scoring.py
-│       │       │   │   ├── test_paper_outcomes.py
-│       │       │   │   └── test_signals_lifecycle.py
-│       │       │   └── conftest.py
-│       │       ├── plugin.yaml
-│       │       ├── pyproject.toml
-│       │       └── README.md
-│       ├── src
-│       │   ├── alpha_engine
-│       │   │   └── plugins
-│       │   │       └── political_insider_institutional
-│       │   │           ├── application
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── pipeline.py
-│       │   │           ├── domain
-│       │   │           │   ├── __init__.py
-│       │   │           │   ├── identity.py
-│       │   │           │   └── rules.py
-│       │   │           ├── normalization
-│       │   │           │   ├── __init__.py
-│       │   │           │   ├── public_records.py
-│       │   │           │   ├── sec_13f.py
-│       │   │           │   ├── sec_ownership.py
-│       │   │           │   └── xmlsafe.py
-│       │   │           ├── opportunities
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── detectors.py
-│       │   │           ├── outcomes
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── evaluator.py
-│       │   │           ├── paper
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── translator.py
-│       │   │           ├── persistence
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── ports.py
-│       │   │           ├── presentation
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── dashboard.py
-│       │   │           ├── providers
-│       │   │           │   ├── __init__.py
-│       │   │           │   ├── base.py
-│       │   │           │   └── sec_edgar.py
-│       │   │           ├── scoring
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── features.py
-│       │   │           ├── signals
-│       │   │           │   ├── __init__.py
-│       │   │           │   └── detectors.py
-│       │   │           ├── __init__.py
-│       │   │           ├── canonical.py
-│       │   │           ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
-│       │   │           ├── config.py
-│       │   │           ├── contracts.py
-│       │   │           ├── diagnostics.py
-│       │   │           ├── IMPLEMENTATION_STATUS.md
-│       │   │           ├── manifest.py
-│       │   │           └── README.md
-│       │   ├── alpha_engine_plugins
-│       │   │   └── meta_opportunity_discovery
-│       │   │       ├── adapters
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── core_boundary.py
-│       │   │       ├── alignment
-│       │   │       │   ├── __init__.py
-│       │   │       │   ├── normalize.py
-│       │   │       │   ├── temporal.py
-│       │   │       │   └── units.py
-│       │   │       ├── cli
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── descriptors.py
-│       │   │       ├── diagnostics
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── health.py
-│       │   │       ├── discovery
-│       │   │       │   ├── __init__.py
-│       │   │       │   ├── engine.py
-│       │   │       │   ├── statistics.py
-│       │   │       │   └── templates.py
-│       │   │       ├── evidence
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── independence.py
-│       │   │       ├── fixtures
-│       │   │       │   ├── __init__.py
-│       │   │       │   ├── catalog.py
-│       │   │       │   ├── fake_data.py
-│       │   │       │   └── runner.py
-│       │   │       ├── graph
-│       │   │       │   ├── __init__.py
-│       │   │       │   ├── builder.py
-│       │   │       │   ├── cycle_guard.py
-│       │   │       │   └── domain.py
-│       │   │       ├── identity
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── linker.py
-│       │   │       ├── lifecycle
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── reevaluate.py
-│       │   │       ├── model_assist
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── validator.py
-│       │   │       ├── operations
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── service.py
-│       │   │       ├── opportunities
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── candidates.py
-│       │   │       ├── outcomes
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── evaluator.py
-│       │   │       ├── paper
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── plan.py
-│       │   │       ├── persistence
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── repository.py
-│       │   │       ├── scoring
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── features.py
-│       │   │       ├── tests
-│       │   │       │   ├── __init__.py
-│       │   │       │   ├── test_boundary_and_outcomes.py
-│       │   │       │   ├── test_fixture_catalog.py
-│       │   │       │   ├── test_identity_paper_model_lifecycle.py
-│       │   │       │   ├── test_meta_discovery.py
-│       │   │       │   └── test_operations_and_statistics.py
-│       │   │       ├── ui
-│       │   │       │   ├── __init__.py
-│       │   │       │   └── descriptors.py
-│       │   │       ├── __init__.py
-│       │   │       ├── __main__.py
-│       │   │       ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
-│       │   │       ├── config.py
-│       │   │       ├── contracts.py
-│       │   │       ├── hashing.py
-│       │   │       ├── manifest.py
-│       │   │       └── py.typed
-│       │   └── alpha_engine_prediction_markets
-│       │       ├── migrations
-│       │       │   └── 001_initial.sql
-│       │       ├── providers
-│       │       │   ├── base.py
-│       │       │   ├── fixture.py
-│       │       │   └── kalshi.py
-│       │       ├── __init__.py
-│       │       ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
-│       │       ├── config.py
-│       │       ├── contracts.py
-│       │       ├── diagnostics.py
-│       │       ├── domain.py
-│       │       ├── engine.py
-│       │       ├── errors.py
-│       │       ├── fixtures.py
-│       │       ├── learning.py
-│       │       ├── manifest.py
-│       │       ├── normalization.py
-│       │       ├── operations.py
-│       │       ├── opportunities.py
-│       │       ├── paper.py
-│       │       ├── persistence.py
-│       │       ├── plugin.py
-│       │       ├── presentation.py
-│       │       ├── py.typed
-│       │       ├── relations.py
-│       │       ├── resolution.py
-│       │       ├── scoring.py
-│       │       ├── settlement.py
-│       │       ├── signals.py
-│       │       └── utils.py
-│       └── tests
-│           ├── plugins
-│           │   └── political_insider_institutional
-│           │       ├── fixtures
-│           │       │   ├── sec_13f.xml
-│           │       │   └── sec_form4.xml
-│           │       ├── conftest.py
-│           │       ├── test_detectors.py
-│           │       ├── test_identity.py
-│           │       ├── test_models_rules.py
-│           │       ├── test_normalization.py
-│           │       ├── test_outcomes_diagnostics.py
-│           │       ├── test_persistence.py
-│           │       ├── test_pipeline_paper.py
-│           │       ├── test_provider_and_boundary.py
-│           │       └── test_public_records.py
-│           └── prediction_markets
-│               ├── conftest.py
-│               ├── test_domain_and_config.py
-│               ├── test_fixture_catalog.py
-│               ├── test_integration_contracts.py
-│               ├── test_kalshi_adapter.py
-│               ├── test_normalization.py
-│               ├── test_paper_settlement.py
-│               ├── test_relations_signals_scoring.py
-│               └── test_resolution_learning_schedule.py
+│   ├── 20260817_231705_534208
+│   │   ├── plugins
+│   │   │   ├── ae_arbitrage_cross_market
+│   │   │   │   ├── docs
+│   │   │   │   │   ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
+│   │   │   │   │   ├── FILE_OWNERSHIP.md
+│   │   │   │   │   └── IMPLEMENTATION_NOTES.md
+│   │   │   │   ├── migrations
+│   │   │   │   │   └── 0001_arbitrage_namespace.sql
+│   │   │   │   ├── src
+│   │   │   │   │   └── ae_arbitrage_cross_market
+│   │   │   │   │       ├── application
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── operations.py
+│   │   │   │   │       │   └── service.py
+│   │   │   │   │       ├── contracts
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── dto.py
+│   │   │   │   │       │   └── host.py
+│   │   │   │   │       ├── detectors
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── arbitrage.py
+│   │   │   │   │       ├── diagnostics
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── health.py
+│   │   │   │   │       ├── domain
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── costs.py
+│   │   │   │   │       │   ├── legs.py
+│   │   │   │   │       │   ├── liquidity.py
+│   │   │   │   │       │   ├── payoff.py
+│   │   │   │   │       │   ├── relationships.py
+│   │   │   │   │       │   ├── settlement.py
+│   │   │   │   │       │   └── states.py
+│   │   │   │   │       ├── learning
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── recommendations.py
+│   │   │   │   │       ├── normalization
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── fx.py
+│   │   │   │   │       │   ├── quotes.py
+│   │   │   │   │       │   └── terms.py
+│   │   │   │   │       ├── outcomes
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── evaluator.py
+│   │   │   │   │       ├── paper
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── simulator.py
+│   │   │   │   │       │   └── translator.py
+│   │   │   │   │       ├── persistence
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── memory.py
+│   │   │   │   │       │   └── repositories.py
+│   │   │   │   │       ├── presentation
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── descriptors.py
+│   │   │   │   │       │   └── matrix.py
+│   │   │   │   │       ├── providers
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── base.py
+│   │   │   │   │       │   └── fixture.py
+│   │   │   │   │       ├── resolution
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── resolver.py
+│   │   │   │   │       ├── scoring
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── features.py
+│   │   │   │   │       ├── __init__.py
+│   │   │   │   │       ├── canonical.py
+│   │   │   │   │       ├── configuration.py
+│   │   │   │   │       └── registration.py
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── compatibility
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── test_boundary.py
+│   │   │   │   │   ├── failure_injection
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── test_negative_invariants.py
+│   │   │   │   │   ├── integration
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   ├── test_fixtures.py
+│   │   │   │   │   │   └── test_operations_matrix.py
+│   │   │   │   │   ├── migration
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── test_migration.py
+│   │   │   │   │   ├── resource
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── test_resource.py
+│   │   │   │   │   ├── security
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   └── test_security.py
+│   │   │   │   │   ├── unit
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   ├── test_canonical.py
+│   │   │   │   │   │   ├── test_configuration_learning.py
+│   │   │   │   │   │   ├── test_costs_liquidity.py
+│   │   │   │   │   │   ├── test_payoff_persistence.py
+│   │   │   │   │   │   ├── test_provider_normalizer.py
+│   │   │   │   │   │   └── test_resolution.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   └── helpers.py
+│   │   │   │   ├── manifest.toml
+│   │   │   │   └── pyproject.toml
+│   │   │   ├── ae_prediction_markets
+│   │   │   │   ├── docs
+│   │   │   │   │   └── IMPLEMENTATION_NOTES.md
+│   │   │   │   ├── scripts
+│   │   │   │   │   └── verify.py
+│   │   │   │   ├── src
+│   │   │   │   │   └── ae_prediction_markets
+│   │   │   │   │       ├── application
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── reference_loop.py
+│   │   │   │   │       ├── cli
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── descriptors.py
+│   │   │   │   │       ├── config
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── schema.py
+│   │   │   │   │       ├── detectors
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── opportunities.py
+│   │   │   │   │       │   └── signals.py
+│   │   │   │   │       ├── diagnostics
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── health.py
+│   │   │   │   │       ├── domain
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── enums.py
+│   │   │   │   │       │   ├── models.py
+│   │   │   │   │       │   └── pricing.py
+│   │   │   │   │       ├── fixtures
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── reference.py
+│   │   │   │   │       ├── integration
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── central.py
+│   │   │   │   │       ├── normalization
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── kalshi.py
+│   │   │   │   │       │   └── rules.py
+│   │   │   │   │       ├── operations
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── handlers.py
+│   │   │   │   │       ├── paper
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── fill_policy.py
+│   │   │   │   │       │   └── translator.py
+│   │   │   │   │       ├── persistence
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── memory.py
+│   │   │   │   │       │   └── ports.py
+│   │   │   │   │       ├── providers
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   ├── base.py
+│   │   │   │   │       │   ├── fixture.py
+│   │   │   │   │       │   └── kalshi.py
+│   │   │   │   │       ├── resolution
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── relations.py
+│   │   │   │   │       ├── scoring
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── features.py
+│   │   │   │   │       ├── settlement
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── evaluator.py
+│   │   │   │   │       ├── ui
+│   │   │   │   │       │   ├── __init__.py
+│   │   │   │   │       │   └── descriptors.py
+│   │   │   │   │       ├── __init__.py
+│   │   │   │   │       ├── contracts.py
+│   │   │   │   │       ├── errors.py
+│   │   │   │   │       ├── manifest.py
+│   │   │   │   │       ├── plugin.py
+│   │   │   │   │       └── serialization.py
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── test_config_persistence.py
+│   │   │   │   │   ├── test_contracts.py
+│   │   │   │   │   ├── test_detectors.py
+│   │   │   │   │   ├── test_domain.py
+│   │   │   │   │   ├── test_extended_capabilities.py
+│   │   │   │   │   ├── test_no_core_private_imports.py
+│   │   │   │   │   ├── test_normalization.py
+│   │   │   │   │   ├── test_paper.py
+│   │   │   │   │   ├── test_provider_security.py
+│   │   │   │   │   ├── test_reference_loop.py
+│   │   │   │   │   ├── test_relations.py
+│   │   │   │   │   ├── test_resource_bounds.py
+│   │   │   │   │   └── test_settlement.py
+│   │   │   │   ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
+│   │   │   │   ├── FILE_HASHES.sha256
+│   │   │   │   ├── OWNERSHIP_MANIFEST.json
+│   │   │   │   ├── plugin.toml
+│   │   │   │   ├── pyproject.toml
+│   │   │   │   └── README_BATCH.txt
+│   │   │   ├── ae_public_markets_quant_options
+│   │   │   │   ├── fixtures
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── src
+│   │   │   │   │   └── ae_public_markets_quant_options
+│   │   │   │   │       ├── __init__.py
+│   │   │   │   │       ├── cli.py
+│   │   │   │   │       ├── config.py
+│   │   │   │   │       ├── contracts.py
+│   │   │   │   │       ├── contributions.py
+│   │   │   │   │       ├── corporate_actions.py
+│   │   │   │   │       ├── detectors.py
+│   │   │   │   │       ├── diagnostics.py
+│   │   │   │   │       ├── errors.py
+│   │   │   │   │       ├── features.py
+│   │   │   │   │       ├── fixtures.py
+│   │   │   │   │       ├── manifest.py
+│   │   │   │   │       ├── models.py
+│   │   │   │   │       ├── normalization.py
+│   │   │   │   │       ├── operations.py
+│   │   │   │   │       ├── options.py
+│   │   │   │   │       ├── outcomes.py
+│   │   │   │   │       ├── paper.py
+│   │   │   │   │       ├── persistence.py
+│   │   │   │   │       ├── point_in_time.py
+│   │   │   │   │       ├── providers.py
+│   │   │   │   │       ├── qualification.py
+│   │   │   │   │       ├── research.py
+│   │   │   │   │       ├── rights.py
+│   │   │   │   │       ├── scoring.py
+│   │   │   │   │       ├── security_master.py
+│   │   │   │   │       └── service.py
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── test_config_persistence_contracts.py
+│   │   │   │   │   ├── test_contributions_operations_qualification.py
+│   │   │   │   │   ├── test_corporate_actions.py
+│   │   │   │   │   ├── test_detectors_scoring.py
+│   │   │   │   │   ├── test_features.py
+│   │   │   │   │   ├── test_normalization.py
+│   │   │   │   │   ├── test_options.py
+│   │   │   │   │   ├── test_paper_outcomes.py
+│   │   │   │   │   ├── test_point_in_time.py
+│   │   │   │   │   ├── test_research.py
+│   │   │   │   │   ├── test_rights_provider.py
+│   │   │   │   │   ├── test_security_master.py
+│   │   │   │   │   └── test_service_manifest_diagnostics.py
+│   │   │   │   ├── pyproject.toml
+│   │   │   │   └── README.md
+│   │   │   └── ae_retail_resale_flip
+│   │   │       ├── scripts
+│   │   │       │   └── verify_retail_plugin.py
+│   │   │       ├── src
+│   │   │       │   └── ae_retail_resale_flip
+│   │   │       │       ├── cli
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── descriptors.py
+│   │   │       │       ├── diagnostics
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── health.py
+│   │   │       │       ├── domain
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   ├── economics.py
+│   │   │       │       │   ├── lifecycle.py
+│   │   │       │       │   └── models.py
+│   │   │       │       ├── identity
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   ├── gtin.py
+│   │   │       │       │   └── resolver.py
+│   │   │       │       ├── integration
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── host_bridge.py
+│   │   │       │       ├── normalization
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── normalizer.py
+│   │   │       │       ├── operations
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   ├── descriptors.py
+│   │   │       │       │   └── handlers.py
+│   │   │       │       ├── opportunities
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── detector.py
+│   │   │       │       ├── outcomes
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── evaluator.py
+│   │   │       │       ├── paper
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── simulation.py
+│   │   │       │       ├── persistence
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── repositories.py
+│   │   │       │       ├── providers
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   ├── base.py
+│   │   │       │       │   ├── fixture.py
+│   │   │       │       │   └── manual_import.py
+│   │   │       │       ├── scoring
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── features.py
+│   │   │       │       ├── signals
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── detectors.py
+│   │   │       │       ├── ui
+│   │   │       │       │   ├── __init__.py
+│   │   │       │       │   └── descriptors.py
+│   │   │       │       ├── __init__.py
+│   │   │       │       ├── config.py
+│   │   │       │       ├── contracts.py
+│   │   │       │       ├── manifest.py
+│   │   │       │       └── serialization.py
+│   │   │       ├── tests
+│   │   │       │   ├── contract
+│   │   │       │   │   ├── test_manifest_boundaries.py
+│   │   │       │   │   └── test_operation_descriptors.py
+│   │   │       │   ├── failure
+│   │   │       │   │   └── test_provider_fail_closed.py
+│   │   │       │   ├── fixtures
+│   │   │       │   │   └── golden_scenarios.json
+│   │   │       │   ├── integration
+│   │   │       │   │   ├── test_golden_scenarios.py
+│   │   │       │   │   ├── test_operations_checkpoint.py
+│   │   │       │   │   └── test_pipeline.py
+│   │   │       │   ├── security
+│   │   │       │   │   └── test_untrusted_inputs.py
+│   │   │       │   ├── unit
+│   │   │       │   │   ├── test_config_serialization.py
+│   │   │       │   │   ├── test_economics.py
+│   │   │       │   │   ├── test_gtin_identity.py
+│   │   │       │   │   ├── test_normalization.py
+│   │   │       │   │   ├── test_opportunity_scoring.py
+│   │   │       │   │   ├── test_paper_outcomes.py
+│   │   │       │   │   └── test_signals_lifecycle.py
+│   │   │       │   └── conftest.py
+│   │   │       ├── plugin.yaml
+│   │   │       ├── pyproject.toml
+│   │   │       └── README.md
+│   │   ├── src
+│   │   │   ├── alpha_engine
+│   │   │   │   └── plugins
+│   │   │   │       └── political_insider_institutional
+│   │   │   │           ├── application
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── pipeline.py
+│   │   │   │           ├── domain
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   ├── identity.py
+│   │   │   │           │   └── rules.py
+│   │   │   │           ├── normalization
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   ├── public_records.py
+│   │   │   │           │   ├── sec_13f.py
+│   │   │   │           │   ├── sec_ownership.py
+│   │   │   │           │   └── xmlsafe.py
+│   │   │   │           ├── opportunities
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── detectors.py
+│   │   │   │           ├── outcomes
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── evaluator.py
+│   │   │   │           ├── paper
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── translator.py
+│   │   │   │           ├── persistence
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── ports.py
+│   │   │   │           ├── presentation
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── dashboard.py
+│   │   │   │           ├── providers
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   ├── base.py
+│   │   │   │           │   └── sec_edgar.py
+│   │   │   │           ├── scoring
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── features.py
+│   │   │   │           ├── signals
+│   │   │   │           │   ├── __init__.py
+│   │   │   │           │   └── detectors.py
+│   │   │   │           ├── __init__.py
+│   │   │   │           ├── canonical.py
+│   │   │   │           ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
+│   │   │   │           ├── config.py
+│   │   │   │           ├── contracts.py
+│   │   │   │           ├── diagnostics.py
+│   │   │   │           ├── IMPLEMENTATION_STATUS.md
+│   │   │   │           ├── manifest.py
+│   │   │   │           └── README.md
+│   │   │   ├── alpha_engine_plugins
+│   │   │   │   └── meta_opportunity_discovery
+│   │   │   │       ├── adapters
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── core_boundary.py
+│   │   │   │       ├── alignment
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   ├── normalize.py
+│   │   │   │       │   ├── temporal.py
+│   │   │   │       │   └── units.py
+│   │   │   │       ├── cli
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── descriptors.py
+│   │   │   │       ├── diagnostics
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── health.py
+│   │   │   │       ├── discovery
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   ├── engine.py
+│   │   │   │       │   ├── statistics.py
+│   │   │   │       │   └── templates.py
+│   │   │   │       ├── evidence
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── independence.py
+│   │   │   │       ├── fixtures
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   ├── catalog.py
+│   │   │   │       │   ├── fake_data.py
+│   │   │   │       │   └── runner.py
+│   │   │   │       ├── graph
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   ├── builder.py
+│   │   │   │       │   ├── cycle_guard.py
+│   │   │   │       │   └── domain.py
+│   │   │   │       ├── identity
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── linker.py
+│   │   │   │       ├── lifecycle
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── reevaluate.py
+│   │   │   │       ├── model_assist
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── validator.py
+│   │   │   │       ├── operations
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── service.py
+│   │   │   │       ├── opportunities
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── candidates.py
+│   │   │   │       ├── outcomes
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── evaluator.py
+│   │   │   │       ├── paper
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── plan.py
+│   │   │   │       ├── persistence
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── repository.py
+│   │   │   │       ├── scoring
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── features.py
+│   │   │   │       ├── tests
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   ├── test_boundary_and_outcomes.py
+│   │   │   │       │   ├── test_fixture_catalog.py
+│   │   │   │       │   ├── test_identity_paper_model_lifecycle.py
+│   │   │   │       │   ├── test_meta_discovery.py
+│   │   │   │       │   └── test_operations_and_statistics.py
+│   │   │   │       ├── ui
+│   │   │   │       │   ├── __init__.py
+│   │   │   │       │   └── descriptors.py
+│   │   │   │       ├── __init__.py
+│   │   │   │       ├── __main__.py
+│   │   │   │       ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
+│   │   │   │       ├── config.py
+│   │   │   │       ├── contracts.py
+│   │   │   │       ├── hashing.py
+│   │   │   │       ├── manifest.py
+│   │   │   │       └── py.typed
+│   │   │   └── alpha_engine_prediction_markets
+│   │   │       ├── migrations
+│   │   │       │   └── 001_initial.sql
+│   │   │       ├── providers
+│   │   │       │   ├── base.py
+│   │   │       │   ├── fixture.py
+│   │   │       │   └── kalshi.py
+│   │   │       ├── __init__.py
+│   │   │       ├── CENTRAL_HUB_INTEGRATION_REQUESTS.md
+│   │   │       ├── config.py
+│   │   │       ├── contracts.py
+│   │   │       ├── diagnostics.py
+│   │   │       ├── domain.py
+│   │   │       ├── engine.py
+│   │   │       ├── errors.py
+│   │   │       ├── fixtures.py
+│   │   │       ├── learning.py
+│   │   │       ├── manifest.py
+│   │   │       ├── normalization.py
+│   │   │       ├── operations.py
+│   │   │       ├── opportunities.py
+│   │   │       ├── paper.py
+│   │   │       ├── persistence.py
+│   │   │       ├── plugin.py
+│   │   │       ├── presentation.py
+│   │   │       ├── py.typed
+│   │   │       ├── relations.py
+│   │   │       ├── resolution.py
+│   │   │       ├── scoring.py
+│   │   │       ├── settlement.py
+│   │   │       ├── signals.py
+│   │   │       └── utils.py
+│   │   └── tests
+│   │       ├── plugins
+│   │       │   └── political_insider_institutional
+│   │       │       ├── fixtures
+│   │       │       │   ├── sec_13f.xml
+│   │       │       │   └── sec_form4.xml
+│   │       │       ├── conftest.py
+│   │       │       ├── test_detectors.py
+│   │       │       ├── test_identity.py
+│   │       │       ├── test_models_rules.py
+│   │       │       ├── test_normalization.py
+│   │       │       ├── test_outcomes_diagnostics.py
+│   │       │       ├── test_persistence.py
+│   │       │       ├── test_pipeline_paper.py
+│   │       │       ├── test_provider_and_boundary.py
+│   │       │       └── test_public_records.py
+│   │       └── prediction_markets
+│   │           ├── conftest.py
+│   │           ├── test_domain_and_config.py
+│   │           ├── test_fixture_catalog.py
+│   │           ├── test_integration_contracts.py
+│   │           ├── test_kalshi_adapter.py
+│   │           ├── test_normalization.py
+│   │           ├── test_paper_settlement.py
+│   │           ├── test_relations_signals_scoring.py
+│   │           └── test_resolution_learning_schedule.py
+│   └── 20260818_231434_593578
+│       └── alpha_engine
+│           ├── scripts
+│           │   └── verify
+│           │       └── verify_all.py
+│           ├── src
+│           │   └── alpha_engine
+│           │       ├── api
+│           │       │   └── server.py
+│           │       ├── bootstrap
+│           │       │   └── __init__.py
+│           │       ├── cli
+│           │       │   └── main.py
+│           │       ├── desktop
+│           │       │   └── main.py
+│           │       ├── health
+│           │       │   └── service.py
+│           │       ├── operations
+│           │       │   └── service.py
+│           │       └── reference_loop
+│           │           └── runner.py
+│           └── README.md
 ├── _update_logs
 │   ├── rollback_manifest_20260809_010424_745545.json
 │   ├── rollback_manifest_20260817_231705_534208.json
+│   ├── rollback_manifest_20260818_230320_077647.json
+│   ├── rollback_manifest_20260818_231434_593578.json
 │   ├── update_log_20260809_010424_745545.txt
-│   └── update_log_20260817_231705_534208.txt
+│   ├── update_log_20260817_231705_534208.txt
+│   ├── update_log_20260818_230320_077647.txt
+│   └── update_log_20260818_231434_593578.txt
 ├── alpha_engine
 │   ├── _update_logs
 │   │   ├── rollback_manifest_20260806_225438_757305.json
@@ -596,6 +678,7 @@ Alpha Engine/
 │   │       │   └── __init__.py
 │   │       ├── bootstrap
 │   │       │   ├── __init__.py
+│   │       │   ├── lifecycle.py
 │   │       │   └── profile.py
 │   │       ├── budgets
 │   │       │   ├── __init__.py
@@ -656,6 +739,7 @@ Alpha Engine/
 │   │       │   └── service.py
 │   │       ├── plugin_host
 │   │       │   ├── __init__.py
+│   │       │   ├── discovery.py
 │   │       │   ├── pdk.py
 │   │       │   └── registry.py
 │   │       ├── providers
@@ -689,16 +773,39 @@ Alpha Engine/
 │   │       │   ├── db.py
 │   │       │   ├── models.py
 │   │       │   └── uow.py
+│   │       ├── verification
+│   │       │   ├── __init__.py
+│   │       │   ├── __main__.py
+│   │       │   ├── feature_registry.json
+│   │       │   ├── models.py
+│   │       │   ├── registry.py
+│   │       │   ├── runner.py
+│   │       │   └── traceability_check.py
 │   │       └── __init__.py
 │   ├── tests
+│   │   ├── verification
+│   │   │   ├── test_traceability.py
+│   │   │   └── test_verifier.py
 │   │   ├── test_kernel.py
 │   │   ├── test_operations.py
 │   │   ├── test_permissions_budget.py
 │   │   ├── test_plugin_contract.py
+│   │   ├── test_plugin_discovery.py
 │   │   ├── test_reference_loop.py
+│   │   ├── test_root_package.py
+│   │   ├── test_runtime_lifecycle.py
+│   │   ├── test_runtime_reference.py
+│   │   ├── test_runtime_server_smoke.py
 │   │   └── test_scheduler_outbox_notifications.py
 │   ├── pyproject.toml
 │   └── README.md
+├── personal_alpha_engine_workspace.egg-info
+│   ├── dependency_links.txt
+│   ├── entry_points.txt
+│   ├── PKG-INFO
+│   ├── requires.txt
+│   ├── SOURCES.txt
+│   └── top_level.txt
 ├── plugins
 │   ├── ae_arbitrage_cross_market
 │   │   ├── docs
@@ -1216,6 +1323,8 @@ Alpha Engine/
 │       ├── test_paper_settlement.py
 │       ├── test_relations_signals_scoring.py
 │       └── test_resolution_learning_schedule.py
+├── pyproject.toml
+├── RUNBOOK.md
 └── text1
 ```
 
@@ -1223,6 +1332,56 @@ Alpha Engine/
 
 | File | Size | Include Candidate? | Reason |
 |---|---:|---|---|
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V00-VERIFIER-SELFTEST.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V00-VERIFIER-SELFTEST.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V01-IMPORT-SANITY.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V01-IMPORT-SANITY.stdout.txt` | 11 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V03-CORE-TESTS.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V03-CORE-TESTS.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V10-PLUGIN-DISCOVERY.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V10-PLUGIN-DISCOVERY.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-ARBITRAGE.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-ARBITRAGE.stdout.txt` | 101 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PREDICTION.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PREDICTION.stdout.txt` | 101 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PUBLIC-MARKETS.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PUBLIC-MARKETS.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-RETAIL.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-RETAIL.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V12-REFERENCE-LOOP.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V12-REFERENCE-LOOP.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V13-LIFECYCLE.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V13-LIFECYCLE.stdout.txt` | 1.6 KB | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V18-TRACEABILITY.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\raw\V18-TRACEABILITY.stdout.txt` | 17 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\verification.json` | 10.9 KB | Yes | Config file |
+| `.alpha_verification_evidence\20260819T032252.064299Z\VERIFICATION_REPORT.md` | 1.1 KB | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V00-VERIFIER-SELFTEST.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V00-VERIFIER-SELFTEST.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V01-IMPORT-SANITY.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V01-IMPORT-SANITY.stdout.txt` | 11 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V03-CORE-TESTS.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V03-CORE-TESTS.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V10-PLUGIN-DISCOVERY.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V10-PLUGIN-DISCOVERY.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-ARBITRAGE.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-ARBITRAGE.stdout.txt` | 101 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PREDICTION.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PREDICTION.stdout.txt` | 101 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PUBLIC-MARKETS.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PUBLIC-MARKETS.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-RETAIL.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-RETAIL.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V12-REFERENCE-LOOP.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V12-REFERENCE-LOOP.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V13-LIFECYCLE.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V13-LIFECYCLE.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V16-ROOT-PACKAGE.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V16-ROOT-PACKAGE.stdout.txt` | 81 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V18-TRACEABILITY.stderr.txt` | 0 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\raw\V18-TRACEABILITY.stdout.txt` | 17 B | Yes | Doc/text file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\verification.json` | 17.9 KB | Yes | Config file |
+| `.alpha_verification_evidence\20260819T032341.571603Z\VERIFICATION_REPORT.md` | 2.5 KB | Yes | Doc/text file |
 | `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\CENTRAL_HUB_INTEGRATION_REQUESTS.md` | 5.9 KB | Yes | Doc/text file |
 | `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\FILE_OWNERSHIP.md` | 656 B | Yes | Doc/text file |
 | `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\IMPLEMENTATION_NOTES.md` | 1.4 KB | Yes | Doc/text file |
@@ -1614,10 +1773,23 @@ Alpha Engine/
 | `_update_backups\20260817_231705_534208\tests\prediction_markets\test_paper_settlement.py` | 5.3 KB | Yes | Source code file |
 | `_update_backups\20260817_231705_534208\tests\prediction_markets\test_relations_signals_scoring.py` | 4.8 KB | Yes | Source code file |
 | `_update_backups\20260817_231705_534208\tests\prediction_markets\test_resolution_learning_schedule.py` | 2.1 KB | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\README.md` | 1.4 KB | Yes | Config file |
+| `_update_backups\20260818_231434_593578\alpha_engine\scripts\verify\verify_all.py` | 367 B | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\api\server.py` | 1.8 KB | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\bootstrap\__init__.py` | 0 B | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\cli\main.py` | 483 B | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\desktop\main.py` | 870 B | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\health\service.py` | 514 B | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\operations\service.py` | 1.5 KB | Yes | Source code file |
+| `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\reference_loop\runner.py` | 4.5 KB | Yes | Source code file |
 | `_update_logs\rollback_manifest_20260809_010424_745545.json` | 195.8 KB | No | Config file larger than per-file cap `195.3 KB` |
 | `_update_logs\rollback_manifest_20260817_231705_534208.json` | 205.0 KB | No | Config file larger than per-file cap `195.3 KB` |
+| `_update_logs\rollback_manifest_20260818_230320_077647.json` | 98.1 KB | Yes | Config file |
+| `_update_logs\rollback_manifest_20260818_231434_593578.json` | 15.5 KB | Yes | Config file |
 | `_update_logs\update_log_20260809_010424_745545.txt` | 41.0 KB | Yes | Doc/text file |
 | `_update_logs\update_log_20260817_231705_534208.txt` | 32.1 KB | Yes | Doc/text file |
+| `_update_logs\update_log_20260818_230320_077647.txt` | 30.7 KB | Yes | Doc/text file |
+| `_update_logs\update_log_20260818_231434_593578.txt` | 2.8 KB | Yes | Doc/text file |
 | `alpha_engine\_update_logs\rollback_manifest_20260806_225438_757305.json` | 42.8 KB | Yes | Config file |
 | `alpha_engine\_update_logs\update_log_20260806_225438_757305.txt` | 6.2 KB | Yes | Doc/text file |
 | `alpha_engine\docs\architecture\CYLINDER_CONNECTION_GUIDE.md` | 826 B | Yes | Doc/text file |
@@ -1625,20 +1797,21 @@ Alpha Engine/
 | `alpha_engine\docs\contracts\PLUGIN_DEVELOPMENT_KIT_1.0_DRAFT.md` | 982 B | Yes | Doc/text file |
 | `alpha_engine\docs\decisions\ADR-0001-implementation-freeze.md` | 753 B | Yes | Doc/text file |
 | `alpha_engine\pyproject.toml` | 941 B | Yes | Config file |
-| `alpha_engine\README.md` | 1.4 KB | Yes | Config file |
-| `alpha_engine\scripts\verify\verify_all.py` | 367 B | Yes | Source code file |
+| `alpha_engine\README.md` | 1.6 KB | Yes | Config file |
+| `alpha_engine\scripts\verify\verify_all.py` | 194 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\__init__.py` | 22 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\api\__init__.py` | 0 B | Yes | Source code file |
-| `alpha_engine\src\alpha_engine\api\server.py` | 1.8 KB | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\api\server.py` | 4.6 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\artifacts\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\artifacts\store.py` | 1.3 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\audit\__init__.py` | 0 B | Yes | Source code file |
-| `alpha_engine\src\alpha_engine\bootstrap\__init__.py` | 0 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\bootstrap\__init__.py` | 259 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\bootstrap\lifecycle.py` | 4.6 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\bootstrap\profile.py` | 607 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\budgets\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\budgets\service.py` | 1.6 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\cli\__init__.py` | 0 B | Yes | Source code file |
-| `alpha_engine\src\alpha_engine\cli\main.py` | 483 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\cli\main.py` | 6.8 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\config\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\config\service.py` | 767 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\contracts\__init__.py` | 0 B | Yes | Source code file |
@@ -1646,13 +1819,13 @@ Alpha Engine/
 | `alpha_engine\src\alpha_engine\data_queries\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\data_queries\gateway.py` | 768 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\desktop\__init__.py` | 0 B | Yes | Source code file |
-| `alpha_engine\src\alpha_engine\desktop\main.py` | 870 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\desktop\main.py` | 2.8 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\evaluation\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\evaluation\service.py` | 800 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\evidence\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\evidence\service.py` | 715 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\health\__init__.py` | 0 B | Yes | Source code file |
-| `alpha_engine\src\alpha_engine\health\service.py` | 514 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\health\service.py` | 3.8 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\kernel\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\kernel\errors.py` | 657 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\kernel\ids.py` | 1.4 KB | Yes | Source code file |
@@ -1668,7 +1841,7 @@ Alpha Engine/
 | `alpha_engine\src\alpha_engine\operations\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\operations\outbox.py` | 1.4 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\operations\scheduler.py` | 1.3 KB | Yes | Source code file |
-| `alpha_engine\src\alpha_engine\operations\service.py` | 1.5 KB | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\operations\service.py` | 3.1 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\opportunities\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\opportunities\service.py` | 780 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\outcomes\__init__.py` | 0 B | Yes | Source code file |
@@ -1676,6 +1849,7 @@ Alpha Engine/
 | `alpha_engine\src\alpha_engine\permissions\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\permissions\service.py` | 1.6 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\plugin_host\__init__.py` | 0 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\plugin_host\discovery.py` | 4.9 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\plugin_host\pdk.py` | 632 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\plugin_host\registry.py` | 1.1 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\providers\__init__.py` | 0 B | Yes | Source code file |
@@ -1686,7 +1860,7 @@ Alpha Engine/
 | `alpha_engine\src\alpha_engine\ranking\service.py` | 1.3 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\reference_loop\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\reference_loop\fixture.py` | 1.7 KB | Yes | Source code file |
-| `alpha_engine\src\alpha_engine\reference_loop\runner.py` | 4.5 KB | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\reference_loop\runner.py` | 8.0 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\registries\__init__.py` | 0 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\registries\service.py` | 901 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\reviews\__init__.py` | 0 B | Yes | Source code file |
@@ -1700,12 +1874,32 @@ Alpha Engine/
 | `alpha_engine\src\alpha_engine\storage\db.py` | 640 B | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\storage\models.py` | 5.7 KB | Yes | Source code file |
 | `alpha_engine\src\alpha_engine\storage\uow.py` | 568 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\verification\__init__.py` | 69 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\verification\__main__.py` | 511 B | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\verification\feature_registry.json` | 5.6 KB | Yes | Config file |
+| `alpha_engine\src\alpha_engine\verification\models.py` | 1.2 KB | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\verification\registry.py` | 11.7 KB | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\verification\runner.py` | 13.1 KB | Yes | Source code file |
+| `alpha_engine\src\alpha_engine\verification\traceability_check.py` | 1.9 KB | Yes | Source code file |
 | `alpha_engine\tests\test_kernel.py` | 427 B | Yes | Source code file |
 | `alpha_engine\tests\test_operations.py` | 457 B | Yes | Source code file |
 | `alpha_engine\tests\test_permissions_budget.py` | 808 B | Yes | Source code file |
 | `alpha_engine\tests\test_plugin_contract.py` | 559 B | Yes | Source code file |
+| `alpha_engine\tests\test_plugin_discovery.py` | 808 B | Yes | Source code file |
 | `alpha_engine\tests\test_reference_loop.py` | 258 B | Yes | Source code file |
+| `alpha_engine\tests\test_root_package.py` | 1.3 KB | Yes | Source code file |
+| `alpha_engine\tests\test_runtime_lifecycle.py` | 2.0 KB | Yes | Source code file |
+| `alpha_engine\tests\test_runtime_reference.py` | 1.3 KB | Yes | Source code file |
+| `alpha_engine\tests\test_runtime_server_smoke.py` | 3.3 KB | Yes | Source code file |
 | `alpha_engine\tests\test_scheduler_outbox_notifications.py` | 900 B | Yes | Source code file |
+| `alpha_engine\tests\verification\test_traceability.py` | 1.9 KB | Yes | Source code file |
+| `alpha_engine\tests\verification\test_verifier.py` | 3.9 KB | Yes | Source code file |
+| `personal_alpha_engine_workspace.egg-info\dependency_links.txt` | 1 B | Yes | Doc/text file |
+| `personal_alpha_engine_workspace.egg-info\entry_points.txt` | 158 B | Yes | Doc/text file |
+| `personal_alpha_engine_workspace.egg-info\PKG-INFO` | 639 B | Yes | Other readable text file |
+| `personal_alpha_engine_workspace.egg-info\requires.txt` | 181 B | Yes | Doc/text file |
+| `personal_alpha_engine_workspace.egg-info\SOURCES.txt` | 17.4 KB | Yes | Doc/text file |
+| `personal_alpha_engine_workspace.egg-info\top_level.txt` | 115 B | Yes | Doc/text file |
 | `plugins\ae_arbitrage_cross_market\docs\CENTRAL_HUB_INTEGRATION_REQUESTS.md` | 5.9 KB | Yes | Doc/text file |
 | `plugins\ae_arbitrage_cross_market\docs\FILE_OWNERSHIP.md` | 656 B | Yes | Doc/text file |
 | `plugins\ae_arbitrage_cross_market\docs\IMPLEMENTATION_NOTES.md` | 1.4 KB | Yes | Doc/text file |
@@ -1953,6 +2147,8 @@ Alpha Engine/
 | `plugins\ae_retail_resale_flip\tests\unit\test_opportunity_scoring.py` | 3.7 KB | Yes | Source code file |
 | `plugins\ae_retail_resale_flip\tests\unit\test_paper_outcomes.py` | 2.4 KB | Yes | Source code file |
 | `plugins\ae_retail_resale_flip\tests\unit\test_signals_lifecycle.py` | 1.4 KB | Yes | Source code file |
+| `pyproject.toml` | 1.2 KB | Yes | Config file |
+| `RUNBOOK.md` | 2.9 KB | Yes | Doc/text file |
 | `src\alpha_engine\plugins\political_insider_institutional\__init__.py` | 349 B | Yes | Source code file |
 | `src\alpha_engine\plugins\political_insider_institutional\application\__init__.py` | 111 B | Yes | Source code file |
 | `src\alpha_engine\plugins\political_insider_institutional\application\pipeline.py` | 2.6 KB | Yes | Source code file |
@@ -8009,11 +8205,134 @@ Alpha Engine/
 - `test_learning_requires_minimum_sample()`
 - `test_schedules_are_declarative_and_disabled_by_default()`
 
-### `alpha_engine\scripts\verify\verify_all.py`
+### `_update_backups\20260818_231434_593578\alpha_engine\scripts\verify\verify_all.py`
 
 **Imports:**
 - `subprocess`
 - `sys`
+
+**Classes:** None detected.
+
+**Top-level functions:** None detected.
+
+### `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\api\server.py`
+
+**Imports:**
+- `from alpha_engine.storage.bootstrap import initialize`
+- `from alpha_engine.storage.models import CoreRecord, OperationRow`
+- `from fastapi import FastAPI, Header, HTTPException`
+- `from pydantic import BaseModel`
+- `os`
+- `secrets`
+- `uvicorn`
+
+**Classes:**
+- `QueryBody`
+
+**Top-level functions:**
+- `create_app()`
+- `main()`
+
+### `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\bootstrap\__init__.py`
+
+**Imports:** None detected.
+
+**Classes:** None detected.
+
+**Top-level functions:** None detected.
+
+### `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\cli\main.py`
+
+**Imports:**
+- `argparse`
+- `from alpha_engine.reference_loop.runner import run`
+- `json`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `main()`
+
+### `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\desktop\main.py`
+
+**Imports:**
+- `from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QLabel, QWidget, QVBoxLayout`
+- `sys`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `main()`
+
+### `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\health\service.py`
+
+**Imports:**
+- `from pathlib import Path`
+- `from sqlalchemy import text`
+
+**Classes:**
+- `HealthService`
+  - `__init__()`
+  - `snapshot()`
+
+**Top-level functions:** None detected.
+
+### `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\operations\service.py`
+
+**Imports:**
+- `from alpha_engine.kernel.errors import IdempotencyConflict`
+- `from alpha_engine.kernel.ids import OperationId`
+- `from alpha_engine.kernel.serialization import canonical_hash, canonical_json`
+- `from alpha_engine.storage.models import OperationRow, JournalRow`
+- `from datetime import datetime, timezone`
+
+**Classes:**
+- `OperationService`
+  - `__init__()`
+  - `admit()`
+  - `transition()`
+
+**Top-level functions:** None detected.
+
+### `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\reference_loop\runner.py`
+
+**Imports:**
+- `argparse`
+- `from __future__ import annotations`
+- `from alpha_engine.artifacts.store import ArtifactStore`
+- `from alpha_engine.budgets.service import BudgetService`
+- `from alpha_engine.contracts.plugin import ProviderRequest`
+- `from alpha_engine.data_queries.gateway import DataQueryGateway`
+- `from alpha_engine.evaluation.service import EvaluationService`
+- `from alpha_engine.evidence.service import EvidenceService`
+- `from alpha_engine.learning.service import LearningService`
+- `from alpha_engine.observations.service import ObservationService`
+- `from alpha_engine.operations.service import OperationService`
+- `from alpha_engine.opportunities.service import OpportunityService`
+- `from alpha_engine.outcomes.service import OutcomeService`
+- `from alpha_engine.permissions.service import PermissionService`
+- `from alpha_engine.providers.registry import ProviderRegistry`
+- `from alpha_engine.radar.service import RadarService`
+- `from alpha_engine.ranking.service import RankingService`
+- `from alpha_engine.reviews.service import DecisionService`
+- `from alpha_engine.signals.service import SignalService`
+- `from alpha_engine.simulation.service import SimulationService`
+- `from alpha_engine.storage.bootstrap import initialize`
+- `from decimal import Decimal`
+- `from fixture import FixtureProvider, FixtureNormalizer, FixtureSignalDetector, FixtureOpportunityDetector`
+- `from pathlib import Path`
+- `json`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `run()`
+- `main()`
+
+### `alpha_engine\scripts\verify\verify_all.py`
+
+**Imports:**
+- `from alpha_engine.verification.runner import run_verification`
 
 **Classes:** None detected.
 
@@ -8038,16 +8357,19 @@ Alpha Engine/
 ### `alpha_engine\src\alpha_engine\api\server.py`
 
 **Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.health.service import HealthService`
+- `from alpha_engine.reference_loop.runner import run_with_runtime`
 - `from alpha_engine.storage.bootstrap import initialize`
 - `from alpha_engine.storage.models import CoreRecord, OperationRow`
 - `from fastapi import FastAPI, Header, HTTPException`
-- `from pydantic import BaseModel`
+- `from pathlib import Path`
+- `from typing import Any, Callable`
 - `os`
 - `secrets`
 - `uvicorn`
 
-**Classes:**
-- `QueryBody`
+**Classes:** None detected.
 
 **Top-level functions:**
 - `create_app()`
@@ -8089,11 +8411,41 @@ Alpha Engine/
 
 ### `alpha_engine\src\alpha_engine\bootstrap\__init__.py`
 
-**Imports:** None detected.
+**Imports:**
+- `from lifecycle import RuntimeAlreadyRunning, RuntimeLease, RuntimeLeaseError`
+- `from profile import ProfilePaths, ensure_profile`
 
 **Classes:** None detected.
 
 **Top-level functions:** None detected.
+
+### `alpha_engine\src\alpha_engine\bootstrap\lifecycle.py`
+
+**Imports:**
+- `ctypes`
+- `from __future__ import annotations`
+- `from dataclasses import dataclass`
+- `from datetime import datetime, timezone`
+- `from pathlib import Path`
+- `from typing import Any`
+- `json`
+- `os`
+
+**Classes:**
+- `RuntimeAlreadyRunning`
+- `RuntimeLeaseError`
+- `RuntimeLease`
+  - `lock_path()`
+  - `discovery_path()`
+  - `_read_json()`
+  - `read_discovery()`
+  - `acquire()`
+  - `publish()`
+  - `release()`
+
+**Top-level functions:**
+- `_utc_now()`
+- `process_is_running()`
 
 ### `alpha_engine\src\alpha_engine\bootstrap\profile.py`
 
@@ -8144,12 +8496,29 @@ Alpha Engine/
 
 **Imports:**
 - `argparse`
+- `from __future__ import annotations`
+- `from alpha_engine.bootstrap.lifecycle import RuntimeAlreadyRunning`
 - `from alpha_engine.reference_loop.runner import run`
+- `from alpha_engine.reference_loop.runner import run_with_runtime`
+- `from alpha_engine.runtime.application import build_runtime`
+- `from alpha_engine.runtime.control import read_runtime_discovery, request_runtime, serve_runtime`
+- `from alpha_engine.verification.runner import run_verification`
+- `from pathlib import Path`
 - `json`
+- `os`
+- `shutil`
+- `sys`
 
 **Classes:** None detected.
 
 **Top-level functions:**
+- `_default_profile()`
+- `_print()`
+- `_add_profile()`
+- `build_parser()`
+- `_start()`
+- `_demo()`
+- `_status()`
 - `main()`
 
 ### `alpha_engine\src\alpha_engine\config\__init__.py`
@@ -8247,12 +8616,18 @@ Alpha Engine/
 ### `alpha_engine\src\alpha_engine\desktop\main.py`
 
 **Imports:**
-- `from PySide6.QtWidgets import QApplication, QMainWindow, QTabWidget, QLabel, QWidget, QVBoxLayout`
+- `from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QTabWidget, QVBoxLayout, QWidget`
+- `from __future__ import annotations`
+- `from alpha_engine.storage.models import CoreRecord`
+- `from typing import Any`
+- `json`
 - `sys`
 
 **Classes:** None detected.
 
 **Top-level functions:**
+- `_record_counts()`
+- `run_desktop()`
 - `main()`
 
 ### `alpha_engine\src\alpha_engine\evaluation\__init__.py`
@@ -8312,12 +8687,16 @@ Alpha Engine/
 ### `alpha_engine\src\alpha_engine\health\service.py`
 
 **Imports:**
+- `from __future__ import annotations`
 - `from pathlib import Path`
 - `from sqlalchemy import text`
+- `from typing import Any`
+- `os`
 
 **Classes:**
 - `HealthService`
   - `__init__()`
+  - `_writable_directory()`
   - `snapshot()`
 
 **Top-level functions:** None detected.
@@ -8526,17 +8905,21 @@ Alpha Engine/
 ### `alpha_engine\src\alpha_engine\operations\service.py`
 
 **Imports:**
+- `from __future__ import annotations`
 - `from alpha_engine.kernel.errors import IdempotencyConflict`
 - `from alpha_engine.kernel.ids import OperationId`
 - `from alpha_engine.kernel.serialization import canonical_hash, canonical_json`
-- `from alpha_engine.storage.models import OperationRow, JournalRow`
+- `from alpha_engine.storage.models import JournalRow, OperationRow`
 - `from datetime import datetime, timezone`
+- `from typing import Any`
+- `json`
 
 **Classes:**
 - `OperationService`
   - `__init__()`
   - `admit()`
   - `transition()`
+  - `snapshot()`
 
 **Top-level functions:** None detected.
 
@@ -8618,6 +9001,24 @@ Alpha Engine/
 **Classes:** None detected.
 
 **Top-level functions:** None detected.
+
+### `alpha_engine\src\alpha_engine\plugin_host\discovery.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from dataclasses import dataclass`
+- `from pathlib import Path`
+- `from typing import Any`
+- `re`
+- `tomllib`
+
+**Classes:**
+- `PluginCandidate`
+
+**Top-level functions:**
+- `_parse_simple_yaml()`
+- `_python_manifest_metadata()`
+- `discover_plugin_candidates()`
 
 ### `alpha_engine\src\alpha_engine\plugin_host\pdk.py`
 
@@ -8752,32 +9153,42 @@ Alpha Engine/
 - `argparse`
 - `from __future__ import annotations`
 - `from alpha_engine.artifacts.store import ArtifactStore`
+- `from alpha_engine.bootstrap.profile import ensure_profile`
 - `from alpha_engine.budgets.service import BudgetService`
 - `from alpha_engine.contracts.plugin import ProviderRequest`
 - `from alpha_engine.data_queries.gateway import DataQueryGateway`
 - `from alpha_engine.evaluation.service import EvaluationService`
 - `from alpha_engine.evidence.service import EvidenceService`
+- `from alpha_engine.health.service import HealthService`
 - `from alpha_engine.learning.service import LearningService`
+- `from alpha_engine.notifications.service import NotificationService`
 - `from alpha_engine.observations.service import ObservationService`
+- `from alpha_engine.operations.outbox import OutboxService`
+- `from alpha_engine.operations.scheduler import SchedulerService`
 - `from alpha_engine.operations.service import OperationService`
 - `from alpha_engine.opportunities.service import OpportunityService`
 - `from alpha_engine.outcomes.service import OutcomeService`
 - `from alpha_engine.permissions.service import PermissionService`
+- `from alpha_engine.plugin_host.registry import PluginRegistry`
 - `from alpha_engine.providers.registry import ProviderRegistry`
 - `from alpha_engine.radar.service import RadarService`
 - `from alpha_engine.ranking.service import RankingService`
+- `from alpha_engine.registries.service import RegistryService`
 - `from alpha_engine.reviews.service import DecisionService`
+- `from alpha_engine.runtime.application import ApplicationRuntime, build_runtime`
 - `from alpha_engine.signals.service import SignalService`
 - `from alpha_engine.simulation.service import SimulationService`
 - `from alpha_engine.storage.bootstrap import initialize`
 - `from decimal import Decimal`
-- `from fixture import FixtureProvider, FixtureNormalizer, FixtureSignalDetector, FixtureOpportunityDetector`
+- `from fixture import FixtureNormalizer, FixtureOpportunityDetector, FixtureProvider, FixtureSignalDetector`
 - `from pathlib import Path`
 - `json`
+- `tempfile`
 
 **Classes:** None detected.
 
 **Top-level functions:**
+- `run_with_runtime()`
 - `run()`
 - `main()`
 
@@ -8948,6 +9359,107 @@ Alpha Engine/
 
 **Top-level functions:** None detected.
 
+### `alpha_engine\src\alpha_engine\verification\__init__.py`
+
+**Imports:**
+- `from runner import run_verification`
+
+**Classes:** None detected.
+
+**Top-level functions:** None detected.
+
+### `alpha_engine\src\alpha_engine\verification\__main__.py`
+
+**Imports:**
+- `argparse`
+- `from __future__ import annotations`
+- `from runner import run_verification`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `main()`
+
+### `alpha_engine\src\alpha_engine\verification\models.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from dataclasses import asdict, dataclass, field`
+- `from typing import Any`
+
+**Classes:**
+- `CheckSpec`
+- `CheckResult`
+  - `as_dict()`
+
+**Top-level functions:** None detected.
+
+### `alpha_engine\src\alpha_engine\verification\registry.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from models import CheckSpec`
+- `from pathlib import Path`
+- `from typing import Any`
+- `json`
+- `os`
+- `sys`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `repository_root()`
+- `_core_env()`
+- `build_check_registry()`
+- `feature_registry_path()`
+- `load_feature_registry()`
+- `validate_feature_registry()`
+- `checks_for_feature()`
+
+### `alpha_engine\src\alpha_engine\verification\runner.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine import __version__`
+- `from collections import Counter`
+- `from datetime import datetime, timezone`
+- `from models import CheckResult, CheckSpec`
+- `from pathlib import Path`
+- `from registry import build_check_registry, checks_for_feature, repository_root, validate_feature_registry`
+- `from typing import Iterable`
+- `json`
+- `os`
+- `shutil`
+- `subprocess`
+- `sys`
+- `time`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `_now()`
+- `_run_id()`
+- `_safe_name()`
+- `execute_check()`
+- `_readiness()`
+- `_write_report()`
+- `_expand_with_prerequisites()`
+- `run_verification()`
+
+### `alpha_engine\src\alpha_engine\verification\traceability_check.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from pathlib import Path`
+- `from registry import repository_root, validate_feature_registry`
+- `json`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `validate_traceability()`
+- `main()`
+
 ### `alpha_engine\tests\test_kernel.py`
 
 **Imports:**
@@ -9002,6 +9514,18 @@ Alpha Engine/
 **Top-level functions:**
 - `test_plugin_manifest_boundary()`
 
+### `alpha_engine\tests\test_plugin_discovery.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.plugin_host.discovery import discover_plugin_candidates`
+- `from alpha_engine.verification.registry import repository_root`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `test_discovery_exposes_duplicate_and_contract_blockers_without_private_imports()`
+
 ### `alpha_engine\tests\test_reference_loop.py`
 
 **Imports:**
@@ -9011,6 +9535,74 @@ Alpha Engine/
 
 **Top-level functions:**
 - `test_reference_loop()`
+
+### `alpha_engine\tests\test_root_package.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.verification.registry import repository_root`
+- `from pathlib import Path`
+- `subprocess`
+- `sys`
+- `zipfile`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `test_repository_root_builds_one_source_development_wheel()`
+
+### `alpha_engine\tests\test_runtime_lifecycle.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.bootstrap.lifecycle import RuntimeAlreadyRunning`
+- `from alpha_engine.runtime.application import build_runtime`
+- `from pathlib import Path`
+- `json`
+- `pytest`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `test_runtime_lifecycle_refuses_second_instance_and_cleans_discovery()`
+- `test_runtime_recovers_stale_lock_and_reports_it()`
+- `test_health_cannot_claim_ready_when_required_artifact_path_is_missing()`
+
+### `alpha_engine\tests\test_runtime_reference.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.reference_loop.runner import run_with_runtime`
+- `from alpha_engine.runtime.application import build_runtime`
+- `from alpha_engine.storage.models import CoreRecord, OperationRow`
+- `from pathlib import Path`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `test_composed_reference_loop_is_idempotent()`
+
+### `alpha_engine\tests\test_runtime_server_smoke.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.runtime.application import build_runtime`
+- `from alpha_engine.runtime.control import read_runtime_discovery, request_runtime`
+- `from pathlib import Path`
+- `os`
+- `socket`
+- `subprocess`
+- `sys`
+- `time`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `_free_port()`
+- `_wait_discovery()`
+- `_start()`
+- `test_real_headless_start_status_second_instance_and_stop()`
+- `test_forced_termination_is_reconciled_on_next_start()`
 
 ### `alpha_engine\tests\test_scheduler_outbox_notifications.py`
 
@@ -9025,6 +9617,41 @@ Alpha Engine/
 
 **Top-level functions:**
 - `test_scheduler_outbox_and_notification()`
+
+### `alpha_engine\tests\verification\test_traceability.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.verification.registry import repository_root, validate_feature_registry`
+- `from pathlib import Path`
+- `json`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `test_feature_registry_references_executable_checks()`
+- `test_supplemental_purpose_traceability_accounts_for_all_gap_ids()`
+- `test_provider_service_decision_ledger_reconciles_historical_candidates()`
+- `test_defect_ledger_keeps_stable_root_cause_and_closure_fields()`
+
+### `alpha_engine\tests\verification\test_verifier.py`
+
+**Imports:**
+- `from __future__ import annotations`
+- `from alpha_engine.verification.models import CheckResult, CheckSpec`
+- `from alpha_engine.verification.runner import _expand_with_prerequisites, _readiness, execute_check`
+- `from pathlib import Path`
+- `sys`
+
+**Classes:** None detected.
+
+**Top-level functions:**
+- `_spec()`
+- `test_execute_check_classifies_pass_failure_and_continues()`
+- `test_execute_check_blocks_only_on_declared_prerequisite()`
+- `test_timeout_missing_tool_and_zero_tests_are_not_green()`
+- `test_required_statuses_drive_readiness()`
+- `test_feature_selection_expands_declared_prerequisites()`
 
 ### `plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\__init__.py`
 
@@ -15277,7 +15904,65 @@ Boundary: this code deliberately does **not** implement a second scheduler, evid
 Current integration status: self-contained cylinder logic is runnable and tested. Repository activation remains blocked until the exact Central Hub source baseline and frozen PDK/public contracts are supplied and the integration requests in `CENTRAL_HUB_INTEGRATION_REQUESTS.md` are dispositioned.
 ```
 
-### File: `alpha_engine\README.md`
+### File: `pyproject.toml`
+
+- Size: `1.2 KB`
+
+```toml
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-alpha-engine-workspace"
+version = "0.1.0"
+description = "Authoritative source-development workspace for the Personal Alpha Engine"
+requires-python = ">=3.12"
+dependencies = [
+  "pydantic>=2.10,<3",
+  "SQLAlchemy>=2.0,<3",
+  "alembic>=1.14,<2",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1"
+]
+
+[project.optional-dependencies]
+desktop = ["PySide6>=6.8,<7"]
+dev = ["pytest>=8,<10", "hypothesis>=6,<7", "mypy>=1.14,<2", "ruff>=0.9,<1"]
+
+[project.scripts]
+alpha = "alpha_engine.cli.main:main"
+alpha-core = "alpha_engine.api.server:main"
+alpha-reference-loop = "alpha_engine.reference_loop.runner:main"
+
+[tool.setuptools.packages.find]
+where = [
+  "alpha_engine/src",
+  "plugins/ae_arbitrage_cross_market/src",
+  "plugins/ae_prediction_markets/src",
+  "plugins/ae_public_markets_quant_options/src",
+  "plugins/ae_retail_resale_flip/src"
+]
+include = ["alpha_engine*", "ae_*"]
+namespaces = true
+
+[tool.pytest.ini_options]
+testpaths = ["alpha_engine/tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[tool.setuptools.package-data]
+"alpha_engine.verification" = ["feature_registry.json"]
+```
+
+### File: `_update_backups\20260818_231434_593578\alpha_engine\README.md`
 
 - Size: `1.4 KB`
 
@@ -15303,6 +15988,33 @@ pytest
 ```
 
 The reference loop is synthetic and is not investment, market, political, or commercial advice.
+```
+
+### File: `alpha_engine\README.md`
+
+- Size: `1.6 KB`
+
+```markdown
+> **Repository-root convergence note (2026-08-18):** the repository-root `pyproject.toml` and `RUNBOOK.md` are now the authoritative source-development install/runtime doorway. This nested project remains the Central Hub component source/configuration and its lower-level commands are retained for compatibility and focused testing.
+
+# Personal Alpha Engine — Central Hub Draft
+
+This repository is a substantial CORE-only implementation candidate derived from the accepted architecture draft. It deliberately contains no production cylinder. The deterministic reference loop proves acquisition/fixture -> normalization -> evidence -> signal -> opportunity -> ranking -> radar/review -> decision -> paper action -> outcome -> evaluation -> learning recommendation.
+
+## Frozen implementation choices in this draft
+- Python 3.12.
+- Local-first modular monolith.
+- SQLAlchemy 2.x synchronous ORM/unit-of-work with SQLite WAL initially.
+- FastAPI + Uvicorn loopback internal API adapter.
+- PySide6 native desktop adapter as an optional install extra; core and CLI run without Qt.
+- Alembic migration line reserved; schema bootstrap is deterministic in this draft and must be converted to numbered migrations before first release.
+- OS keyring is the production secret-store target; this draft never persists secret values and ships only a SecretRef protocol.
+- Plugins are in-process Python packages only after manifest/contract compatibility validation; production isolation may later move selected plugin work into subprocesses without changing public contracts.
+
+## Quick proof
+```bash
+python -m alpha_engine.reference_loop.runner --db ./alpha_demo.sqlite3 --artifacts ./artifacts
+pytest
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\README.md`
@@ -15565,6 +16277,14 @@ No command in this package performs live brokerage execution.
 
 ```
 
+### File: `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\bootstrap\__init__.py`
+
+- Size: `0 B`
+
+```python
+
+```
+
 ### File: `alpha_engine\src\alpha_engine\api\__init__.py`
 
 - Size: `0 B`
@@ -15582,14 +16302,6 @@ No command in this package performs live brokerage execution.
 ```
 
 ### File: `alpha_engine\src\alpha_engine\audit\__init__.py`
-
-- Size: `0 B`
-
-```python
-
-```
-
-### File: `alpha_engine\src\alpha_engine\bootstrap\__init__.py`
 
 - Size: `0 B`
 
@@ -16493,6 +17205,16 @@ from .reference_loop import ReferenceLoopResult, run_reference_loop
 from .reference_loop import ReferenceLoopResult, run_reference_loop
 ```
 
+### File: `alpha_engine\src\alpha_engine\verification\__init__.py`
+
+- Size: `69 B`
+
+```python
+from .runner import run_verification
+
+__all__ = ["run_verification"]
+```
+
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\paper\__init__.py`
 
 - Size: `71 B`
@@ -17019,6 +17741,19 @@ from .domain import GraphEdge, GraphNode, HypothesisGraph
 __all__ = ["GraphEdge", "GraphNode", "HypothesisGraph", "build_hypothesis_graph"]
 ```
 
+### File: `alpha_engine\scripts\verify\verify_all.py`
+
+- Size: `194 B`
+
+```python
+from alpha_engine.verification.runner import run_verification
+
+
+if __name__ == "__main__":
+    result = run_verification("full")
+    raise SystemExit(0 if result["readiness"] == "READY" else 1)
+```
+
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\discovery\__init__.py`
 
 - Size: `199 B`
@@ -17196,6 +17931,23 @@ from alpha_engine.reference_loop.runner import run
 
 def test_reference_loop(tmp_path):
     m=run(tmp_path/'alpha.db',tmp_path/'artifacts'); assert m['artifact_integrity'] is True; assert m['learning_auto_applied'] is False; assert m['score_total']=='0.9375'
+```
+
+### File: `alpha_engine\src\alpha_engine\bootstrap\__init__.py`
+
+- Size: `259 B`
+
+```python
+from .profile import ProfilePaths, ensure_profile
+from .lifecycle import RuntimeAlreadyRunning, RuntimeLease, RuntimeLeaseError
+
+__all__ = [
+    "ProfilePaths",
+    "RuntimeAlreadyRunning",
+    "RuntimeLease",
+    "RuntimeLeaseError",
+    "ensure_profile",
+]
 ```
 
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\model_assist\__init__.py`
@@ -17424,7 +18176,7 @@ from .manifest import PLUGIN_ID, plugin_manifest
 __all__ = ["PLUGIN_ID", "plugin_manifest"]
 ```
 
-### File: `alpha_engine\scripts\verify\verify_all.py`
+### File: `_update_backups\20260818_231434_593578\alpha_engine\scripts\verify\verify_all.py`
 
 - Size: `367 B`
 
@@ -17780,7 +18532,7 @@ def test_fixture_lookup():
     assert fixture_by_id("PM-FIX-014").expected == ("PM_BOOK_SEQUENCE_GAP", "resnapshot_required")
 ```
 
-### File: `alpha_engine\src\alpha_engine\cli\main.py`
+### File: `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\cli\main.py`
 
 - Size: `483 B`
 
@@ -17830,7 +18582,32 @@ from .plugin import build_registration
 __all__ = ["PredictionMarketsEngine", "MANIFEST", "PLUGIN_ID", "PLUGIN_VERSION", "build_registration"]
 ```
 
-### File: `alpha_engine\src\alpha_engine\health\service.py`
+### File: `alpha_engine\src\alpha_engine\verification\__main__.py`
+
+- Size: `511 B`
+
+```python
+from __future__ import annotations
+
+import argparse
+
+from .runner import run_verification
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(prog="alpha verify")
+    parser.add_argument("tier", choices=["quick", "full", "qualification", "feature"])
+    parser.add_argument("feature_id", nargs="?")
+    args = parser.parse_args()
+    result = run_verification(args.tier, feature_id=args.feature_id)
+    raise SystemExit(0 if result["readiness"] == "READY" else 1)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+### File: `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\health\service.py`
 
 - Size: `514 B`
 
@@ -19220,6 +19997,29 @@ def test_permission_and_budget(tmp_path):
     with pytest.raises(BudgetDenied): b.reserve('p',Decimal('.8'))
 ```
 
+### File: `alpha_engine\tests\test_plugin_discovery.py`
+
+- Size: `808 B`
+
+```python
+from __future__ import annotations
+
+from alpha_engine.plugin_host.discovery import discover_plugin_candidates
+from alpha_engine.verification.registry import repository_root
+
+
+def test_discovery_exposes_duplicate_and_contract_blockers_without_private_imports() -> None:
+    candidates = discover_plugin_candidates(repository_root())
+    assert candidates
+    prediction = [c for c in candidates if c.plugin_id == "ae.prediction_markets"]
+    assert len(prediction) >= 2
+    assert all(c.status == "BLOCKED" for c in prediction)
+    assert any("duplicate plugin_id" in reason for c in prediction for reason in c.reasons)
+    retail = [c for c in candidates if c.plugin_id == "ae.retail_resale_flip"]
+    assert len(retail) == 1
+    assert retail[0].entrypoint == "ae_retail_resale_flip.manifest:plugin_bundle"
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\unit\test_canonical.py`
 
 - Size: `815 B`
@@ -19510,7 +20310,7 @@ def test_money_float_not_required():
     assert m.amount==Decimal("0.3") and m.currency=="USD"
 ```
 
-### File: `alpha_engine\src\alpha_engine\desktop\main.py`
+### File: `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\desktop\main.py`
 
 - Size: `870 B`
 
@@ -22012,6 +22812,63 @@ class GuardedProviderMixin:
             raise ProviderPolicyError("provider does not support requested query intent")
 ```
 
+### File: `alpha_engine\src\alpha_engine\verification\models.py`
+
+- Size: `1.2 KB`
+
+```python
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass, field
+from typing import Any
+
+STATUSES = ("PASS", "FAILED", "BLOCKED", "INCOMPLETE", "SKIPPED")
+
+
+@dataclass(frozen=True, slots=True)
+class CheckSpec:
+    check_id: str
+    title: str
+    command: tuple[str, ...]
+    cwd: str
+    timeout_seconds: int = 120
+    required: bool = True
+    prerequisites: tuple[str, ...] = ()
+    feature_ids: tuple[str, ...] = ()
+    defect_ids: tuple[str, ...] = ()
+    layer: str = "integration"
+    tiers: tuple[str, ...] = ("full", "qualification")
+    env: dict[str, str] = field(default_factory=dict)
+    static_status: str | None = None
+    static_reason: str | None = None
+
+
+@dataclass(slots=True)
+class CheckResult:
+    check_id: str
+    title: str
+    status: str
+    required: bool
+    started_at: str
+    finished_at: str
+    duration_seconds: float
+    command: list[str]
+    cwd: str
+    timeout_seconds: int
+    exit_code: int | None
+    stdout_path: str | None
+    stderr_path: str | None
+    reason_code: str | None
+    reason: str | None
+    feature_ids: list[str]
+    defect_ids: list[str]
+    layer: str
+    prerequisites: list[str]
+
+    def as_dict(self) -> dict[str, Any]:
+        return asdict(self)
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\tests\test_service_manifest_diagnostics.py`
 
 - Size: `1.2 KB`
@@ -23365,6 +24222,50 @@ MANIFEST = MetaPluginManifest(
 )
 ```
 
+### File: `alpha_engine\tests\test_runtime_reference.py`
+
+- Size: `1.3 KB`
+
+```python
+from __future__ import annotations
+
+from pathlib import Path
+
+from alpha_engine.reference_loop.runner import run_with_runtime
+from alpha_engine.runtime.application import build_runtime
+from alpha_engine.storage.models import CoreRecord, OperationRow
+
+
+def test_composed_reference_loop_is_idempotent(tmp_path: Path) -> None:
+    runtime = build_runtime(tmp_path / "demo", mode="demo")
+    try:
+        first = run_with_runtime(runtime)
+        second = run_with_runtime(runtime)
+        assert second == first
+        assert first["runtime_mode"] == "demo"
+        assert first["artifact_integrity"] is True
+        with runtime.sf() as session:
+            operations = session.query(OperationRow).filter_by(op_type="REFERENCE_LOOP").all()
+            assert len(operations) == 1
+            assert operations[0].state == "SUCCEEDED"
+            expected_singletons = [
+                "OBSERVATION",
+                "SIGNAL",
+                "OPPORTUNITY",
+                "SCORE",
+                "RADAR",
+                "DECISION",
+                "PAPER_ACTION",
+                "OUTCOME",
+                "EVALUATION",
+                "LEARNING",
+            ]
+            for record_type in expected_singletons:
+                assert session.query(CoreRecord).filter_by(record_type=record_type).count() == 1
+    finally:
+        runtime.close()
+```
+
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\manifest.py`
 
 - Size: `1.3 KB`
@@ -23494,6 +24395,45 @@ class DetectorTests(unittest.TestCase):
         s = detect_resolution_risk(r, now=t)
         self.assertIsNotNone(s)
         self.assertGreater(s.strength, Decimal("0"))
+```
+
+### File: `alpha_engine\tests\test_root_package.py`
+
+- Size: `1.3 KB`
+
+```python
+from __future__ import annotations
+
+import subprocess
+import sys
+import zipfile
+from pathlib import Path
+
+from alpha_engine.verification.registry import repository_root
+
+
+def test_repository_root_builds_one_source_development_wheel(tmp_path: Path) -> None:
+    root = repository_root()
+    completed = subprocess.run(
+        [sys.executable, "-m", "pip", "wheel", ".", "--no-deps", "--no-build-isolation", "-w", str(tmp_path)],
+        cwd=root,
+        text=True,
+        capture_output=True,
+        timeout=90,
+        check=False,
+    )
+    assert completed.returncode == 0, completed.stdout + "\n" + completed.stderr
+    wheels = list(tmp_path.glob("personal_alpha_engine_workspace-*.whl"))
+    assert len(wheels) == 1
+    with zipfile.ZipFile(wheels[0]) as archive:
+        names = set(archive.namelist())
+        assert "alpha_engine/cli/main.py" in names
+        assert "alpha_engine/verification/feature_registry.json" in names
+        assert any(name.startswith("ae_prediction_markets/") for name in names)
+        assert any(name.startswith("ae_arbitrage_cross_market/") for name in names)
+        assert any(name.startswith("ae_public_markets_quant_options/") for name in names)
+        assert any(name.startswith("ae_retail_resale_flip/") for name in names)
+        assert not any(name.startswith("alpha_engine_prediction_markets/") for name in names)
 ```
 
 ### File: `plugins\ae_prediction_markets\tests\test_detectors.py`
@@ -25034,7 +25974,7 @@ def assess_dependency_change(candidate: MetaCandidate, change: DependencyChange)
     )
 ```
 
-### File: `alpha_engine\src\alpha_engine\operations\service.py`
+### File: `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\operations\service.py`
 
 - Size: `1.5 KB`
 
@@ -27088,7 +28028,7 @@ class NegativeInvariantTests(unittest.TestCase):
             PaperPlanTranslator().translate(result.detector_result.opportunities[0], relationship(), target_size=Decimal("2"), base_currency="USD", max_interleg_skew_seconds=5)
 ```
 
-### File: `alpha_engine\src\alpha_engine\api\server.py`
+### File: `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\api\server.py`
 
 - Size: `1.8 KB`
 
@@ -27631,6 +28571,54 @@ def translate_single_leg(*, market: PMMarket, outcome_id: str, quantity: Decimal
         fee_schedule_ref=fee_schedule_ref,
         venue_semantics={"binary_complement":"true","provider_market_ref":market.provider_market_ref},
     )
+```
+
+### File: `alpha_engine\tests\verification\test_traceability.py`
+
+- Size: `1.9 KB`
+
+```python
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from alpha_engine.verification.registry import repository_root, validate_feature_registry
+
+
+def test_feature_registry_references_executable_checks() -> None:
+    assert validate_feature_registry() == []
+
+
+def test_supplemental_purpose_traceability_accounts_for_all_gap_ids() -> None:
+    root = repository_root()
+    data = json.loads((root / "alpha_engine" / "docs" / "runtime" / "PURPOSE_TRACEABILITY.json").read_text(encoding="utf-8"))
+    ids = [row["id"] for row in data["requirements"]]
+    assert len(ids) == len(set(ids)) == 33
+    assert ids == [f"AE-PURPOSE-GAP-{n:03d}" for n in range(1, 34)]
+    assert all(row["status"] in {"PASS", "PARTIAL", "BLOCKED", "FAILED", "DEFERRED", "SUPERSEDED"} for row in data["requirements"])
+
+
+def test_provider_service_decision_ledger_reconciles_historical_candidates() -> None:
+    root = repository_root()
+    data = json.loads((root / "alpha_engine" / "docs" / "runtime" / "PROVIDER_SERVICE_DECISIONS.json").read_text(encoding="utf-8"))
+    decisions = {row["candidate"]: row for row in data["decisions"]}
+    for candidate in ["Polygon", "Alpha Vantage", "FMP", "NewsAPI", "Reddit", "FRED", "PostgreSQL", "Redis", "Alpaca", "IBKR", "Twilio", "Discord"]:
+        assert candidate in decisions
+    assert decisions["PostgreSQL"]["status"] == "SUPERSEDED"
+    assert decisions["Twilio"]["status"] == "DEFERRED"
+
+
+def test_defect_ledger_keeps_stable_root_cause_and_closure_fields() -> None:
+    root = repository_root()
+    data = json.loads((root / "alpha_engine" / "docs" / "runtime" / "DEFECT_LEDGER.json").read_text(encoding="utf-8"))
+    ids = [row["id"] for row in data["defects"]]
+    assert len(ids) == len(set(ids))
+    for row in data["defects"]:
+        assert row["root_cause"]
+        assert row["authority"]
+        assert row["regression_coverage"]
+        assert row["closure_criteria"]
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\tests\test_paper.py`
@@ -28563,6 +29551,66 @@ class OutcomeEvaluator(Protocol):
     def evaluate(self, subject: Mapping[str,Any], outcome: Mapping[str,Any])->Mapping[str,str]: ...
 ```
 
+### File: `alpha_engine\src\alpha_engine\verification\traceability_check.py`
+
+- Size: `1.9 KB`
+
+```python
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from .registry import repository_root, validate_feature_registry
+
+
+REQUIRED_PROVIDER_DECISIONS = {
+    "Polygon", "Alpha Vantage", "FMP", "NewsAPI", "Reddit", "FRED",
+    "PostgreSQL", "Redis", "Alpaca", "IBKR", "Twilio", "Discord",
+}
+
+
+def validate_traceability() -> list[str]:
+    root = repository_root()
+    errors = list(validate_feature_registry())
+    runtime_docs = root / "alpha_engine" / "docs" / "runtime"
+
+    purpose = json.loads((runtime_docs / "PURPOSE_TRACEABILITY.json").read_text(encoding="utf-8"))
+    ids = [row.get("id") for row in purpose.get("requirements", [])]
+    expected = [f"AE-PURPOSE-GAP-{n:03d}" for n in range(1, 34)]
+    if ids != expected:
+        errors.append("supplemental purpose traceability does not account for AE-PURPOSE-GAP-001..033 exactly once")
+
+    providers = json.loads((runtime_docs / "PROVIDER_SERVICE_DECISIONS.json").read_text(encoding="utf-8"))
+    found = {row.get("candidate") for row in providers.get("decisions", [])}
+    missing = sorted(REQUIRED_PROVIDER_DECISIONS - found)
+    if missing:
+        errors.append("missing historical provider/service decisions: " + ", ".join(missing))
+
+    defects = json.loads((runtime_docs / "DEFECT_LEDGER.json").read_text(encoding="utf-8"))
+    defect_ids = [row.get("id") for row in defects.get("defects", [])]
+    if len(defect_ids) != len(set(defect_ids)):
+        errors.append("duplicate defect IDs")
+    for row in defects.get("defects", []):
+        for field in ("root_cause", "authority", "regression_coverage", "closure_criteria"):
+            if not row.get(field):
+                errors.append(f"{row.get('id')}: missing {field}")
+    return errors
+
+
+def main() -> None:
+    errors = validate_traceability()
+    if errors:
+        for error in errors:
+            print(f"ERROR: {error}")
+        raise SystemExit(1)
+    print("TRACEABILITY_OK")
+
+
+if __name__ == "__main__":
+    main()
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\qualification.py`
 
 - Size: `1.9 KB`
@@ -29241,6 +30289,67 @@ class FixtureCatalogTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+```
+
+### File: `alpha_engine\tests\test_runtime_lifecycle.py`
+
+- Size: `2.0 KB`
+
+```python
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import pytest
+
+from alpha_engine.bootstrap.lifecycle import RuntimeAlreadyRunning
+from alpha_engine.runtime.application import build_runtime
+
+
+def test_runtime_lifecycle_refuses_second_instance_and_cleans_discovery(tmp_path: Path) -> None:
+    profile = tmp_path / "profile"
+    runtime = build_runtime(profile, acquire_lease=True)
+    try:
+        assert runtime.health.snapshot()["status"] == "READY"
+        with pytest.raises(RuntimeAlreadyRunning):
+            build_runtime(profile, acquire_lease=True)
+        assert runtime.lease is not None
+        runtime.lease.publish(port=9999, session_token="test-token", mode="test", status="READY")
+        discovery = json.loads((profile / "runtime" / "runtime.json").read_text(encoding="utf-8"))
+        assert discovery["port"] == 9999
+        assert discovery["status"] == "READY"
+    finally:
+        runtime.close()
+    assert not (profile / "runtime" / "instance.lock").exists()
+    assert not (profile / "runtime" / "runtime.json").exists()
+
+
+def test_runtime_recovers_stale_lock_and_reports_it(tmp_path: Path) -> None:
+    profile = tmp_path / "profile"
+    runtime_dir = profile / "runtime"
+    runtime_dir.mkdir(parents=True)
+    (runtime_dir / "instance.lock").write_text(
+        json.dumps({"pid": 99999999, "profile": str(profile)}), encoding="utf-8"
+    )
+    runtime = build_runtime(profile, acquire_lease=True)
+    try:
+        assert runtime.lease is not None
+        assert runtime.lease.stale_recovered is True
+        assert runtime.status()["runtime"]["stale_lock_recovered"] is True
+    finally:
+        runtime.close()
+
+
+def test_health_cannot_claim_ready_when_required_artifact_path_is_missing(tmp_path: Path) -> None:
+    runtime = build_runtime(tmp_path / "profile")
+    try:
+        runtime.profile.artifacts.rmdir()
+        snapshot = runtime.health.snapshot()
+        assert snapshot["status"] == "BLOCKED"
+        assert "HEALTH-ARTIFACTS" in snapshot["blockers"]
+    finally:
+        runtime.close()
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\integration\test_operations_matrix.py`
@@ -34242,6 +35351,80 @@ def test_comparable_selection_excludes_wrong_product(product):
     assert e.value.amount==Decimal("150.00") and e.sample_ids==("good",)
 ```
 
+### File: `alpha_engine\src\alpha_engine\desktop\main.py`
+
+- Size: `2.8 KB`
+
+```python
+from __future__ import annotations
+
+import json
+from typing import Any
+
+
+def _record_counts(runtime: Any) -> dict[str, int]:
+    if runtime is None:
+        return {}
+    from alpha_engine.storage.models import CoreRecord
+
+    with runtime.sf() as session:
+        rows = session.query(CoreRecord.record_type).all()
+    counts: dict[str, int] = {}
+    for (record_type,) in rows:
+        counts[record_type] = counts.get(record_type, 0) + 1
+    return counts
+
+
+def run_desktop(runtime: Any | None = None) -> int:
+    try:
+        from PySide6.QtWidgets import QApplication, QLabel, QMainWindow, QTabWidget, QVBoxLayout, QWidget
+    except ImportError as exc:
+        raise SystemExit('Desktop extra not installed: pip install -e ".[desktop]"') from exc
+    import sys
+
+    app = QApplication.instance() or QApplication(sys.argv)
+    win = QMainWindow()
+    win.setWindowTitle("Personal Alpha Engine")
+    tabs = QTabWidget()
+    counts = _record_counts(runtime)
+    health = runtime.health.snapshot() if runtime is not None else {"status": "UNBOUND"}
+    views = [
+        ("Overview", f"Runtime: {health['status']}\nMode: {getattr(runtime, 'mode', 'standalone-shell')}"),
+        ("Opportunity Radar", f"Radar entries: {counts.get('RADAR', 0)}\nOpportunities: {counts.get('OPPORTUNITY', 0)}"),
+        ("Review Queue", f"Decisions: {counts.get('DECISION', 0)}"),
+        ("Evidence & Data", f"Evidence: {counts.get('EVIDENCE', 0)}\nObservations: {counts.get('OBSERVATION', 0)}"),
+        ("Paper Portfolio", f"Paper actions: {counts.get('PAPER_ACTION', 0)}"),
+        ("Outcomes & Evaluation", f"Outcomes: {counts.get('OUTCOME', 0)}\nEvaluations: {counts.get('EVALUATION', 0)}\nLearning: {counts.get('LEARNING', 0)}"),
+        ("Operations", "Use `alpha status` or the loopback API for current operation details."),
+        ("Providers & Data Queries", "Provider routes are owned by the composed Central Hub registry."),
+        ("Budgets", "Budget authority is active in the composed runtime."),
+        ("Permissions", "Permission authority is active in the composed runtime."),
+        ("Notifications", "Notification intents are local-first; email transport remains separately configured."),
+        ("Registries", "Canonical registries are available through the Central Hub."),
+        ("Health & Recovery", json.dumps(health, indent=2)),
+        ("Settings", "Configuration remains local to the selected profile."),
+    ]
+    for name, text in views:
+        page = QWidget()
+        layout = QVBoxLayout(page)
+        label = QLabel(text)
+        label.setWordWrap(True)
+        layout.addWidget(label)
+        tabs.addTab(page, name)
+    win.setCentralWidget(tabs)
+    win.resize(1200, 800)
+    win.show()
+    return int(app.exec())
+
+
+def main() -> None:
+    raise SystemExit(run_desktop())
+
+
+if __name__ == "__main__":
+    main()
+```
+
 ### File: `plugins\ae_retail_resale_flip\tests\unit\test_economics.py`
 
 - Size: `2.8 KB`
@@ -36531,6 +37714,98 @@ class IdentityResolver:
         return ResolutionDecision(ResolutionState.MATCHED, rows[0][1].core_ref, rows[0][0], (rows[0][1].core_ref,), tuple(rows[0][2]))
 ```
 
+### File: `alpha_engine\src\alpha_engine\operations\service.py`
+
+- Size: `3.1 KB`
+
+```python
+from __future__ import annotations
+
+import json
+from datetime import datetime, timezone
+from typing import Any
+
+from alpha_engine.kernel.errors import IdempotencyConflict
+from alpha_engine.kernel.ids import OperationId
+from alpha_engine.kernel.serialization import canonical_hash, canonical_json
+from alpha_engine.storage.models import JournalRow, OperationRow
+
+
+class OperationService:
+    def __init__(self, sf):
+        self.sf = sf
+
+    def admit(self, actor: str, op_type: str, idempotency_key: str, payload: dict) -> tuple[str, bool]:
+        request_hash = canonical_hash(payload)
+        with self.sf() as session:
+            existing = (
+                session.query(OperationRow)
+                .filter_by(actor=actor, op_type=op_type, idempotency_key=idempotency_key)
+                .one_or_none()
+            )
+            if existing:
+                if existing.request_hash != request_hash:
+                    raise IdempotencyConflict()
+                return existing.id, False
+            operation_id = str(OperationId.new())
+            now = datetime.now(timezone.utc)
+            session.add(
+                OperationRow(
+                    id=operation_id,
+                    actor=actor,
+                    op_type=op_type,
+                    idempotency_key=idempotency_key,
+                    request_hash=request_hash,
+                    state="ADMITTED",
+                    created_at=now,
+                )
+            )
+            session.add(
+                JournalRow(
+                    operation_id=operation_id,
+                    seq=1,
+                    event_type="ADMITTED",
+                    details_json=canonical_json(payload),
+                    recorded_at=now,
+                )
+            )
+            session.commit()
+            return operation_id, True
+
+    def transition(self, operation_id: str, state: str, details: dict | None = None) -> None:
+        with self.sf() as session:
+            operation = session.get(OperationRow, operation_id)
+            if operation is None:
+                raise KeyError(f"unknown operation: {operation_id}")
+            seq = session.query(JournalRow).filter_by(operation_id=operation_id).count() + 1
+            operation.state = state
+            if state in {"SUCCEEDED", "FAILED", "BLOCKED", "CANCELLED"}:
+                operation.result_json = canonical_json(details or {})
+            session.add(
+                JournalRow(
+                    operation_id=operation_id,
+                    seq=seq,
+                    event_type=state,
+                    details_json=canonical_json(details or {}),
+                    recorded_at=datetime.now(timezone.utc),
+                )
+            )
+            session.commit()
+
+    def snapshot(self, operation_id: str) -> dict[str, Any] | None:
+        with self.sf() as session:
+            row = session.get(OperationRow, operation_id)
+            if row is None:
+                return None
+            return {
+                "id": row.id,
+                "actor": row.actor,
+                "type": row.op_type,
+                "state": row.state,
+                "result": json.loads(row.result_json) if row.result_json else None,
+            }
+```
+
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\config.py`
 
 - Size: `3.2 KB`
@@ -37085,6 +38360,116 @@ def validate_model_proposal(
         model_confidence=proposal.confidence,
         validation_fingerprint=fingerprint,
     )
+```
+
+### File: `alpha_engine\tests\test_runtime_server_smoke.py`
+
+- Size: `3.3 KB`
+
+```python
+from __future__ import annotations
+
+import os
+import socket
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+from alpha_engine.runtime.application import build_runtime
+from alpha_engine.runtime.control import read_runtime_discovery, request_runtime
+
+
+def _free_port() -> int:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.bind(("127.0.0.1", 0))
+        return int(sock.getsockname()[1])
+
+
+def _wait_discovery(profile: Path, process: subprocess.Popen[bytes], timeout: float = 10.0) -> dict:
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        if process.poll() is not None:
+            raise AssertionError(f"runtime exited early with {process.returncode}")
+        discovery = read_runtime_discovery(profile)
+        if discovery and discovery.get("status") == "READY":
+            return discovery
+        time.sleep(0.05)
+    raise AssertionError("runtime did not publish READY discovery")
+
+
+def _start(profile: Path, port: int) -> subprocess.Popen[bytes]:
+    env = os.environ.copy()
+    return subprocess.Popen(
+        [
+            sys.executable,
+            "-m",
+            "alpha_engine.cli.main",
+            "start",
+            "--headless",
+            "--profile",
+            str(profile),
+            "--port",
+            str(port),
+        ],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        env=env,
+    )
+
+
+def test_real_headless_start_status_second_instance_and_stop(tmp_path: Path) -> None:
+    profile = tmp_path / "runtime-profile"
+    process = _start(profile, _free_port())
+    try:
+        discovery = _wait_discovery(profile, process)
+        assert discovery["status"] == "READY"
+        status = request_runtime(profile, "/internal/v1/status")
+        assert status["health"]["status"] == "READY"
+        second = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "alpha_engine.cli.main",
+                "start",
+                "--headless",
+                "--profile",
+                str(profile),
+                "--port",
+                str(_free_port()),
+            ],
+            text=True,
+            capture_output=True,
+            timeout=10,
+            check=False,
+            env=os.environ.copy(),
+        )
+        assert second.returncode == 2
+        assert "SECOND_INSTANCE" in second.stdout
+        assert request_runtime(profile, "/internal/v1/shutdown", method="POST")["status"] == "STOPPING"
+        assert process.wait(timeout=10) == 0
+        assert not (profile / "runtime" / "instance.lock").exists()
+        assert not (profile / "runtime" / "runtime.json").exists()
+    finally:
+        if process.poll() is None:
+            process.kill()
+            process.wait(timeout=5)
+
+
+def test_forced_termination_is_reconciled_on_next_start(tmp_path: Path) -> None:
+    profile = tmp_path / "forced-profile"
+    process = _start(profile, _free_port())
+    _wait_discovery(profile, process)
+    process.kill()
+    process.wait(timeout=5)
+    assert (profile / "runtime" / "instance.lock").exists()
+    runtime = build_runtime(profile, acquire_lease=True)
+    try:
+        assert runtime.lease is not None
+        assert runtime.lease.stale_recovered is True
+        assert runtime.health.snapshot()["status"] == "READY"
+    finally:
+        runtime.close()
 ```
 
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\presentation.py`
@@ -39279,6 +40664,113 @@ def test_dedupe_key_stable(offer):
     assert a==b
 ```
 
+### File: `alpha_engine\src\alpha_engine\health\service.py`
+
+- Size: `3.8 KB`
+
+```python
+from __future__ import annotations
+
+import os
+from pathlib import Path
+from typing import Any
+
+from sqlalchemy import text
+
+
+class HealthService:
+    """Truthful local readiness checks for the composed runtime.
+
+    Network/provider health is deliberately excluded from the mandatory core gate. Optional
+    capabilities may degrade independently; core READY only means the local deterministic runtime
+    can safely admit normal local work for the current development schema authority.
+    """
+
+    def __init__(self, engine: Any, artifact_root: str | Path, runtime_root: str | Path | None = None):
+        self.engine = engine
+        self.artifact_root = Path(artifact_root)
+        self.runtime_root = Path(runtime_root) if runtime_root is not None else None
+
+    @staticmethod
+    def _writable_directory(path: Path) -> tuple[bool, str | None]:
+        if not path.exists():
+            return False, "missing"
+        probe = path / ".alpha-write-probe"
+        try:
+            probe.write_text("ok", encoding="utf-8")
+            probe.unlink(missing_ok=True)
+        except OSError as exc:
+            return False, f"{type(exc).__name__}: {exc}"
+        return True, None
+
+    def snapshot(self) -> dict[str, Any]:
+        checks: list[dict[str, Any]] = []
+
+        db_ok = False
+        db_detail: str | None = None
+        try:
+            with self.engine.connect() as conn:
+                db_ok = conn.execute(text("select 1")).scalar_one() == 1
+                integrity = conn.execute(text("pragma integrity_check")).scalar_one()
+                if integrity != "ok":
+                    db_ok = False
+                    db_detail = f"integrity_check={integrity}"
+        except Exception as exc:  # noqa: BLE001 - health must classify arbitrary DB failures.
+            db_detail = f"{type(exc).__name__}: {exc}"
+        checks.append(
+            {
+                "id": "HEALTH-DB",
+                "title": "SQLite connectivity and integrity",
+                "required": True,
+                "status": "PASS" if db_ok else "FAILED",
+                "detail": db_detail,
+            }
+        )
+
+        artifact_ok, artifact_detail = self._writable_directory(self.artifact_root)
+        checks.append(
+            {
+                "id": "HEALTH-ARTIFACTS",
+                "title": "Artifact store is present and writable",
+                "required": True,
+                "status": "PASS" if artifact_ok else "FAILED",
+                "detail": artifact_detail,
+            }
+        )
+
+        runtime_ok = True
+        runtime_detail = None
+        if self.runtime_root is not None:
+            runtime_ok, runtime_detail = self._writable_directory(self.runtime_root)
+        checks.append(
+            {
+                "id": "HEALTH-RUNTIME-DIR",
+                "title": "Runtime state directory is present and writable",
+                "required": True,
+                "status": "PASS" if runtime_ok else "FAILED",
+                "detail": runtime_detail,
+            }
+        )
+
+        required_failed = [c for c in checks if c["required"] and c["status"] != "PASS"]
+        status = "READY" if not required_failed else "BLOCKED"
+        return {
+            "model_version": 1,
+            "status": status,
+            "checks": checks,
+            "blockers": [c["id"] for c in required_failed],
+            "remediation": [
+                "Run `alpha verify quick` for deterministic diagnostics."
+                if required_failed
+                else "No mandatory local-runtime blockers detected."
+            ],
+            "qualification_notes": [
+                "Core schema still uses development bootstrap/create_all rather than numbered release migrations.",
+                "Optional provider and cylinder qualification is reported separately from core readiness.",
+            ],
+        }
+```
+
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\scoring\features.py`
 
 - Size: `3.8 KB`
@@ -39673,6 +41165,98 @@ def test_data_to_outcome_reference_loop():
     lot=apply_paper_action(lot,PaperAction.SELL,quantity=Decimal("1"),gross_proceeds=estimate.value,fees=m(15))
     lot=apply_paper_action(lot,PaperAction.CLOSE_OUT)
     assert evaluate_paper_lot(lot).state==OutcomeState.FINAL
+```
+
+### File: `alpha_engine\tests\verification\test_verifier.py`
+
+- Size: `3.9 KB`
+
+```python
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+from alpha_engine.verification.models import CheckResult, CheckSpec
+from alpha_engine.verification.runner import _expand_with_prerequisites, _readiness, execute_check
+
+
+def _spec(tmp_path: Path, check_id: str, code: str, *, timeout: int = 5, prerequisites=()) -> CheckSpec:
+    return CheckSpec(
+        check_id=check_id,
+        title=check_id,
+        command=(sys.executable, "-c", code),
+        cwd=str(tmp_path),
+        timeout_seconds=timeout,
+        prerequisites=tuple(prerequisites),
+        tiers=("quick",),
+    )
+
+
+def test_execute_check_classifies_pass_failure_and_continues(tmp_path: Path) -> None:
+    evidence = tmp_path / "evidence"
+    evidence.mkdir()
+    prior = {}
+    passed = execute_check(_spec(tmp_path, "PASS", "print('ok')"), evidence, prior)
+    prior[passed.check_id] = passed
+    failed = execute_check(_spec(tmp_path, "FAIL", "raise SystemExit(3)"), evidence, prior)
+    prior[failed.check_id] = failed
+    after = execute_check(_spec(tmp_path, "AFTER", "print('still ran')"), evidence, prior)
+    assert passed.status == "PASS"
+    assert failed.status == "FAILED"
+    assert after.status == "PASS"
+    assert (evidence / after.stdout_path).read_text(encoding="utf-8").strip() == "still ran"
+
+
+def test_execute_check_blocks_only_on_declared_prerequisite(tmp_path: Path) -> None:
+    evidence = tmp_path / "evidence"
+    evidence.mkdir()
+    failed = execute_check(_spec(tmp_path, "A", "raise SystemExit(1)"), evidence, {})
+    blocked = execute_check(_spec(tmp_path, "B", "print('must not run')", prerequisites=("A",)), evidence, {"A": failed})
+    independent = execute_check(_spec(tmp_path, "C", "print('runs')"), evidence, {"A": failed, "B": blocked})
+    assert blocked.status == "BLOCKED"
+    assert blocked.reason_code == "PREREQUISITE_NOT_PASS"
+    assert independent.status == "PASS"
+
+
+def test_timeout_missing_tool_and_zero_tests_are_not_green(tmp_path: Path) -> None:
+    evidence = tmp_path / "evidence"
+    evidence.mkdir()
+    timeout = execute_check(_spec(tmp_path, "TIME", "import time; time.sleep(2)", timeout=1), evidence, {})
+    missing = CheckSpec("MISSING", "missing", ("definitely-no-such-alpha-tool",), str(tmp_path), tiers=("quick",))
+    missing_result = execute_check(missing, evidence, {})
+    zero = CheckSpec(
+        "ZERO",
+        "zero",
+        (sys.executable, "-c", "raise SystemExit(5)", "pytest"),
+        str(tmp_path),
+        tiers=("quick",),
+    )
+    zero_result = execute_check(zero, evidence, {})
+    assert timeout.status == "FAILED" and timeout.reason_code == "TIMEOUT"
+    assert missing_result.status == "BLOCKED" and missing_result.reason_code == "MISSING_TOOL"
+    assert zero_result.status == "INCOMPLETE" and zero_result.reason_code == "ZERO_TESTS_COLLECTED"
+
+
+def test_required_statuses_drive_readiness() -> None:
+    base = dict(
+        title="x", required=True, started_at="x", finished_at="x", duration_seconds=0.0,
+        command=[], cwd=".", timeout_seconds=1, exit_code=0, stdout_path=None, stderr_path=None,
+        reason_code=None, reason=None, feature_ids=[], defect_ids=[], layer="x", prerequisites=[]
+    )
+    passing = CheckResult(check_id="p", status="PASS", **base)
+    failed = CheckResult(check_id="f", status="FAILED", **base)
+    blocked = CheckResult(check_id="b", status="BLOCKED", **base)
+    assert _readiness([passing]) == ("READY", [])
+    assert _readiness([passing, failed])[0] == "NOT_READY"
+    assert _readiness([passing, blocked])[0] == "NOT_QUALIFIED"
+
+
+def test_feature_selection_expands_declared_prerequisites(tmp_path: Path) -> None:
+    prerequisite = _spec(tmp_path, "PRE", "print('pre')")
+    feature = _spec(tmp_path, "FEATURE", "print('feature')", prerequisites=("PRE",))
+    expanded = _expand_with_prerequisites([feature], {"PRE": prerequisite, "FEATURE": feature})
+    assert [spec.check_id for spec in expanded] == ["PRE", "FEATURE"]
 ```
 
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\providers\fixture.py`
@@ -41573,7 +43157,7 @@ def normalize_public_record(record: Mapping[str, Any], *, ingested_at: datetime)
     )
 ```
 
-### File: `alpha_engine\src\alpha_engine\reference_loop\runner.py`
+### File: `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\reference_loop\runner.py`
 
 - Size: `4.5 KB`
 
@@ -41838,6 +43422,151 @@ def normalize_option_quote(row: Mapping[str, Any], evidence_ref: str) -> OptionQ
         volume=_d(row["volume"]) if row.get("volume") is not None else None,
         evidence_ref=evidence_ref, quality_flags=tuple(flags),
     )
+```
+
+### File: `alpha_engine\src\alpha_engine\bootstrap\lifecycle.py`
+
+- Size: `4.6 KB`
+
+```python
+from __future__ import annotations
+
+import json
+import os
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+
+class RuntimeAlreadyRunning(RuntimeError):
+    """Raised when an active runtime already owns a profile."""
+
+
+class RuntimeLeaseError(RuntimeError):
+    """Raised when the runtime lease cannot be safely acquired or released."""
+
+
+def _utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def process_is_running(pid: int) -> bool:
+    if pid <= 0:
+        return False
+    if pid == os.getpid():
+        return True
+    if os.name == "nt":
+        try:
+            import ctypes
+
+            PROCESS_QUERY_LIMITED_INFORMATION = 0x1000
+            STILL_ACTIVE = 259
+            kernel32 = ctypes.windll.kernel32
+            handle = kernel32.OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, False, pid)
+            if not handle:
+                return False
+            try:
+                code = ctypes.c_ulong()
+                if not kernel32.GetExitCodeProcess(handle, ctypes.byref(code)):
+                    return False
+                return code.value == STILL_ACTIVE
+            finally:
+                kernel32.CloseHandle(handle)
+        except Exception:
+            return False
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    except OSError:
+        return False
+    return True
+
+
+@dataclass(slots=True)
+class RuntimeLease:
+    runtime_dir: Path
+    profile_root: Path
+    acquired: bool = False
+    stale_recovered: bool = False
+
+    @property
+    def lock_path(self) -> Path:
+        return self.runtime_dir / "instance.lock"
+
+    @property
+    def discovery_path(self) -> Path:
+        return self.runtime_dir / "runtime.json"
+
+    def _read_json(self, path: Path) -> dict[str, Any] | None:
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except (FileNotFoundError, json.JSONDecodeError, OSError):
+            return None
+
+    def read_discovery(self) -> dict[str, Any] | None:
+        return self._read_json(self.discovery_path)
+
+    def acquire(self) -> None:
+        self.runtime_dir.mkdir(parents=True, exist_ok=True)
+        existing = self._read_json(self.lock_path)
+        if existing:
+            pid = int(existing.get("pid") or 0)
+            if process_is_running(pid):
+                raise RuntimeAlreadyRunning(
+                    f"profile already owned by process {pid}: {self.profile_root}"
+                )
+            self.stale_recovered = True
+            self.lock_path.unlink(missing_ok=True)
+            self.discovery_path.unlink(missing_ok=True)
+        elif self.lock_path.exists():
+            # An unreadable lock is ambiguous. Do not destroy it automatically.
+            raise RuntimeLeaseError(f"unreadable runtime lock: {self.lock_path}")
+
+        payload = {
+            "schema_version": 1,
+            "pid": os.getpid(),
+            "profile": str(self.profile_root.resolve()),
+            "acquired_at": _utc_now(),
+        }
+        try:
+            with self.lock_path.open("x", encoding="utf-8") as handle:
+                json.dump(payload, handle, sort_keys=True)
+        except FileExistsError as exc:
+            raise RuntimeAlreadyRunning(f"runtime lock raced for {self.profile_root}") from exc
+        self.acquired = True
+
+    def publish(self, *, port: int, session_token: str, mode: str, status: str) -> None:
+        if not self.acquired:
+            raise RuntimeLeaseError("runtime discovery cannot be published before lease acquisition")
+        payload = {
+            "schema_version": 1,
+            "pid": os.getpid(),
+            "profile": str(self.profile_root.resolve()),
+            "host": "127.0.0.1",
+            "port": int(port),
+            "session_token": session_token,
+            "mode": mode,
+            "status": status,
+            "published_at": _utc_now(),
+            "stale_lock_recovered": self.stale_recovered,
+        }
+        tmp = self.discovery_path.with_suffix(".json.tmp")
+        tmp.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        os.replace(tmp, self.discovery_path)
+
+    def release(self) -> None:
+        if not self.acquired:
+            return
+        lock = self._read_json(self.lock_path)
+        if lock and int(lock.get("pid") or 0) not in (0, os.getpid()):
+            raise RuntimeLeaseError("refusing to release a runtime lease owned by another process")
+        self.discovery_path.unlink(missing_ok=True)
+        self.lock_path.unlink(missing_ok=True)
+        self.acquired = False
 ```
 
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\opportunities\candidates.py`
@@ -42234,6 +43963,145 @@ def fixture_by_id(fixture_id: str) -> FixtureScenario:
         if fixture.fixture_id == fixture_id:
             return fixture
     raise KeyError(fixture_id)
+```
+
+### File: `alpha_engine\src\alpha_engine\api\server.py`
+
+- Size: `4.6 KB`
+
+```python
+from __future__ import annotations
+
+import os
+import secrets
+from pathlib import Path
+from typing import Any, Callable
+
+from fastapi import FastAPI, Header, HTTPException
+
+from alpha_engine.health.service import HealthService
+from alpha_engine.storage.bootstrap import initialize
+from alpha_engine.storage.models import CoreRecord, OperationRow
+
+
+def create_app(
+    db_path: str = "alpha.sqlite3",
+    session_token: str | None = None,
+    *,
+    runtime: Any | None = None,
+    shutdown_callback: Callable[[], None] | None = None,
+) -> FastAPI:
+    """Create the loopback internal API.
+
+    `runtime=` is the authoritative production/development composition path. `db_path` remains as a
+    compatibility seam for the historical `alpha-core` entry point and intentionally exposes a
+    degraded composition status rather than pretending to be the whole product.
+    """
+
+    token = session_token or secrets.token_urlsafe(32)
+    legacy_engine = None
+    if runtime is None:
+        legacy_engine, sf = initialize(db_path)
+        legacy_artifacts = Path(f"{db_path}.artifacts")
+        legacy_artifacts.mkdir(parents=True, exist_ok=True)
+        health_service = HealthService(legacy_engine, legacy_artifacts)
+    else:
+        sf = runtime.sf
+        health_service = runtime.health
+
+    app = FastAPI(title="Personal Alpha Engine Internal API", docs_url=None, redoc_url=None)
+
+    def auth(x_alpha_session: str | None) -> None:
+        if x_alpha_session != token:
+            raise HTTPException(401, "invalid local session")
+
+    @app.get("/internal/v1/health")
+    def health(x_alpha_session: str | None = Header(default=None)) -> dict[str, Any]:
+        auth(x_alpha_session)
+        return health_service.snapshot()
+
+    @app.get("/internal/v1/status")
+    def status(x_alpha_session: str | None = Header(default=None)) -> dict[str, Any]:
+        auth(x_alpha_session)
+        if runtime is None:
+            return {
+                "health": health_service.snapshot(),
+                "composition": {
+                    "mode": "legacy-alpha-core",
+                    "limitations": ["Use `alpha start` for the authoritative composed runtime."],
+                },
+            }
+        return runtime.status()
+
+    @app.get("/internal/v1/records")
+    def records(
+        record_type: str | None = None,
+        x_alpha_session: str | None = Header(default=None),
+    ) -> list[dict[str, Any]]:
+        auth(x_alpha_session)
+        with sf() as session:
+            query = session.query(CoreRecord)
+            if record_type:
+                query = query.filter_by(record_type=record_type)
+            return [
+                {
+                    "id": row.id,
+                    "record_type": row.record_type,
+                    "kind": row.kind,
+                    "subject": row.subject,
+                    "payload_json": row.payload_json,
+                    "version": row.version,
+                }
+                for row in query.limit(500).all()
+            ]
+
+    @app.get("/internal/v1/operations")
+    def operations(x_alpha_session: str | None = Header(default=None)) -> list[dict[str, Any]]:
+        auth(x_alpha_session)
+        with sf() as session:
+            return [
+                {"id": row.id, "type": row.op_type, "state": row.state}
+                for row in session.query(OperationRow).limit(500).all()
+            ]
+
+    @app.post("/internal/v1/demo/reference-run")
+    def reference_run(x_alpha_session: str | None = Header(default=None)) -> dict[str, Any]:
+        auth(x_alpha_session)
+        if runtime is None:
+            raise HTTPException(503, "reference demo requires the authoritative composed runtime")
+        from alpha_engine.reference_loop.runner import run_with_runtime
+
+        return run_with_runtime(runtime)
+
+    @app.post("/internal/v1/shutdown")
+    def shutdown(x_alpha_session: str | None = Header(default=None)) -> dict[str, str]:
+        auth(x_alpha_session)
+        if shutdown_callback is None:
+            raise HTTPException(409, "runtime shutdown is not available on this host")
+        shutdown_callback()
+        return {"status": "STOPPING"}
+
+    app.state.session_token = token
+    app.state.runtime = runtime
+    app.state.legacy_engine = legacy_engine
+    return app
+
+
+def main() -> None:
+    """Historical API-only compatibility entry point.
+
+    The supported composed launcher is `alpha start`. This command remains useful for API-only smoke/debug.
+    """
+
+    import uvicorn
+
+    token = secrets.token_urlsafe(32)
+    print(f"ALPHA_SESSION={token}")
+    uvicorn.run(
+        create_app(os.environ.get("ALPHA_DB", "alpha.sqlite3"), token),
+        host="127.0.0.1",
+        port=int(os.environ.get("ALPHA_PORT", "8765")),
+    )
 ```
 
 ### File: `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\engine.py`
@@ -43080,6 +44948,143 @@ def resolution_risk_feature(flags: tuple[str, ...], rule_ref: str | None) -> Sco
     }
     risk = clamp01(sum((weights.get(x, Decimal("0.1")) for x in set(flags)), Decimal("0")))
     return ScoringFeature(name="pm.resolution_risk", value=risk, units="0..1", provenance_refs=(rule_ref,))
+```
+
+### File: `alpha_engine\src\alpha_engine\plugin_host\discovery.py`
+
+- Size: `4.9 KB`
+
+```python
+from __future__ import annotations
+
+import re
+import tomllib
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+
+@dataclass(frozen=True, slots=True)
+class PluginCandidate:
+    plugin_id: str
+    name: str
+    version: str
+    core_contract: str
+    entrypoint: str | None
+    manifest_path: str
+    package_root: str
+    status: str
+    reasons: tuple[str, ...] = ()
+
+
+def _parse_simple_yaml(path: Path) -> dict[str, Any]:
+    data: dict[str, Any] = {}
+    current_list: str | None = None
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.rstrip()
+        if not line or line.lstrip().startswith("#"):
+            continue
+        if line.startswith("  - ") and current_list:
+            data.setdefault(current_list, []).append(line[4:].strip().strip('"\''))
+            continue
+        if ":" not in line or line.startswith(" "):
+            continue
+        key, value = line.split(":", 1)
+        key = key.strip()
+        value = value.strip()
+        if not value:
+            data[key] = []
+            current_list = key
+        else:
+            current_list = None
+            data[key] = value.strip('"\'')
+    return data
+
+
+def _python_manifest_metadata(path: Path) -> dict[str, str] | None:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    plugin_id = None
+    version = None
+    for pattern in [r'PLUGIN_ID\s*=\s*["\']([^"\']+)', r'plugin_id\s*=\s*["\']([^"\']+)']:
+        match = re.search(pattern, text)
+        if match:
+            plugin_id = match.group(1)
+            break
+    for pattern in [r'PLUGIN_VERSION\s*=\s*["\']([^"\']+)', r'plugin_version\s*=\s*["\']([^"\']+)', r'version\s*=\s*["\']([^"\']+)']:
+        match = re.search(pattern, text)
+        if match:
+            version = match.group(1)
+            break
+    contract_match = re.search(r'core_contract\s*=\s*["\']([^"\']+)', text)
+    if not plugin_id:
+        return None
+    return {
+        "plugin_id": plugin_id,
+        "name": plugin_id,
+        "version": version or "unknown",
+        "core_contract": contract_match.group(1) if contract_match else "unknown",
+        "entrypoint": "python-manifest-only",
+    }
+
+
+def discover_plugin_candidates(repo_root: str | Path) -> list[PluginCandidate]:
+    root = Path(repo_root)
+    raw: list[dict[str, Any]] = []
+    for manifest in sorted((root / "plugins").glob("*/plugin.toml")) + sorted(
+        (root / "plugins").glob("*/manifest.toml")
+    ):
+        data = tomllib.loads(manifest.read_text(encoding="utf-8"))
+        raw.append({**data, "manifest_path": manifest, "package_root": manifest.parent})
+    for manifest in sorted((root / "plugins").glob("*/plugin.yaml")):
+        data = _parse_simple_yaml(manifest)
+        pyproject = manifest.parent / "pyproject.toml"
+        if pyproject.exists():
+            pydata = tomllib.loads(pyproject.read_text(encoding="utf-8"))
+            entrypoints = pydata.get("project", {}).get("entry-points", {}).get("alpha_engine.plugins", {})
+            if entrypoints and not data.get("entrypoint"):
+                data["entrypoint"] = next(iter(entrypoints.values()))
+        raw.append({**data, "manifest_path": manifest, "package_root": manifest.parent})
+
+    python_manifests = list((root / "src").glob("*/manifest.py")) + list(
+        (root / "src" / "alpha_engine" / "plugins").glob("*/manifest.py")
+    )
+    for manifest in sorted(python_manifests):
+        data = _python_manifest_metadata(manifest)
+        if data:
+            raw.append({**data, "manifest_path": manifest, "package_root": manifest.parent})
+
+    counts: dict[str, int] = {}
+    for item in raw:
+        pid = str(item.get("plugin_id", ""))
+        counts[pid] = counts.get(pid, 0) + 1
+
+    candidates: list[PluginCandidate] = []
+    for item in raw:
+        pid = str(item.get("plugin_id", ""))
+        reasons: list[str] = []
+        contract = str(item.get("core_contract", "unknown"))
+        entrypoint = item.get("entrypoint")
+        if counts.get(pid, 0) > 1:
+            reasons.append("duplicate plugin_id implementation")
+        if contract != "1.0":
+            reasons.append(f"core contract is not exact frozen 1.0: {contract}")
+        if not entrypoint or entrypoint == "python-manifest-only":
+            reasons.append("no loadable public entrypoint declared")
+        status = "CANDIDATE" if not reasons else "BLOCKED"
+        candidates.append(
+            PluginCandidate(
+                plugin_id=pid,
+                name=str(item.get("name") or pid),
+                version=str(item.get("version") or item.get("plugin_version") or "unknown"),
+                core_contract=contract,
+                entrypoint=str(entrypoint) if entrypoint else None,
+                manifest_path=str(Path(item["manifest_path"]).relative_to(root)),
+                package_root=str(Path(item["package_root"]).relative_to(root)),
+                status=status,
+                reasons=tuple(reasons),
+            )
+        )
+    return candidates
 ```
 
 ### File: `_update_backups\20260817_231705_534208\tests\prediction_markets\test_integration_contracts.py`
@@ -46053,6 +48058,182 @@ class SecOwnershipNormalizer:
                     metadata={"issuer_name": issuer_name, "owner_name": owner_name, "derivative": derivative},
                 ))
         return out
+```
+
+### File: `alpha_engine\src\alpha_engine\cli\main.py`
+
+- Size: `6.8 KB`
+
+```python
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import shutil
+import sys
+from pathlib import Path
+
+from alpha_engine.bootstrap.lifecycle import RuntimeAlreadyRunning
+from alpha_engine.reference_loop.runner import run as run_reference_compat
+from alpha_engine.reference_loop.runner import run_with_runtime
+from alpha_engine.runtime.application import build_runtime
+from alpha_engine.runtime.control import read_runtime_discovery, request_runtime, serve_runtime
+from alpha_engine.verification.runner import run_verification
+
+
+def _default_profile(name: str = "default") -> Path:
+    if name == "default" and os.environ.get("ALPHA_PROFILE"):
+        return Path(os.environ["ALPHA_PROFILE"]).expanduser()
+    return Path.home() / ".alpha_engine" / name
+
+
+def _print(payload: object) -> None:
+    print(json.dumps(payload, indent=2, sort_keys=True))
+
+
+def _add_profile(parser: argparse.ArgumentParser, name: str = "default") -> None:
+    parser.add_argument("--profile", default=str(_default_profile(name)))
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="alpha")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    start = sub.add_parser("start", help="start the authoritative local runtime")
+    _add_profile(start)
+    start.add_argument("--headless", action="store_true")
+    start.add_argument("--port", type=int, default=8765)
+
+    demo = sub.add_parser("demo", help="seed and launch the deterministic demo profile")
+    _add_profile(demo, "demo")
+    demo.add_argument("--headless", action="store_true")
+    demo.add_argument("--port", type=int, default=8766)
+    demo.add_argument("--reset", action="store_true")
+    demo.add_argument("--seed-only", action="store_true")
+
+    status = sub.add_parser("status", help="show runtime/composition/readiness status")
+    _add_profile(status)
+
+    stop = sub.add_parser("stop", help="request graceful shutdown of the selected profile runtime")
+    _add_profile(stop)
+
+    verify = sub.add_parser("verify", help="run deterministic verification")
+    verify_sub = verify.add_subparsers(dest="verify_tier", required=True)
+    verify_sub.add_parser("quick")
+    verify_sub.add_parser("full")
+    feature = verify_sub.add_parser("feature")
+    feature.add_argument("feature_id")
+
+    qualify = sub.add_parser("qualify", help="run deterministic release/readiness qualification")
+    qualify.add_argument("--live", action="store_true", help="reserved opt-in; no live provider is qualified yet")
+
+    legacy = sub.add_parser("reference-loop", help="historical lower-level deterministic reference runner")
+    legacy.add_argument("--db", default="alpha-reference.sqlite3")
+    legacy.add_argument("--artifacts", default="alpha-reference-artifacts")
+    return parser
+
+
+def _start(profile: Path, *, mode: str, headless: bool, port: int) -> int:
+    try:
+        runtime = build_runtime(profile, mode=mode, acquire_lease=True)
+    except RuntimeAlreadyRunning as exc:
+        _print({"status": "BLOCKED", "reason_code": "SECOND_INSTANCE", "reason": str(exc)})
+        return 2
+    health = runtime.health.snapshot()
+    if health["status"] != "READY":
+        runtime.close()
+        _print({"status": "BLOCKED", "health": health})
+        return 3
+    _print({"status": "STARTING", "profile": str(profile.resolve()), "mode": mode, "port": port})
+    try:
+        return serve_runtime(runtime, port=port, desktop=not headless)
+    except BaseException:
+        # serve_runtime owns normal cleanup; ensure lease is not stranded on startup exceptions.
+        runtime.close()
+        raise
+
+
+def _demo(args: argparse.Namespace) -> int:
+    profile = Path(args.profile).expanduser()
+    if args.reset:
+        discovery = read_runtime_discovery(profile)
+        if discovery:
+            _print({"status": "BLOCKED", "reason": "cannot reset an active/discovered demo profile; stop it first"})
+            return 2
+        shutil.rmtree(profile, ignore_errors=True)
+    try:
+        runtime = build_runtime(profile, mode="demo", acquire_lease=True)
+    except RuntimeAlreadyRunning as exc:
+        _print({"status": "BLOCKED", "reason_code": "SECOND_INSTANCE", "reason": str(exc)})
+        return 2
+    try:
+        manifest = run_with_runtime(runtime)
+        _print({"status": "DEMO_SEEDED", "profile": str(profile.resolve()), "manifest": manifest})
+        if args.seed_only:
+            runtime.close()
+            return 0
+        return serve_runtime(runtime, port=args.port, desktop=not args.headless)
+    except BaseException:
+        runtime.close()
+        raise
+
+
+def _status(profile: Path) -> int:
+    discovery = read_runtime_discovery(profile)
+    if discovery:
+        try:
+            payload = request_runtime(profile, "/internal/v1/status")
+            payload["discovery"] = {k: v for k, v in discovery.items() if k != "session_token"}
+            _print(payload)
+            return 0 if payload.get("health", {}).get("status") == "READY" else 1
+        except RuntimeError as exc:
+            _print({"status": "STALE_OR_UNREACHABLE", "reason": str(exc), "discovery": {k: v for k, v in discovery.items() if k != "session_token"}})
+            return 1
+    runtime = build_runtime(profile, mode="offline-status", acquire_lease=False)
+    try:
+        payload = runtime.status()
+        payload["runtime"]["online"] = False
+        _print(payload)
+        return 0 if payload["health"]["status"] == "READY" else 1
+    finally:
+        runtime.close()
+
+
+def main() -> None:
+    parser = build_parser()
+    args = parser.parse_args()
+    if args.cmd == "reference-loop":
+        _print(run_reference_compat(args.db, args.artifacts))
+        return
+    if args.cmd == "start":
+        raise SystemExit(_start(Path(args.profile).expanduser(), mode="normal", headless=args.headless, port=args.port))
+    if args.cmd == "demo":
+        raise SystemExit(_demo(args))
+    if args.cmd == "status":
+        raise SystemExit(_status(Path(args.profile).expanduser()))
+    if args.cmd == "stop":
+        try:
+            _print(request_runtime(Path(args.profile).expanduser(), "/internal/v1/shutdown", method="POST"))
+            return
+        except RuntimeError as exc:
+            _print({"status": "NOT_RUNNING", "reason": str(exc)})
+            raise SystemExit(2) from exc
+    if args.cmd == "verify":
+        tier = args.verify_tier
+        feature_id = getattr(args, "feature_id", None)
+        result = run_verification("feature" if tier == "feature" else tier, feature_id=feature_id)
+        raise SystemExit(0 if result["readiness"] == "READY" else 1)
+    if args.cmd == "qualify":
+        result = run_verification("qualification")
+        if args.live:
+            print("LIVE_PROVIDER_QUALIFICATION=BLOCKED: no provider/rights path is qualified in this pass", file=sys.stderr)
+            raise SystemExit(1)
+        raise SystemExit(0 if result["readiness"] == "READY" else 1)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\providers\kalshi.py`
@@ -49581,6 +51762,206 @@ def fixture_cycle() -> CanonicalSnapshot:
     return CanonicalSnapshot("snapshot:cycle", "1", AS_OF, "cap-hash-cycle", (a, b))
 ```
 
+### File: `alpha_engine\src\alpha_engine\reference_loop\runner.py`
+
+- Size: `8.0 KB`
+
+```python
+from __future__ import annotations
+
+import argparse
+import json
+from decimal import Decimal
+
+from alpha_engine.contracts.plugin import ProviderRequest
+from alpha_engine.runtime.application import ApplicationRuntime, build_runtime
+from .fixture import (
+    FixtureNormalizer,
+    FixtureOpportunityDetector,
+    FixtureProvider,
+    FixtureSignalDetector,
+)
+
+
+def run_with_runtime(runtime: ApplicationRuntime) -> dict:
+    """Execute the deterministic reference workflow through the composed public service authorities."""
+
+    runtime.providers.register("reference.fixture", FixtureProvider(), priority=1)
+    operation_id, created = runtime.operations.admit(
+        "reference-script", "REFERENCE_LOOP", "reference-loop-v2", {"subject": "resource:A"}
+    )
+    if not created:
+        existing = runtime.operations.snapshot(operation_id)
+        if existing and existing["state"] == "SUCCEEDED" and existing["result"]:
+            return existing["result"]
+        raise RuntimeError(
+            f"reference operation already exists in non-terminal reusable state: {existing}"
+        )
+
+    runtime.operations.transition(operation_id, "RUNNING")
+    budget_id = runtime.budgets.define("reference.fixture", Decimal("5.00"))
+    permission_id = runtime.permissions.grant(
+        "PAPER_ACTION", "resource:A", max_uses=10
+    )
+
+    result = runtime.data_queries.execute(
+        ProviderRequest(query_type="synthetic_resource_forecast", payload={"subject": "resource:A"})
+    )
+    raw = json.dumps(result.payload, sort_keys=True).encode()
+    artifact_id = runtime.artifacts.adopt_bytes(raw, "application/json")
+    evidence_id = runtime.evidence.register(
+        "resource:A", artifact_id, metadata={"provider": "reference.fixture"}
+    )
+
+    observation_candidate = FixtureNormalizer().normalize(result, [evidence_id])[0]
+    observation_id = runtime.observations.persist_candidate(observation_candidate)
+    signal_candidate = FixtureSignalDetector().detect(
+        [
+            {
+                "id": observation_id,
+                "subject": observation_candidate.subject,
+                "value": observation_candidate.value,
+                "evidence_refs": observation_candidate.evidence_refs,
+            }
+        ]
+    )[0]
+    signal_id = runtime.signals.persist_candidate(signal_candidate)
+    opportunity_candidate = FixtureOpportunityDetector().detect(
+        [{"id": signal_id, "subject": signal_candidate.subject}]
+    )[0]
+    opportunity_id = runtime.opportunities.persist_candidate(opportunity_candidate, [evidence_id])
+    score_id, total = runtime.ranking.score(
+        opportunity_id, {"magnitude": "0.90", "confidence": "0.95", "freshness": "1.00"}
+    )
+    radar_id = runtime.radar.evaluate(opportunity_id, score_id, total)
+    decision_id = runtime.decisions.record(
+        opportunity_id, "APPROVE_PAPER_ACTION", "Deterministic reference approval"
+    )
+    runtime.permissions.require_and_use("PAPER_ACTION", "resource:A")
+    reservation = runtime.budgets.reserve("reference.fixture", Decimal("0.10"))
+    action_id = runtime.simulation.paper_action(
+        opportunity_id, decision_id, Decimal("10"), Decimal("1"), Decimal("10")
+    )
+    runtime.budgets.commit(reservation, Decimal("0.05"))
+    outcome_artifact = runtime.artifacts.adopt_bytes(b'{"realized":"0.80"}', "application/json")
+    outcome_evidence = runtime.evidence.register(opportunity_id, outcome_artifact)
+    outcome_id = runtime.outcomes.finalize(action_id, {"realized": "0.80"}, [outcome_evidence])
+    evaluation_id = runtime.evaluation.evaluate(
+        opportunity_id, outcome_id, total, Decimal("0.80")
+    )
+    learning_id = runtime.learning.recommend(
+        evaluation_id, "ranking.reference.confidence_weight", "0.35", "0.34"
+    )
+
+    manifest = {
+        "operation_id": operation_id,
+        "budget_id": budget_id,
+        "permission_id": permission_id,
+        "artifact_id": artifact_id,
+        "evidence_id": evidence_id,
+        "observation_id": observation_id,
+        "signal_id": signal_id,
+        "opportunity_id": opportunity_id,
+        "score_id": score_id,
+        "score_total": str(total),
+        "radar_id": radar_id,
+        "decision_id": decision_id,
+        "paper_action_id": action_id,
+        "outcome_id": outcome_id,
+        "evaluation_id": evaluation_id,
+        "learning_recommendation_id": learning_id,
+        "artifact_integrity": runtime.artifacts.verify(artifact_id),
+        "learning_auto_applied": False,
+        "runtime_mode": runtime.mode,
+    }
+    runtime.operations.transition(operation_id, "SUCCEEDED", manifest)
+    return manifest
+
+
+def run(db: str, artifacts: str) -> dict:
+    """Backward-compatible lower-level runner preserving the historical CLI contract."""
+
+    from pathlib import Path
+    import tempfile
+
+    # The legacy two-path contract is preserved by composing a temporary profile and overriding the
+    # storage/artifact locations only for this compatibility runner. It remains lower-level than `alpha demo`.
+    from alpha_engine.storage.bootstrap import initialize
+    from alpha_engine.artifacts.store import ArtifactStore
+    from alpha_engine.evidence.service import EvidenceService
+    from alpha_engine.providers.registry import ProviderRegistry
+    from alpha_engine.data_queries.gateway import DataQueryGateway
+    from alpha_engine.operations.service import OperationService
+    from alpha_engine.operations.scheduler import SchedulerService
+    from alpha_engine.operations.outbox import OutboxService
+    from alpha_engine.permissions.service import PermissionService
+    from alpha_engine.budgets.service import BudgetService
+    from alpha_engine.plugin_host.registry import PluginRegistry
+    from alpha_engine.observations.service import ObservationService
+    from alpha_engine.signals.service import SignalService
+    from alpha_engine.opportunities.service import OpportunityService
+    from alpha_engine.ranking.service import RankingService
+    from alpha_engine.radar.service import RadarService
+    from alpha_engine.reviews.service import DecisionService
+    from alpha_engine.simulation.service import SimulationService
+    from alpha_engine.outcomes.service import OutcomeService
+    from alpha_engine.evaluation.service import EvaluationService
+    from alpha_engine.learning.service import LearningService
+    from alpha_engine.notifications.service import NotificationService
+    from alpha_engine.registries.service import RegistryService
+    from alpha_engine.health.service import HealthService
+    from alpha_engine.bootstrap.profile import ensure_profile
+
+    profile = ensure_profile(Path(tempfile.gettempdir()) / "alpha-engine-reference-compat")
+    engine, sf = initialize(db)
+    providers = ProviderRegistry()
+    runtime = ApplicationRuntime(
+        profile=profile,
+        engine=engine,
+        sf=sf,
+        artifacts=ArtifactStore(artifacts, sf),
+        evidence=EvidenceService(sf),
+        providers=providers,
+        data_queries=DataQueryGateway(providers),
+        operations=OperationService(sf),
+        scheduler=SchedulerService(sf),
+        outbox=OutboxService(sf),
+        permissions=PermissionService(sf),
+        budgets=BudgetService(sf),
+        plugins=PluginRegistry(sf),
+        observations=ObservationService(sf),
+        signals=SignalService(sf),
+        opportunities=OpportunityService(sf),
+        ranking=RankingService(sf),
+        radar=RadarService(sf),
+        decisions=DecisionService(sf),
+        simulation=SimulationService(sf),
+        outcomes=OutcomeService(sf),
+        evaluation=EvaluationService(sf),
+        learning=LearningService(sf),
+        notifications=NotificationService(sf),
+        registries=RegistryService(sf),
+        health=HealthService(engine, artifacts),
+        mode="reference-compat",
+    )
+    try:
+        return run_with_runtime(runtime)
+    finally:
+        engine.dispose()
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--db", default="alpha-reference.sqlite3")
+    parser.add_argument("--artifacts", default="alpha-reference-artifacts")
+    args = parser.parse_args()
+    print(json.dumps(run(args.db, args.artifacts), indent=2))
+
+
+if __name__ == "__main__":
+    main()
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\domain\models.py`
 
 - Size: `8.2 KB`
@@ -53067,6 +55448,309 @@ def run_detectors(
     )
 ```
 
+### File: `alpha_engine\src\alpha_engine\verification\registry.py`
+
+- Size: `11.7 KB`
+
+```python
+from __future__ import annotations
+
+import json
+import os
+import sys
+from pathlib import Path
+from typing import Any
+
+from .models import CheckSpec
+
+
+def repository_root() -> Path:
+    override = os.environ.get("ALPHA_REPO_ROOT")
+    if override:
+        return Path(override).resolve()
+    here = Path(__file__).resolve()
+    for parent in [Path.cwd().resolve(), *Path.cwd().resolve().parents, *here.parents]:
+        if (parent / "alpha_engine" / "pyproject.toml").exists() and (parent / "plugins").exists():
+            return parent
+    # Installed-core fallback: the nested project itself.
+    for parent in here.parents:
+        if (parent / "pyproject.toml").exists():
+            return parent
+    raise RuntimeError("unable to locate Alpha Engine repository root")
+
+
+def _core_env(root: Path) -> dict[str, str]:
+    existing = os.environ.get("PYTHONPATH", "")
+    parts = [str(root / "alpha_engine" / "src")]
+    if existing:
+        parts.append(existing)
+    return {"PYTHONPATH": os.pathsep.join(parts), "ALPHA_REPO_ROOT": str(root), "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"}
+
+
+def build_check_registry(root: Path | None = None) -> dict[str, CheckSpec]:
+    root = (root or repository_root()).resolve()
+    py = sys.executable
+    core = root / "alpha_engine"
+    env = _core_env(root)
+    specs = [
+        CheckSpec(
+            "V00-VERIFIER-SELFTEST",
+            "Verifier anti-false-green self-tests",
+            (py, "-m", "pytest", "-q", "tests/verification/test_verifier.py"),
+            str(core),
+            timeout_seconds=60,
+            feature_ids=("AE-VER-015", "AE-FTR-QA-009"),
+            layer="qa-infrastructure",
+            tiers=("quick", "full", "qualification"),
+            env=env,
+        ),
+        CheckSpec(
+            "V01-IMPORT-SANITY",
+            "Core import and composition sanity",
+            (py, "-c", "from alpha_engine.runtime import build_runtime; from alpha_engine.cli.main import main; print('IMPORT_OK')"),
+            str(core),
+            timeout_seconds=30,
+            feature_ids=("AE-RUN-001", "AE-PURPOSE-GAP-002", "AE-GAP-001"),
+            layer="package",
+            tiers=("quick", "full", "qualification"),
+            env=env,
+        ),
+        CheckSpec(
+            "V03-CORE-TESTS",
+            "Core deterministic pytest suite",
+            (py, "-m", "pytest", "-q"),
+            str(core),
+            timeout_seconds=180,
+            prerequisites=("V01-IMPORT-SANITY",),
+            feature_ids=("AE-FTR-QA-005", "AE-VER-004"),
+            layer="unit-integration",
+            tiers=("quick", "full", "qualification"),
+            env=env,
+        ),
+        CheckSpec(
+            "V10-PLUGIN-DISCOVERY",
+            "Plugin manifest/duplicate/compatibility discovery",
+            (py, "-m", "pytest", "-q", "tests/test_plugin_discovery.py"),
+            str(core),
+            timeout_seconds=60,
+            feature_ids=("AE-VER-007", "AE-GAP-001"),
+            layer="plugin-contract",
+            tiers=("full", "qualification"),
+            env=env,
+        ),
+        CheckSpec(
+            "V11-ARBITRAGE",
+            "Arbitrage cylinder deterministic suite",
+            (py, "-m", "pytest", "-q"),
+            str(root / "plugins" / "ae_arbitrage_cross_market"),
+            timeout_seconds=120,
+            layer="plugin",
+            tiers=("full", "qualification"),
+            env={"PYTHONPATH": os.pathsep.join([str(root / "plugins" / "ae_arbitrage_cross_market" / "src"), str(root / "plugins" / "ae_arbitrage_cross_market" / "tests")]), "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"},
+        ),
+        CheckSpec(
+            "V11-PREDICTION",
+            "Canonical standalone prediction-markets deterministic suite",
+            (py, "-m", "pytest", "-q"),
+            str(root / "plugins" / "ae_prediction_markets"),
+            timeout_seconds=120,
+            layer="plugin",
+            tiers=("full", "qualification"),
+            env={"PYTHONPATH": str(root / "plugins" / "ae_prediction_markets" / "src"), "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"},
+        ),
+        CheckSpec(
+            "V11-PUBLIC-MARKETS",
+            "Public markets deterministic suite",
+            (py, "-m", "pytest", "-q"),
+            str(root / "plugins" / "ae_public_markets_quant_options"),
+            timeout_seconds=120,
+            layer="plugin",
+            tiers=("full", "qualification"),
+            env={"PYTHONPATH": str(root / "plugins" / "ae_public_markets_quant_options" / "src"), "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"},
+        ),
+        CheckSpec(
+            "V11-RETAIL",
+            "Retail/resale deterministic suite",
+            (py, "-m", "pytest", "-q"),
+            str(root / "plugins" / "ae_retail_resale_flip"),
+            timeout_seconds=120,
+            layer="plugin",
+            tiers=("full", "qualification"),
+            env={"PYTHONPATH": str(root / "plugins" / "ae_retail_resale_flip" / "src"), "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"},
+        ),
+        CheckSpec(
+            "V12-REFERENCE-LOOP",
+            "Deterministic reference loop through composed authorities",
+            (py, "-m", "pytest", "-q", "tests/test_runtime_reference.py::test_composed_reference_loop_is_idempotent"),
+            str(core),
+            timeout_seconds=90,
+            prerequisites=("V01-IMPORT-SANITY",),
+            feature_ids=("AE-VER-006", "AE-RUN-002", "AE-FTR-QA-005"),
+            layer="e2e",
+            tiers=("quick", "full", "qualification"),
+            env=env,
+        ),
+        CheckSpec(
+            "V13-LIFECYCLE",
+            "Runtime startup/status/second-instance/shutdown lifecycle",
+            (py, "-m", "pytest", "-q", "tests/test_runtime_lifecycle.py", "tests/test_runtime_server_smoke.py"),
+            str(core),
+            timeout_seconds=90,
+            prerequisites=("V01-IMPORT-SANITY",),
+            feature_ids=("AE-RUN-001", "AE-RUN-003", "AE-VER-005"),
+            layer="lifecycle",
+            tiers=("quick", "full", "qualification"),
+            env=env,
+        ),
+        CheckSpec(
+            "V18-TRACEABILITY",
+            "Feature acceptance registry integrity",
+            (py, "-m", "alpha_engine.verification.traceability_check"),
+            str(core),
+            timeout_seconds=60,
+            feature_ids=("AE-VER-003", "AE-PURPOSE-GAP-001", "AE-PURPOSE-GAP-033"),
+            layer="traceability",
+            tiers=("quick", "full", "qualification"),
+            env=env,
+        ),
+        CheckSpec(
+            "V05-MIGRATION-AUTHORITY",
+            "Numbered core migration/upgrade authority qualification",
+            (),
+            str(root),
+            required=True,
+            feature_ids=("AE-VER-009",),
+            layer="migration",
+            tiers=("qualification",),
+            static_status="BLOCKED",
+            static_reason="Core still uses development create_all bootstrap; numbered release migrations and upgrade/recovery evidence are not implemented.",
+        ),
+        CheckSpec(
+            "V06-WORKER-SUPERVISION",
+            "Worker lease/supervision/recovery qualification",
+            (),
+            str(root),
+            required=True,
+            feature_ids=("AE-PURPOSE-GAP-009", "AE-VER-008"),
+            layer="workers-recovery",
+            tiers=("qualification",),
+            static_status="BLOCKED",
+            static_reason="Central worker supervisor/lease execution is not yet implemented; scheduler rows are not sufficient proof.",
+        ),
+        CheckSpec(
+            "V10-PLUGIN-ACTIVATION",
+            "Frozen-PDK plugin activation qualification",
+            (),
+            str(root),
+            required=True,
+            feature_ids=("AE-VER-007", "AE-GAP-001"),
+            layer="plugin-runtime",
+            tiers=("qualification",),
+            static_status="BLOCKED",
+            static_reason="Delivered cylinders have mixed manifest/contract shapes and duplicate Prediction Markets implementations; no universal frozen host activation path is qualified yet.",
+        ),
+        CheckSpec(
+            "V13-DESKTOP-SMOKE",
+            "Native desktop runtime smoke on target environment",
+            (),
+            str(root),
+            required=True,
+            feature_ids=("AE-VER-005",),
+            layer="ui-smoke",
+            tiers=("qualification",),
+            static_status="BLOCKED",
+            static_reason="Desktop PySide6/target-machine smoke was not executed in this builder environment.",
+        ),
+        CheckSpec(
+            "V15-TARGET-RESOURCE",
+            "Baseline Windows laptop resource/responsiveness qualification",
+            (),
+            str(root),
+            required=True,
+            feature_ids=("AE-VER-011",),
+            layer="resource",
+            tiers=("qualification",),
+            static_status="BLOCKED",
+            static_reason="Target-machine resource qualification has not been executed; no pass thresholds are fabricated.",
+        ),
+        CheckSpec(
+            "V16-ROOT-PACKAGE",
+            "Repository-root source package build",
+            (py, "-m", "pytest", "-q", "alpha_engine/tests/test_root_package.py"),
+            str(root),
+            timeout_seconds=120,
+            required=True,
+            feature_ids=("AE-GAP-001", "AE-RUN-004", "AE-VER-009"),
+            layer="packaging",
+            tiers=("qualification",),
+            env=env,
+        ),
+        CheckSpec(
+            "V17-LIVE-SOURCE",
+            "Opt-in real-source vertical slice",
+            (),
+            str(root),
+            required=False,
+            feature_ids=("AE-PURPOSE-GAP-010", "AE-VER-012"),
+            layer="live-provider",
+            tiers=("qualification",),
+            static_status="SKIPPED",
+            static_reason="No sanctioned live provider/rights path was authorized for this deterministic builder run.",
+        ),
+        CheckSpec(
+            "V19-ACCEPTED-SCOPE-MATRIX",
+            "Complete 392-feature + purpose acceptance matrix population",
+            (),
+            str(root),
+            required=True,
+            feature_ids=("AE-PURPOSE-GAP-033", "AE-VER-016"),
+            layer="readiness",
+            tiers=("qualification",),
+            static_status="INCOMPLETE",
+            static_reason="Executable traceability is established for this convergence pass, but the cumulative 392-feature registry has not yet been fully populated into the verifier.",
+        ),
+    ]
+    return {spec.check_id: spec for spec in specs}
+
+
+def feature_registry_path() -> Path:
+    return Path(__file__).with_name("feature_registry.json")
+
+
+def load_feature_registry() -> dict[str, Any]:
+    return json.loads(feature_registry_path().read_text(encoding="utf-8"))
+
+
+def validate_feature_registry(checks: dict[str, CheckSpec] | None = None) -> list[str]:
+    checks = checks or build_check_registry()
+    data = load_feature_registry()
+    errors: list[str] = []
+    seen: set[str] = set()
+    for feature in data.get("features", []):
+        feature_id = feature.get("feature_id")
+        if not feature_id or feature_id in seen:
+            errors.append(f"duplicate or missing feature_id: {feature_id!r}")
+            continue
+        seen.add(feature_id)
+        disposition = feature.get("disposition")
+        refs = feature.get("checks", [])
+        for check_id in refs:
+            if check_id not in checks:
+                errors.append(f"{feature_id}: unknown check {check_id}")
+        if disposition in {"ACCEPTED", "IMPLEMENTED", "PARTIAL"} and not refs:
+            errors.append(f"{feature_id}: accepted/current capability has no executable check")
+    return errors
+
+
+def checks_for_feature(feature_id: str, checks: dict[str, CheckSpec] | None = None) -> list[CheckSpec]:
+    checks = checks or build_check_registry()
+    data = load_feature_registry()
+    for feature in data.get("features", []):
+        if feature.get("feature_id") == feature_id:
+            return [checks[cid] for cid in feature.get("checks", []) if cid in checks]
+    return []
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\normalization\kalshi.py`
 
 - Size: `11.8 KB`
@@ -54439,6 +57123,370 @@ def executable_probability(price: Decimal | None, payout: Decimal) -> Decimal | 
     if p < 0 or p > 1:
         raise ValueError("price outside payout bounds")
     return p
+```
+
+### File: `alpha_engine\src\alpha_engine\verification\runner.py`
+
+- Size: `13.1 KB`
+
+```python
+from __future__ import annotations
+
+import json
+import os
+import shutil
+import subprocess
+import sys
+import time
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Iterable
+
+from alpha_engine import __version__
+from .models import CheckResult, CheckSpec
+from .registry import build_check_registry, checks_for_feature, repository_root, validate_feature_registry
+
+SCHEMA_VERSION = 1
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def _run_id() -> str:
+    return datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
+
+
+def _safe_name(value: str) -> str:
+    return "".join(c if c.isalnum() or c in "-_." else "_" for c in value)
+
+
+def execute_check(spec: CheckSpec, evidence_dir: Path, prior: dict[str, CheckResult]) -> CheckResult:
+    started = _now()
+    started_perf = time.perf_counter()
+    if spec.static_status is not None:
+        if spec.static_status not in {"PASS", "FAILED", "BLOCKED", "INCOMPLETE", "SKIPPED"}:
+            raise ValueError(f"invalid static status for {spec.check_id}: {spec.static_status}")
+        return CheckResult(
+            check_id=spec.check_id, title=spec.title, status=spec.static_status, required=spec.required,
+            started_at=started, finished_at=_now(),
+            duration_seconds=round(time.perf_counter() - started_perf, 6),
+            command=list(spec.command), cwd=spec.cwd, timeout_seconds=spec.timeout_seconds, exit_code=None,
+            stdout_path=None, stderr_path=None, reason_code="STATIC_PREREQUISITE",
+            reason=spec.static_reason, feature_ids=list(spec.feature_ids), defect_ids=list(spec.defect_ids),
+            layer=spec.layer, prerequisites=list(spec.prerequisites),
+        )
+
+    missing_prereqs = [
+        pid for pid in spec.prerequisites if pid not in prior or prior[pid].status != "PASS"
+    ]
+    if missing_prereqs:
+        finished = _now()
+        return CheckResult(
+            check_id=spec.check_id,
+            title=spec.title,
+            status="BLOCKED",
+            required=spec.required,
+            started_at=started,
+            finished_at=finished,
+            duration_seconds=round(time.perf_counter() - started_perf, 6),
+            command=list(spec.command),
+            cwd=spec.cwd,
+            timeout_seconds=spec.timeout_seconds,
+            exit_code=None,
+            stdout_path=None,
+            stderr_path=None,
+            reason_code="PREREQUISITE_NOT_PASS",
+            reason="Prerequisites not PASS: " + ", ".join(missing_prereqs),
+            feature_ids=list(spec.feature_ids),
+            defect_ids=list(spec.defect_ids),
+            layer=spec.layer,
+            prerequisites=list(spec.prerequisites),
+        )
+
+    stdout_path = evidence_dir / "raw" / f"{_safe_name(spec.check_id)}.stdout.txt"
+    stderr_path = evidence_dir / "raw" / f"{_safe_name(spec.check_id)}.stderr.txt"
+    stdout_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if not Path(spec.cwd).exists():
+        return CheckResult(
+            check_id=spec.check_id,
+            title=spec.title,
+            status="BLOCKED",
+            required=spec.required,
+            started_at=started,
+            finished_at=_now(),
+            duration_seconds=round(time.perf_counter() - started_perf, 6),
+            command=list(spec.command),
+            cwd=spec.cwd,
+            timeout_seconds=spec.timeout_seconds,
+            exit_code=None,
+            stdout_path=None,
+            stderr_path=None,
+            reason_code="MISSING_WORKING_DIRECTORY",
+            reason=f"Working directory does not exist: {spec.cwd}",
+            feature_ids=list(spec.feature_ids),
+            defect_ids=list(spec.defect_ids),
+            layer=spec.layer,
+            prerequisites=list(spec.prerequisites),
+        )
+
+    executable = spec.command[0] if spec.command else ""
+    if executable and not (Path(executable).exists() or shutil.which(executable)):
+        return CheckResult(
+            check_id=spec.check_id,
+            title=spec.title,
+            status="BLOCKED",
+            required=spec.required,
+            started_at=started,
+            finished_at=_now(),
+            duration_seconds=round(time.perf_counter() - started_perf, 6),
+            command=list(spec.command),
+            cwd=spec.cwd,
+            timeout_seconds=spec.timeout_seconds,
+            exit_code=None,
+            stdout_path=None,
+            stderr_path=None,
+            reason_code="MISSING_TOOL",
+            reason=f"Executable not found: {executable}",
+            feature_ids=list(spec.feature_ids),
+            defect_ids=list(spec.defect_ids),
+            layer=spec.layer,
+            prerequisites=list(spec.prerequisites),
+        )
+
+    env = os.environ.copy()
+    env.update(spec.env)
+    try:
+        completed = subprocess.run(
+            list(spec.command),
+            cwd=spec.cwd,
+            env=env,
+            text=True,
+            capture_output=True,
+            timeout=spec.timeout_seconds,
+            check=False,
+        )
+        stdout_path.write_text(completed.stdout or "", encoding="utf-8", errors="replace")
+        stderr_path.write_text(completed.stderr or "", encoding="utf-8", errors="replace")
+        if completed.returncode == 0:
+            status = "PASS"
+            reason_code = reason = None
+        elif completed.returncode == 5 and "pytest" in " ".join(spec.command).lower():
+            status = "INCOMPLETE"
+            reason_code = "ZERO_TESTS_COLLECTED"
+            reason = "pytest collected no tests for a required check"
+        else:
+            status = "FAILED"
+            reason_code = "NONZERO_EXIT"
+            reason = f"Command exited with {completed.returncode}"
+        exit_code = completed.returncode
+    except subprocess.TimeoutExpired as exc:
+        stdout_path.write_text(
+            (exc.stdout or "") if isinstance(exc.stdout, str) else "", encoding="utf-8", errors="replace"
+        )
+        stderr_path.write_text(
+            (exc.stderr or "") if isinstance(exc.stderr, str) else "", encoding="utf-8", errors="replace"
+        )
+        status = "FAILED"
+        reason_code = "TIMEOUT"
+        reason = f"Exceeded timeout of {spec.timeout_seconds}s"
+        exit_code = None
+    except Exception as exc:  # noqa: BLE001 - verifier must retain and classify harness exceptions.
+        stderr_path.write_text(f"{type(exc).__name__}: {exc}\n", encoding="utf-8")
+        status = "INCOMPLETE"
+        reason_code = "HARNESS_EXCEPTION"
+        reason = f"Verifier exception: {type(exc).__name__}: {exc}"
+        exit_code = None
+
+    return CheckResult(
+        check_id=spec.check_id,
+        title=spec.title,
+        status=status,
+        required=spec.required,
+        started_at=started,
+        finished_at=_now(),
+        duration_seconds=round(time.perf_counter() - started_perf, 6),
+        command=list(spec.command),
+        cwd=spec.cwd,
+        timeout_seconds=spec.timeout_seconds,
+        exit_code=exit_code,
+        stdout_path=str(stdout_path.relative_to(evidence_dir)),
+        stderr_path=str(stderr_path.relative_to(evidence_dir)),
+        reason_code=reason_code,
+        reason=reason,
+        feature_ids=list(spec.feature_ids),
+        defect_ids=list(spec.defect_ids),
+        layer=spec.layer,
+        prerequisites=list(spec.prerequisites),
+    )
+
+
+def _readiness(results: Iterable[CheckResult]) -> tuple[str, list[str]]:
+    required = [r for r in results if r.required]
+    failed = [r.check_id for r in required if r.status == "FAILED"]
+    incomplete = [r.check_id for r in required if r.status in {"BLOCKED", "INCOMPLETE"}]
+    if failed:
+        return "NOT_READY", failed + incomplete
+    if incomplete:
+        return "NOT_QUALIFIED", incomplete
+    return "READY", []
+
+
+def _write_report(evidence_dir: Path, payload: dict) -> None:
+    (evidence_dir / "verification.json").write_text(
+        json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    lines = [
+        "# Alpha Engine Verification Report",
+        "",
+        f"- Run: `{payload['run_id']}`",
+        f"- Tier: `{payload['tier']}`",
+        f"- Build: `{payload['build_version']}`",
+        f"- Readiness: **{payload['readiness']}**",
+        f"- Totals: `{payload['totals']}`",
+        "- Builder verification is evidence only; final acceptance belongs to independent review and Primary Development reconciliation.",
+        "",
+        "## Checks",
+        "",
+        "| Check | Status | Required | Layer | Reason |",
+        "|---|---|---:|---|---|",
+    ]
+    for result in payload["results"]:
+        reason = (result.get("reason") or "").replace("|", "\\|")
+        lines.append(
+            f"| `{result['check_id']}` | {result['status']} | {result['required']} | {result['layer']} | {reason} |"
+        )
+    if payload["blockers"]:
+        lines += ["", "## Blockers", ""] + [f"- `{x}`" for x in payload["blockers"]]
+    (evidence_dir / "VERIFICATION_REPORT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+
+def _expand_with_prerequisites(selected: list[CheckSpec], checks: dict[str, CheckSpec]) -> list[CheckSpec]:
+    ordered: list[CheckSpec] = []
+    seen: set[str] = set()
+
+    def add(spec: CheckSpec) -> None:
+        if spec.check_id in seen:
+            return
+        for prerequisite_id in spec.prerequisites:
+            prerequisite = checks.get(prerequisite_id)
+            if prerequisite is not None:
+                add(prerequisite)
+        seen.add(spec.check_id)
+        ordered.append(spec)
+
+    for spec in selected:
+        add(spec)
+    return ordered
+
+def run_verification(
+    tier: str,
+    *,
+    feature_id: str | None = None,
+    evidence_root: str | Path | None = None,
+    root: Path | None = None,
+) -> dict:
+    root = (root or repository_root()).resolve()
+    checks = build_check_registry(root)
+    if tier == "feature":
+        if not feature_id:
+            raise ValueError("feature tier requires feature_id")
+        selected = checks_for_feature(feature_id, checks)
+        if selected:
+            selected = _expand_with_prerequisites(selected, checks)
+        else:
+            selected = []
+    else:
+        selected = [spec for spec in checks.values() if tier in spec.tiers]
+
+    run_id = _run_id()
+    evidence_base = Path(evidence_root) if evidence_root else root / ".alpha_verification_evidence"
+    evidence_dir = evidence_base / run_id
+    evidence_dir.mkdir(parents=True, exist_ok=False)
+
+    metadata_errors = validate_feature_registry(checks)
+    results: dict[str, CheckResult] = {}
+    if tier == "feature" and not selected:
+        synthetic = CheckResult(
+            check_id="V18-FEATURE-NOT-REGISTERED",
+            title=f"Feature traceability for {feature_id}",
+            status="INCOMPLETE",
+            required=True,
+            started_at=_now(),
+            finished_at=_now(),
+            duration_seconds=0.0,
+            command=[],
+            cwd=str(root),
+            timeout_seconds=0,
+            exit_code=None,
+            stdout_path=None,
+            stderr_path=None,
+            reason_code="UNKNOWN_OR_UNMAPPED_FEATURE",
+            reason=f"No executable acceptance checks registered for {feature_id}",
+            feature_ids=[feature_id or ""],
+            defect_ids=[],
+            layer="traceability",
+            prerequisites=[],
+        )
+        results[synthetic.check_id] = synthetic
+    else:
+        for spec in selected:
+            result = execute_check(spec, evidence_dir, results)
+            results[result.check_id] = result
+            print(f"{result.check_id}: {result.status}")
+
+    if metadata_errors:
+        result = CheckResult(
+            check_id="V00-REGISTRY-METADATA",
+            title="Verification registry metadata validation",
+            status="FAILED",
+            required=True,
+            started_at=_now(),
+            finished_at=_now(),
+            duration_seconds=0.0,
+            command=[],
+            cwd=str(root),
+            timeout_seconds=0,
+            exit_code=None,
+            stdout_path=None,
+            stderr_path=None,
+            reason_code="TRACEABILITY_INVALID",
+            reason="; ".join(metadata_errors),
+            feature_ids=["AE-VER-003"],
+            defect_ids=[],
+            layer="qa-infrastructure",
+            prerequisites=[],
+        )
+        results[result.check_id] = result
+
+    readiness, blockers = _readiness(results.values())
+    totals = dict(Counter(r.status for r in results.values()))
+    for status in ["PASS", "FAILED", "BLOCKED", "INCOMPLETE", "SKIPPED"]:
+        totals.setdefault(status, 0)
+    payload = {
+        "schema_version": SCHEMA_VERSION,
+        "run_id": run_id,
+        "tier": tier,
+        "feature_id": feature_id,
+        "started_at": min((r.started_at for r in results.values()), default=_now()),
+        "finished_at": _now(),
+        "project": "Personal Alpha Engine",
+        "build_version": __version__,
+        "python": sys.version,
+        "repository_root": str(root),
+        "readiness": readiness,
+        "blockers": blockers,
+        "totals": totals,
+        "results": [r.as_dict() for r in results.values()],
+        "acceptance_authority": "builder-evidence-only",
+    }
+    _write_report(evidence_dir, payload)
+    payload["evidence_dir"] = str(evidence_dir)
+    print(json.dumps({"readiness": readiness, "totals": totals, "evidence_dir": str(evidence_dir)}, indent=2))
+    return payload
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\detectors\arbitrage.py`
@@ -56557,6 +59605,1426 @@ forbidden_capabilities = [
 }
 ```
 
+### File: `alpha_engine\src\alpha_engine\verification\feature_registry.json`
+
+- Size: `5.6 KB`
+
+```json
+{
+  "schema_version": 1,
+  "features": [
+    {
+      "feature_id": "AE-RUN-001",
+      "disposition": "PARTIAL",
+      "owner": "core.bootstrap",
+      "checks": ["V01-IMPORT-SANITY", "V13-LIFECYCLE"],
+      "notes": "Authoritative composed local runtime and lifecycle lease implemented; worker subprocess supervision remains outside this pass."
+    },
+    {
+      "feature_id": "AE-RUN-002",
+      "disposition": "PARTIAL",
+      "owner": "core.runtime.reference_demo",
+      "checks": ["V12-REFERENCE-LOOP"],
+      "notes": "Deterministic composed demo seed implemented; full live desktop read-model binding remains incomplete."
+    },
+    {
+      "feature_id": "AE-RUN-003",
+      "disposition": "IMPLEMENTED",
+      "owner": "core.health",
+      "checks": ["V13-LIFECYCLE"],
+      "notes": "Local mandatory readiness now checks SQLite integrity and writable artifact/runtime directories instead of hard-coded READY."
+    },
+    {
+      "feature_id": "AE-RUN-004",
+      "disposition": "PARTIAL",
+      "owner": "developer_experience",
+      "checks": ["V01-IMPORT-SANITY", "V18-TRACEABILITY"],
+      "notes": "Runbook and Python source-development doorway added; physical repository re-home is not complete."
+    },
+    {
+      "feature_id": "AE-VER-001",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.verification",
+      "checks": ["V00-VERIFIER-SELFTEST", "V18-TRACEABILITY"],
+      "notes": "Canonical non-fail-fast Python harness with retained raw evidence."
+    },
+    {
+      "feature_id": "AE-VER-002",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.verification",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "Quick, feature, full, and qualification selection over shared check specs."
+    },
+    {
+      "feature_id": "AE-VER-003",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.traceability",
+      "checks": ["V18-TRACEABILITY"],
+      "notes": "Executable feature-to-check registry and validation."
+    },
+    {
+      "feature_id": "AE-VER-004",
+      "disposition": "PARTIAL",
+      "owner": "all_builders",
+      "checks": ["V03-CORE-TESTS", "V18-TRACEABILITY"],
+      "notes": "Enforcement exists for registered current features; cumulative 392-feature population remains incomplete."
+    },
+    {
+      "feature_id": "AE-VER-005",
+      "disposition": "IMPLEMENTED",
+      "owner": "core.bootstrap.qa",
+      "checks": ["V13-LIFECYCLE"],
+      "notes": "Lease, stale-lock, second-instance, health, publish and clean-release behavior are directly tested."
+    },
+    {
+      "feature_id": "AE-VER-006",
+      "disposition": "PARTIAL",
+      "owner": "core.reference_demo",
+      "checks": ["V12-REFERENCE-LOOP"],
+      "notes": "Reference loop now uses composed services and is idempotent in-profile; HTTP-hosted replay test remains future work."
+    },
+    {
+      "feature_id": "AE-VER-007",
+      "disposition": "PARTIAL",
+      "owner": "core.plugin_host.qa",
+      "checks": ["V10-PLUGIN-DISCOVERY", "V11-ARBITRAGE", "V11-PREDICTION", "V11-PUBLIC-MARKETS", "V11-RETAIL"],
+      "notes": "Central discovery reports duplicate/incompatible candidates and full verifier executes standalone cylinder suites; activation through a frozen universal PDK remains blocked."
+    },
+    {
+      "feature_id": "AE-VER-013",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.diagnostics",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "JSON, Markdown, and per-check raw outputs retained in timestamped evidence directories."
+    },
+    {
+      "feature_id": "AE-VER-015",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.infrastructure",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "Self-tests cover continuation, timeout, blocking, missing tools, zero tests, evidence, and aggregation."
+    },
+    {
+      "feature_id": "AE-VER-016",
+      "disposition": "PARTIAL",
+      "owner": "qa.release",
+      "checks": ["V00-VERIFIER-SELFTEST", "V18-TRACEABILITY"],
+      "notes": "Required FAILED/BLOCKED/INCOMPLETE states drive readiness; full accepted-scope population is not yet complete."
+    },
+    {
+      "feature_id": "AE-PURPOSE-GAP-001",
+      "disposition": "PARTIAL",
+      "owner": "core.qa",
+      "checks": ["V18-TRACEABILITY"],
+      "notes": "Supplement/runtime traceability is executable; original source-purpose statement population requires the full source catalog."
+    },
+    {
+      "feature_id": "AE-PURPOSE-GAP-002",
+      "disposition": "PARTIAL",
+      "owner": "core.bootstrap",
+      "checks": ["V01-IMPORT-SANITY", "V13-LIFECYCLE"],
+      "notes": "Explicit composition root exists for core authorities; canonical plugin activation remains incomplete."
+    },
+    {
+      "feature_id": "AE-PURPOSE-GAP-033",
+      "disposition": "PARTIAL",
+      "owner": "qa",
+      "checks": ["V18-TRACEABILITY", "V00-VERIFIER-SELFTEST"],
+      "notes": "Readiness matrix machinery exists but does not yet represent every 392-feature/purpose/provider/migration acceptance item."
+    },
+    {
+      "feature_id": "AE-GAP-001",
+      "disposition": "PARTIAL",
+      "owner": "repository.integration",
+      "checks": ["V01-IMPORT-SANITY", "V10-PLUGIN-DISCOVERY"],
+      "notes": "Root split is now explicit in tooling and diagnostics but physical package-root reconciliation is not complete."
+    },
+    {
+      "feature_id": "AE-FTR-QA-005",
+      "disposition": "ACCEPTED",
+      "owner": "core.qa",
+      "checks": ["V03-CORE-TESTS", "V12-REFERENCE-LOOP"],
+      "notes": "Existing reference loop preserved and strengthened through composition."
+    },
+    {
+      "feature_id": "AE-FTR-QA-009",
+      "disposition": "IMPLEMENTED",
+      "owner": "core.qa",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "Non-fail-fast verifier implemented."
+    }
+  ]
+}
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\verification.json`
+
+- Size: `10.9 KB`
+
+```json
+{
+  "acceptance_authority": "builder-evidence-only",
+  "blockers": [
+    "V13-LIFECYCLE"
+  ],
+  "build_version": "0.1.0",
+  "feature_id": null,
+  "finished_at": "2026-08-19T03:23:33.145820+00:00",
+  "project": "Personal Alpha Engine",
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "readiness": "NOT_READY",
+  "repository_root": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+  "results": [
+    {
+      "check_id": "V00-VERIFIER-SELFTEST",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/verification/test_verifier.py"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 2.608339,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-015",
+        "AE-FTR-QA-009"
+      ],
+      "finished_at": "2026-08-19T03:22:54.674605+00:00",
+      "layer": "qa-infrastructure",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:22:52.066267+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V00-VERIFIER-SELFTEST.stderr.txt",
+      "stdout_path": "raw\\V00-VERIFIER-SELFTEST.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Verifier anti-false-green self-tests"
+    },
+    {
+      "check_id": "V01-IMPORT-SANITY",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-c",
+        "from alpha_engine.runtime import build_runtime; from alpha_engine.cli.main import main; print('IMPORT_OK')"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 1.634472,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-PURPOSE-GAP-002",
+        "AE-GAP-001"
+      ],
+      "finished_at": "2026-08-19T03:22:56.309339+00:00",
+      "layer": "package",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:22:54.674864+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V01-IMPORT-SANITY.stderr.txt",
+      "stdout_path": "raw\\V01-IMPORT-SANITY.stdout.txt",
+      "timeout_seconds": 30,
+      "title": "Core import and composition sanity"
+    },
+    {
+      "check_id": "V03-CORE-TESTS",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 19.723339,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-FTR-QA-005",
+        "AE-VER-004"
+      ],
+      "finished_at": "2026-08-19T03:23:16.032981+00:00",
+      "layer": "unit-integration",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:22:56.309648+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V03-CORE-TESTS.stderr.txt",
+      "stdout_path": "raw\\V03-CORE-TESTS.stdout.txt",
+      "timeout_seconds": 180,
+      "title": "Core deterministic pytest suite"
+    },
+    {
+      "check_id": "V10-PLUGIN-DISCOVERY",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_plugin_discovery.py"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 0.663508,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-007",
+        "AE-GAP-001"
+      ],
+      "finished_at": "2026-08-19T03:23:16.696817+00:00",
+      "layer": "plugin-contract",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:16.033296+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V10-PLUGIN-DISCOVERY.stderr.txt",
+      "stdout_path": "raw\\V10-PLUGIN-DISCOVERY.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Plugin manifest/duplicate/compatibility discovery"
+    },
+    {
+      "check_id": "V11-ARBITRAGE",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_arbitrage_cross_market",
+      "defect_ids": [],
+      "duration_seconds": 4.459426,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:23:21.156427+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:16.697012+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-ARBITRAGE.stderr.txt",
+      "stdout_path": "raw\\V11-ARBITRAGE.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Arbitrage cylinder deterministic suite"
+    },
+    {
+      "check_id": "V11-PREDICTION",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_prediction_markets",
+      "defect_ids": [],
+      "duration_seconds": 1.284599,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:23:22.441318+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:21.156731+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-PREDICTION.stderr.txt",
+      "stdout_path": "raw\\V11-PREDICTION.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Canonical standalone prediction-markets deterministic suite"
+    },
+    {
+      "check_id": "V11-PUBLIC-MARKETS",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_public_markets_quant_options",
+      "defect_ids": [],
+      "duration_seconds": 1.192475,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:23:23.634125+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:22.441660+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-PUBLIC-MARKETS.stderr.txt",
+      "stdout_path": "raw\\V11-PUBLIC-MARKETS.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Public markets deterministic suite"
+    },
+    {
+      "check_id": "V11-RETAIL",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_retail_resale_flip",
+      "defect_ids": [],
+      "duration_seconds": 1.599256,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:23:25.233681+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:23.634436+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-RETAIL.stderr.txt",
+      "stdout_path": "raw\\V11-RETAIL.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Retail/resale deterministic suite"
+    },
+    {
+      "check_id": "V12-REFERENCE-LOOP",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_runtime_reference.py::test_composed_reference_loop_is_idempotent"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 1.84534,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-006",
+        "AE-RUN-002",
+        "AE-FTR-QA-005"
+      ],
+      "finished_at": "2026-08-19T03:23:27.079336+00:00",
+      "layer": "e2e",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:25.233998+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V12-REFERENCE-LOOP.stderr.txt",
+      "stdout_path": "raw\\V12-REFERENCE-LOOP.stdout.txt",
+      "timeout_seconds": 90,
+      "title": "Deterministic reference loop through composed authorities"
+    },
+    {
+      "check_id": "V13-LIFECYCLE",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_runtime_lifecycle.py",
+        "tests/test_runtime_server_smoke.py"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 5.90863,
+      "exit_code": 1,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-RUN-003",
+        "AE-VER-005"
+      ],
+      "finished_at": "2026-08-19T03:23:32.988291+00:00",
+      "layer": "lifecycle",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": "Command exited with 1",
+      "reason_code": "NONZERO_EXIT",
+      "required": true,
+      "started_at": "2026-08-19T03:23:27.079660+00:00",
+      "status": "FAILED",
+      "stderr_path": "raw\\V13-LIFECYCLE.stderr.txt",
+      "stdout_path": "raw\\V13-LIFECYCLE.stdout.txt",
+      "timeout_seconds": 90,
+      "title": "Runtime startup/status/second-instance/shutdown lifecycle"
+    },
+    {
+      "check_id": "V18-TRACEABILITY",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "alpha_engine.verification.traceability_check"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 0.156803,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-003",
+        "AE-PURPOSE-GAP-001",
+        "AE-PURPOSE-GAP-033"
+      ],
+      "finished_at": "2026-08-19T03:23:33.145277+00:00",
+      "layer": "traceability",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:32.988479+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V18-TRACEABILITY.stderr.txt",
+      "stdout_path": "raw\\V18-TRACEABILITY.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Feature acceptance registry integrity"
+    }
+  ],
+  "run_id": "20260819T032252.064299Z",
+  "schema_version": 1,
+  "started_at": "2026-08-19T03:22:52.066267+00:00",
+  "tier": "full",
+  "totals": {
+    "BLOCKED": 0,
+    "FAILED": 1,
+    "INCOMPLETE": 0,
+    "PASS": 10,
+    "SKIPPED": 0
+  }
+}
+```
+
+### File: `_update_logs\rollback_manifest_20260818_231434_593578.json`
+
+- Size: `15.5 KB`
+
+```json
+{
+  "format": "update-package-rollback-manifest-v1",
+  "timestamp": "20260818_231434_593578",
+  "package_folder": "C:\\Users\\nicol\\Downloads\\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE",
+  "app_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+  "backup_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine\\_update_backups\\20260818_231434_593578",
+  "update_mode": {
+    "number": "2",
+    "name": "Complete package update",
+    "include_new_files_in_existing_folders": true,
+    "include_new_files_requiring_folders": true
+  },
+  "rollback_guidance": [
+    "Restore each successful replaced_file record from its backup path.",
+    "Delete successful created_file records only after confirming they were created by this update.",
+    "Remove successful created_directory records only when they are empty.",
+    "Never delete unlisted files or directories during rollback."
+  ],
+  "operations": [
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\docs\\runtime",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\tests\\verification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\README.md",
+      "status": "success",
+      "source_sha256": "bf4ccbf8fc9dd77aa5b40c3f5354e975a837ce69e30f4b11dc231a04200bc6a0",
+      "destination_sha256": "bf4ccbf8fc9dd77aa5b40c3f5354e975a837ce69e30f4b11dc231a04200bc6a0",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\README.md",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\scripts\\verify\\verify_all.py",
+      "status": "success",
+      "source_sha256": "25f3a94d33bb9ad92d53672b942a56659acf16b326b6d8485be3356bc1bc48f5",
+      "destination_sha256": "25f3a94d33bb9ad92d53672b942a56659acf16b326b6d8485be3356bc1bc48f5",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\scripts\\verify\\verify_all.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\api\\server.py",
+      "status": "success",
+      "source_sha256": "bf8faff1a4dbbf20bb7380cb50274f1efdd95768a6264d2ab81e7a804ea5fced",
+      "destination_sha256": "bf8faff1a4dbbf20bb7380cb50274f1efdd95768a6264d2ab81e7a804ea5fced",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\api\\server.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\bootstrap\\__init__.py",
+      "status": "success",
+      "source_sha256": "254333f615c5695fa841d1792f9c1cb371979c9739902ae65a31a1a572637b28",
+      "destination_sha256": "254333f615c5695fa841d1792f9c1cb371979c9739902ae65a31a1a572637b28",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\bootstrap\\__init__.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\cli\\main.py",
+      "status": "success",
+      "source_sha256": "fdfddd2e7fa3e731c4e28cd26bee7d8a6635a81ce1a2975d672059c09798de51",
+      "destination_sha256": "fdfddd2e7fa3e731c4e28cd26bee7d8a6635a81ce1a2975d672059c09798de51",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\cli\\main.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\desktop\\main.py",
+      "status": "success",
+      "source_sha256": "da25a79ae5c0c979132fdef5fa3fb2961b056aa9ca8b9c80fcbcf3efae6d7705",
+      "destination_sha256": "da25a79ae5c0c979132fdef5fa3fb2961b056aa9ca8b9c80fcbcf3efae6d7705",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\desktop\\main.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\health\\service.py",
+      "status": "success",
+      "source_sha256": "e8f8cbc18703e8585f582a919efebab085bfe93abd367d667bc87ce2354f9b08",
+      "destination_sha256": "e8f8cbc18703e8585f582a919efebab085bfe93abd367d667bc87ce2354f9b08",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\health\\service.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\operations\\service.py",
+      "status": "success",
+      "source_sha256": "e1b49d6abb7ede16609d9fccb8354af5508649783f50f921088217f23c456054",
+      "destination_sha256": "e1b49d6abb7ede16609d9fccb8354af5508649783f50f921088217f23c456054",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\operations\\service.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\reference_loop\\runner.py",
+      "status": "success",
+      "source_sha256": "fbdcd8221a09484a2c44c17b00467bd02a6ca168fd5b8db2fda14009749b5cee",
+      "destination_sha256": "fbdcd8221a09484a2c44c17b00467bd02a6ca168fd5b8db2fda14009749b5cee",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\reference_loop\\runner.py",
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\bootstrap\\lifecycle.py",
+      "status": "success",
+      "source_sha256": "1ce9ed02e39265520319231f509706ebdd5de385815ec83e6dda110639364921",
+      "destination_sha256": "1ce9ed02e39265520319231f509706ebdd5de385815ec83e6dda110639364921",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\plugin_host\\discovery.py",
+      "status": "success",
+      "source_sha256": "2bc95b5e32bc17c6b11c4fa09e7540f9093318ebb0cab0812223b27dccb073e7",
+      "destination_sha256": "2bc95b5e32bc17c6b11c4fa09e7540f9093318ebb0cab0812223b27dccb073e7",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_plugin_discovery.py",
+      "status": "success",
+      "source_sha256": "dfa6d6501bfb31661af155b045937dc5fb7caf98eb595eb60bd201b09729c74d",
+      "destination_sha256": "dfa6d6501bfb31661af155b045937dc5fb7caf98eb595eb60bd201b09729c74d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_root_package.py",
+      "status": "success",
+      "source_sha256": "6d82c43d74ceea9ee30311d8bf31c0f222194175ffb820bdc6a80d4518fca98c",
+      "destination_sha256": "6d82c43d74ceea9ee30311d8bf31c0f222194175ffb820bdc6a80d4518fca98c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_runtime_lifecycle.py",
+      "status": "success",
+      "source_sha256": "2e019243accd9e02623d86b3aea4c266ebf1265b45d85146cbd8e37362784dc0",
+      "destination_sha256": "2e019243accd9e02623d86b3aea4c266ebf1265b45d85146cbd8e37362784dc0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_runtime_reference.py",
+      "status": "success",
+      "source_sha256": "6e58afca10783e57996ece27d392aab35458e36bf430b6341b9a86e6d92a190c",
+      "destination_sha256": "6e58afca10783e57996ece27d392aab35458e36bf430b6341b9a86e6d92a190c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_runtime_server_smoke.py",
+      "status": "success",
+      "source_sha256": "43982fa30c3223288d43fba00dcb05bd2c80a179ab5cb01f1b4e37b668d68c8a",
+      "destination_sha256": "43982fa30c3223288d43fba00dcb05bd2c80a179ab5cb01f1b4e37b668d68c8a",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "pyproject.toml",
+      "status": "success",
+      "source_sha256": "4611abc000682abe37b0aa4ee6fe65239fd67aab72a4db7bc1aae6dc5453ab77",
+      "destination_sha256": "4611abc000682abe37b0aa4ee6fe65239fd67aab72a4db7bc1aae6dc5453ab77",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "RUNBOOK.md",
+      "status": "success",
+      "source_sha256": "32c7eae18d9bb8f117b0fcb0558c69b8771aa55185f95fb08b2edc17bb2ad195",
+      "destination_sha256": "32c7eae18d9bb8f117b0fcb0558c69b8771aa55185f95fb08b2edc17bb2ad195",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\docs\\runtime\\DEFECT_LEDGER.json",
+      "status": "success",
+      "source_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "destination_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\docs\\runtime\\PROVIDER_SERVICE_DECISIONS.json",
+      "status": "success",
+      "source_sha256": "9ed63c89d854dbecb30d53f3d431a4fa445975cc137679b10a9011c8b63fc63c",
+      "destination_sha256": "9ed63c89d854dbecb30d53f3d431a4fa445975cc137679b10a9011c8b63fc63c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\docs\\runtime\\PURPOSE_TRACEABILITY.json",
+      "status": "success",
+      "source_sha256": "56659cac2f8d6be09096316febe83e3fe8cfd362a9db91fc0d97153e61539c64",
+      "destination_sha256": "56659cac2f8d6be09096316febe83e3fe8cfd362a9db91fc0d97153e61539c64",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime\\__init__.py",
+      "status": "success",
+      "source_sha256": "779a4df98adb75dc60e61cda7585893a2dfcc2f6364c0191be76ecffc4e92791",
+      "destination_sha256": "779a4df98adb75dc60e61cda7585893a2dfcc2f6364c0191be76ecffc4e92791",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime\\application.py",
+      "status": "success",
+      "source_sha256": "890a776ee750508e70a72bd276165bff7dcaf407ee0fb2aeef263f6ff4182e69",
+      "destination_sha256": "890a776ee750508e70a72bd276165bff7dcaf407ee0fb2aeef263f6ff4182e69",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime\\control.py",
+      "status": "success",
+      "source_sha256": "ec9d34b2c6e8013b1fdd6740cc1d8556c1ae5f3b4fe9a9fec91e3d28939983d1",
+      "destination_sha256": "ec9d34b2c6e8013b1fdd6740cc1d8556c1ae5f3b4fe9a9fec91e3d28939983d1",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\__init__.py",
+      "status": "success",
+      "source_sha256": "3ce911393537f286991bdf96ea63ee94e41ecbe516d24959799864b714683992",
+      "destination_sha256": "3ce911393537f286991bdf96ea63ee94e41ecbe516d24959799864b714683992",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\__main__.py",
+      "status": "success",
+      "source_sha256": "7815e60d9b2c00c5330e4c616c77b272e38b5187fc9554aa179fa2d4fba987ba",
+      "destination_sha256": "7815e60d9b2c00c5330e4c616c77b272e38b5187fc9554aa179fa2d4fba987ba",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\feature_registry.json",
+      "status": "success",
+      "source_sha256": "739683c28e1362bbfde84e9bf1d2f5fc343ac3408fb036582794c1da4cc149f2",
+      "destination_sha256": "739683c28e1362bbfde84e9bf1d2f5fc343ac3408fb036582794c1da4cc149f2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\models.py",
+      "status": "success",
+      "source_sha256": "3dd1097ca76638ed98e0c3b5a14f2b082ad32e7969ed8adafe1a9f68caebb082",
+      "destination_sha256": "3dd1097ca76638ed98e0c3b5a14f2b082ad32e7969ed8adafe1a9f68caebb082",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\registry.py",
+      "status": "success",
+      "source_sha256": "38a09e85caa9ce74735afbdd1073a07996af09ffbdde3d9041ba4f63fbc35781",
+      "destination_sha256": "38a09e85caa9ce74735afbdd1073a07996af09ffbdde3d9041ba4f63fbc35781",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\runner.py",
+      "status": "success",
+      "source_sha256": "e5aa1973ace524db4c9834c0d0aaa194a84d5cad8ae39f4583976c01fcd22dc0",
+      "destination_sha256": "e5aa1973ace524db4c9834c0d0aaa194a84d5cad8ae39f4583976c01fcd22dc0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\traceability_check.py",
+      "status": "success",
+      "source_sha256": "0c2ccc285a8aab9b8d58011a2b7a60fc5702c943774f4f235f6592a972d92d19",
+      "destination_sha256": "0c2ccc285a8aab9b8d58011a2b7a60fc5702c943774f4f235f6592a972d92d19",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\verification\\test_traceability.py",
+      "status": "success",
+      "source_sha256": "2bb3c565b53fe1cb86b9a6421a59962cd675f2e9d1d167ab7929201678e0d757",
+      "destination_sha256": "2bb3c565b53fe1cb86b9a6421a59962cd675f2e9d1d167ab7929201678e0d757",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\verification\\test_verifier.py",
+      "status": "success",
+      "source_sha256": "e04b4a516ca2ec700ba7cbdcd16575e114c0b643f0e9b43d3104373fb5fff5d6",
+      "destination_sha256": "e04b4a516ca2ec700ba7cbdcd16575e114c0b643f0e9b43d3104373fb5fff5d6",
+      "backup_relative_path": null,
+      "details": null
+    }
+  ]
+}
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\verification.json`
+
+- Size: `17.9 KB`
+
+```json
+{
+  "acceptance_authority": "builder-evidence-only",
+  "blockers": [
+    "V05-MIGRATION-AUTHORITY",
+    "V06-WORKER-SUPERVISION",
+    "V10-PLUGIN-ACTIVATION",
+    "V13-DESKTOP-SMOKE",
+    "V15-TARGET-RESOURCE",
+    "V19-ACCEPTED-SCOPE-MATRIX"
+  ],
+  "build_version": "0.1.0",
+  "feature_id": null,
+  "finished_at": "2026-08-19T03:24:30.520576+00:00",
+  "project": "Personal Alpha Engine",
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "readiness": "NOT_QUALIFIED",
+  "repository_root": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+  "results": [
+    {
+      "check_id": "V00-VERIFIER-SELFTEST",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/verification/test_verifier.py"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 2.170833,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-015",
+        "AE-FTR-QA-009"
+      ],
+      "finished_at": "2026-08-19T03:23:43.743456+00:00",
+      "layer": "qa-infrastructure",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:41.572622+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V00-VERIFIER-SELFTEST.stderr.txt",
+      "stdout_path": "raw\\V00-VERIFIER-SELFTEST.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Verifier anti-false-green self-tests"
+    },
+    {
+      "check_id": "V01-IMPORT-SANITY",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-c",
+        "from alpha_engine.runtime import build_runtime; from alpha_engine.cli.main import main; print('IMPORT_OK')"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 1.330696,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-PURPOSE-GAP-002",
+        "AE-GAP-001"
+      ],
+      "finished_at": "2026-08-19T03:23:45.074386+00:00",
+      "layer": "package",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:43.743685+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V01-IMPORT-SANITY.stderr.txt",
+      "stdout_path": "raw\\V01-IMPORT-SANITY.stdout.txt",
+      "timeout_seconds": 30,
+      "title": "Core import and composition sanity"
+    },
+    {
+      "check_id": "V03-CORE-TESTS",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 21.122408,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-FTR-QA-005",
+        "AE-VER-004"
+      ],
+      "finished_at": "2026-08-19T03:24:06.197114+00:00",
+      "layer": "unit-integration",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:23:45.074719+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V03-CORE-TESTS.stderr.txt",
+      "stdout_path": "raw\\V03-CORE-TESTS.stdout.txt",
+      "timeout_seconds": 180,
+      "title": "Core deterministic pytest suite"
+    },
+    {
+      "check_id": "V10-PLUGIN-DISCOVERY",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_plugin_discovery.py"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 0.601043,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-007",
+        "AE-GAP-001"
+      ],
+      "finished_at": "2026-08-19T03:24:06.798394+00:00",
+      "layer": "plugin-contract",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:06.197378+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V10-PLUGIN-DISCOVERY.stderr.txt",
+      "stdout_path": "raw\\V10-PLUGIN-DISCOVERY.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Plugin manifest/duplicate/compatibility discovery"
+    },
+    {
+      "check_id": "V11-ARBITRAGE",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_arbitrage_cross_market",
+      "defect_ids": [],
+      "duration_seconds": 4.124249,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:24:10.922872+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:06.798635+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-ARBITRAGE.stderr.txt",
+      "stdout_path": "raw\\V11-ARBITRAGE.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Arbitrage cylinder deterministic suite"
+    },
+    {
+      "check_id": "V11-PREDICTION",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_prediction_markets",
+      "defect_ids": [],
+      "duration_seconds": 1.160774,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:24:12.083904+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:10.923136+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-PREDICTION.stderr.txt",
+      "stdout_path": "raw\\V11-PREDICTION.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Canonical standalone prediction-markets deterministic suite"
+    },
+    {
+      "check_id": "V11-PUBLIC-MARKETS",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_public_markets_quant_options",
+      "defect_ids": [],
+      "duration_seconds": 0.872027,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:24:12.956153+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:12.084148+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-PUBLIC-MARKETS.stderr.txt",
+      "stdout_path": "raw\\V11-PUBLIC-MARKETS.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Public markets deterministic suite"
+    },
+    {
+      "check_id": "V11-RETAIL",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\plugins\\ae_retail_resale_flip",
+      "defect_ids": [],
+      "duration_seconds": 1.291655,
+      "exit_code": 0,
+      "feature_ids": [],
+      "finished_at": "2026-08-19T03:24:14.248338+00:00",
+      "layer": "plugin",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:12.956699+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V11-RETAIL.stderr.txt",
+      "stdout_path": "raw\\V11-RETAIL.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Retail/resale deterministic suite"
+    },
+    {
+      "check_id": "V12-REFERENCE-LOOP",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_runtime_reference.py::test_composed_reference_loop_is_idempotent"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 1.963488,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-006",
+        "AE-RUN-002",
+        "AE-FTR-QA-005"
+      ],
+      "finished_at": "2026-08-19T03:24:16.212354+00:00",
+      "layer": "e2e",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:14.248862+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V12-REFERENCE-LOOP.stderr.txt",
+      "stdout_path": "raw\\V12-REFERENCE-LOOP.stdout.txt",
+      "timeout_seconds": 90,
+      "title": "Deterministic reference loop through composed authorities"
+    },
+    {
+      "check_id": "V13-LIFECYCLE",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_runtime_lifecycle.py",
+        "tests/test_runtime_server_smoke.py"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 6.940758,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-RUN-001",
+        "AE-RUN-003",
+        "AE-VER-005"
+      ],
+      "finished_at": "2026-08-19T03:24:23.153345+00:00",
+      "layer": "lifecycle",
+      "prerequisites": [
+        "V01-IMPORT-SANITY"
+      ],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:16.212599+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V13-LIFECYCLE.stderr.txt",
+      "stdout_path": "raw\\V13-LIFECYCLE.stdout.txt",
+      "timeout_seconds": 90,
+      "title": "Runtime startup/status/second-instance/shutdown lifecycle"
+    },
+    {
+      "check_id": "V18-TRACEABILITY",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "alpha_engine.verification.traceability_check"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine\\alpha_engine",
+      "defect_ids": [],
+      "duration_seconds": 0.1499,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-VER-003",
+        "AE-PURPOSE-GAP-001",
+        "AE-PURPOSE-GAP-033"
+      ],
+      "finished_at": "2026-08-19T03:24:23.303482+00:00",
+      "layer": "traceability",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:23.153585+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V18-TRACEABILITY.stderr.txt",
+      "stdout_path": "raw\\V18-TRACEABILITY.stdout.txt",
+      "timeout_seconds": 60,
+      "title": "Feature acceptance registry integrity"
+    },
+    {
+      "check_id": "V05-MIGRATION-AUTHORITY",
+      "command": [],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 1e-05,
+      "exit_code": null,
+      "feature_ids": [
+        "AE-VER-009"
+      ],
+      "finished_at": "2026-08-19T03:24:23.303819+00:00",
+      "layer": "migration",
+      "prerequisites": [],
+      "reason": "Core still uses development create_all bootstrap; numbered release migrations and upgrade/recovery evidence are not implemented.",
+      "reason_code": "STATIC_PREREQUISITE",
+      "required": true,
+      "started_at": "2026-08-19T03:24:23.303806+00:00",
+      "status": "BLOCKED",
+      "stderr_path": null,
+      "stdout_path": null,
+      "timeout_seconds": 120,
+      "title": "Numbered core migration/upgrade authority qualification"
+    },
+    {
+      "check_id": "V06-WORKER-SUPERVISION",
+      "command": [],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 1.2e-05,
+      "exit_code": null,
+      "feature_ids": [
+        "AE-PURPOSE-GAP-009",
+        "AE-VER-008"
+      ],
+      "finished_at": "2026-08-19T03:24:23.303915+00:00",
+      "layer": "workers-recovery",
+      "prerequisites": [],
+      "reason": "Central worker supervisor/lease execution is not yet implemented; scheduler rows are not sufficient proof.",
+      "reason_code": "STATIC_PREREQUISITE",
+      "required": true,
+      "started_at": "2026-08-19T03:24:23.303898+00:00",
+      "status": "BLOCKED",
+      "stderr_path": null,
+      "stdout_path": null,
+      "timeout_seconds": 120,
+      "title": "Worker lease/supervision/recovery qualification"
+    },
+    {
+      "check_id": "V10-PLUGIN-ACTIVATION",
+      "command": [],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 7e-06,
+      "exit_code": null,
+      "feature_ids": [
+        "AE-VER-007",
+        "AE-GAP-001"
+      ],
+      "finished_at": "2026-08-19T03:24:23.304004+00:00",
+      "layer": "plugin-runtime",
+      "prerequisites": [],
+      "reason": "Delivered cylinders have mixed manifest/contract shapes and duplicate Prediction Markets implementations; no universal frozen host activation path is qualified yet.",
+      "reason_code": "STATIC_PREREQUISITE",
+      "required": true,
+      "started_at": "2026-08-19T03:24:23.303995+00:00",
+      "status": "BLOCKED",
+      "stderr_path": null,
+      "stdout_path": null,
+      "timeout_seconds": 120,
+      "title": "Frozen-PDK plugin activation qualification"
+    },
+    {
+      "check_id": "V13-DESKTOP-SMOKE",
+      "command": [],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 4e-06,
+      "exit_code": null,
+      "feature_ids": [
+        "AE-VER-005"
+      ],
+      "finished_at": "2026-08-19T03:24:23.304071+00:00",
+      "layer": "ui-smoke",
+      "prerequisites": [],
+      "reason": "Desktop PySide6/target-machine smoke was not executed in this builder environment.",
+      "reason_code": "STATIC_PREREQUISITE",
+      "required": true,
+      "started_at": "2026-08-19T03:24:23.304063+00:00",
+      "status": "BLOCKED",
+      "stderr_path": null,
+      "stdout_path": null,
+      "timeout_seconds": 120,
+      "title": "Native desktop runtime smoke on target environment"
+    },
+    {
+      "check_id": "V15-TARGET-RESOURCE",
+      "command": [],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 4e-06,
+      "exit_code": null,
+      "feature_ids": [
+        "AE-VER-011"
+      ],
+      "finished_at": "2026-08-19T03:24:23.304125+00:00",
+      "layer": "resource",
+      "prerequisites": [],
+      "reason": "Target-machine resource qualification has not been executed; no pass thresholds are fabricated.",
+      "reason_code": "STATIC_PREREQUISITE",
+      "required": true,
+      "started_at": "2026-08-19T03:24:23.304119+00:00",
+      "status": "BLOCKED",
+      "stderr_path": null,
+      "stdout_path": null,
+      "timeout_seconds": 120,
+      "title": "Baseline Windows laptop resource/responsiveness qualification"
+    },
+    {
+      "check_id": "V16-ROOT-PACKAGE",
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "alpha_engine/tests/test_root_package.py"
+      ],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 7.215654,
+      "exit_code": 0,
+      "feature_ids": [
+        "AE-GAP-001",
+        "AE-RUN-004",
+        "AE-VER-009"
+      ],
+      "finished_at": "2026-08-19T03:24:30.519797+00:00",
+      "layer": "packaging",
+      "prerequisites": [],
+      "reason": null,
+      "reason_code": null,
+      "required": true,
+      "started_at": "2026-08-19T03:24:23.304172+00:00",
+      "status": "PASS",
+      "stderr_path": "raw\\V16-ROOT-PACKAGE.stderr.txt",
+      "stdout_path": "raw\\V16-ROOT-PACKAGE.stdout.txt",
+      "timeout_seconds": 120,
+      "title": "Repository-root source package build"
+    },
+    {
+      "check_id": "V17-LIVE-SOURCE",
+      "command": [],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 1.1e-05,
+      "exit_code": null,
+      "feature_ids": [
+        "AE-PURPOSE-GAP-010",
+        "AE-VER-012"
+      ],
+      "finished_at": "2026-08-19T03:24:30.520172+00:00",
+      "layer": "live-provider",
+      "prerequisites": [],
+      "reason": "No sanctioned live provider/rights path was authorized for this deterministic builder run.",
+      "reason_code": "STATIC_PREREQUISITE",
+      "required": false,
+      "started_at": "2026-08-19T03:24:30.520153+00:00",
+      "status": "SKIPPED",
+      "stderr_path": null,
+      "stdout_path": null,
+      "timeout_seconds": 120,
+      "title": "Opt-in real-source vertical slice"
+    },
+    {
+      "check_id": "V19-ACCEPTED-SCOPE-MATRIX",
+      "command": [],
+      "cwd": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+      "defect_ids": [],
+      "duration_seconds": 6e-06,
+      "exit_code": null,
+      "feature_ids": [
+        "AE-PURPOSE-GAP-033",
+        "AE-VER-016"
+      ],
+      "finished_at": "2026-08-19T03:24:30.520278+00:00",
+      "layer": "readiness",
+      "prerequisites": [],
+      "reason": "Executable traceability is established for this convergence pass, but the cumulative 392-feature registry has not yet been fully populated into the verifier.",
+      "reason_code": "STATIC_PREREQUISITE",
+      "required": true,
+      "started_at": "2026-08-19T03:24:30.520269+00:00",
+      "status": "INCOMPLETE",
+      "stderr_path": null,
+      "stdout_path": null,
+      "timeout_seconds": 120,
+      "title": "Complete 392-feature + purpose acceptance matrix population"
+    }
+  ],
+  "run_id": "20260819T032341.571603Z",
+  "schema_version": 1,
+  "started_at": "2026-08-19T03:23:41.572622+00:00",
+  "tier": "qualification",
+  "totals": {
+    "BLOCKED": 5,
+    "FAILED": 0,
+    "INCOMPLETE": 1,
+    "PASS": 12,
+    "SKIPPED": 1
+  }
+}
+```
+
 ### File: `alpha_engine\_update_logs\rollback_manifest_20260806_225438_757305.json`
 
 - Size: `42.8 KB`
@@ -57719,6 +62187,2412 @@ forbidden_capabilities = [
 }
 ```
 
+### File: `_update_logs\rollback_manifest_20260818_230320_077647.json`
+
+- Size: `98.1 KB`
+
+```json
+{
+  "format": "update-package-rollback-manifest-v1",
+  "timestamp": "20260818_230320_077647",
+  "package_folder": "C:\\Users\\nicol\\Downloads\\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18",
+  "app_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+  "backup_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine\\_update_backups\\20260818_230320_077647",
+  "update_mode": {
+    "number": "2",
+    "name": "Complete package update",
+    "include_new_files_in_existing_folders": true,
+    "include_new_files_requiring_folders": true
+  },
+  "rollback_guidance": [
+    "Restore each successful replaced_file record from its backup path.",
+    "Delete successful created_file records only after confirming they were created by this update.",
+    "Remove successful created_directory records only when they are empty.",
+    "Never delete unlisted files or directories during rollback."
+  ],
+  "operations": [
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\limitations",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\repository_state",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\docs",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\scripts",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\docs\\runtime",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\scripts\\verify",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\verification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003\\raw",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\api",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\bootstrap",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\cli",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\desktop",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\health",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\operations",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\plugin_host",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\reference_loop",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\runtime",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\docs\\runtime\\DEFECT_LEDGER.json",
+      "status": "success",
+      "source_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "destination_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\docs\\runtime\\PROVIDER_SERVICE_DECISIONS.json",
+      "status": "success",
+      "source_sha256": "9ed63c89d854dbecb30d53f3d431a4fa445975cc137679b10a9011c8b63fc63c",
+      "destination_sha256": "9ed63c89d854dbecb30d53f3d431a4fa445975cc137679b10a9011c8b63fc63c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\docs\\runtime\\PURPOSE_TRACEABILITY.json",
+      "status": "success",
+      "source_sha256": "56659cac2f8d6be09096316febe83e3fe8cfd362a9db91fc0d97153e61539c64",
+      "destination_sha256": "56659cac2f8d6be09096316febe83e3fe8cfd362a9db91fc0d97153e61539c64",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\README.md",
+      "status": "success",
+      "source_sha256": "bf4ccbf8fc9dd77aa5b40c3f5354e975a837ce69e30f4b11dc231a04200bc6a0",
+      "destination_sha256": "bf4ccbf8fc9dd77aa5b40c3f5354e975a837ce69e30f4b11dc231a04200bc6a0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\scripts\\verify\\verify_all.py",
+      "status": "success",
+      "source_sha256": "25f3a94d33bb9ad92d53672b942a56659acf16b326b6d8485be3356bc1bc48f5",
+      "destination_sha256": "25f3a94d33bb9ad92d53672b942a56659acf16b326b6d8485be3356bc1bc48f5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\api\\server.py",
+      "status": "success",
+      "source_sha256": "bf8faff1a4dbbf20bb7380cb50274f1efdd95768a6264d2ab81e7a804ea5fced",
+      "destination_sha256": "bf8faff1a4dbbf20bb7380cb50274f1efdd95768a6264d2ab81e7a804ea5fced",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\bootstrap\\__init__.py",
+      "status": "success",
+      "source_sha256": "254333f615c5695fa841d1792f9c1cb371979c9739902ae65a31a1a572637b28",
+      "destination_sha256": "254333f615c5695fa841d1792f9c1cb371979c9739902ae65a31a1a572637b28",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\bootstrap\\lifecycle.py",
+      "status": "success",
+      "source_sha256": "1ce9ed02e39265520319231f509706ebdd5de385815ec83e6dda110639364921",
+      "destination_sha256": "1ce9ed02e39265520319231f509706ebdd5de385815ec83e6dda110639364921",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\cli\\main.py",
+      "status": "success",
+      "source_sha256": "fdfddd2e7fa3e731c4e28cd26bee7d8a6635a81ce1a2975d672059c09798de51",
+      "destination_sha256": "fdfddd2e7fa3e731c4e28cd26bee7d8a6635a81ce1a2975d672059c09798de51",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\desktop\\main.py",
+      "status": "success",
+      "source_sha256": "da25a79ae5c0c979132fdef5fa3fb2961b056aa9ca8b9c80fcbcf3efae6d7705",
+      "destination_sha256": "da25a79ae5c0c979132fdef5fa3fb2961b056aa9ca8b9c80fcbcf3efae6d7705",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\health\\service.py",
+      "status": "success",
+      "source_sha256": "e8f8cbc18703e8585f582a919efebab085bfe93abd367d667bc87ce2354f9b08",
+      "destination_sha256": "e8f8cbc18703e8585f582a919efebab085bfe93abd367d667bc87ce2354f9b08",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\operations\\service.py",
+      "status": "success",
+      "source_sha256": "e1b49d6abb7ede16609d9fccb8354af5508649783f50f921088217f23c456054",
+      "destination_sha256": "e1b49d6abb7ede16609d9fccb8354af5508649783f50f921088217f23c456054",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\plugin_host\\discovery.py",
+      "status": "success",
+      "source_sha256": "2bc95b5e32bc17c6b11c4fa09e7540f9093318ebb0cab0812223b27dccb073e7",
+      "destination_sha256": "2bc95b5e32bc17c6b11c4fa09e7540f9093318ebb0cab0812223b27dccb073e7",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\reference_loop\\runner.py",
+      "status": "success",
+      "source_sha256": "fbdcd8221a09484a2c44c17b00467bd02a6ca168fd5b8db2fda14009749b5cee",
+      "destination_sha256": "fbdcd8221a09484a2c44c17b00467bd02a6ca168fd5b8db2fda14009749b5cee",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\runtime\\__init__.py",
+      "status": "success",
+      "source_sha256": "779a4df98adb75dc60e61cda7585893a2dfcc2f6364c0191be76ecffc4e92791",
+      "destination_sha256": "779a4df98adb75dc60e61cda7585893a2dfcc2f6364c0191be76ecffc4e92791",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\runtime\\application.py",
+      "status": "success",
+      "source_sha256": "890a776ee750508e70a72bd276165bff7dcaf407ee0fb2aeef263f6ff4182e69",
+      "destination_sha256": "890a776ee750508e70a72bd276165bff7dcaf407ee0fb2aeef263f6ff4182e69",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\runtime\\control.py",
+      "status": "success",
+      "source_sha256": "ec9d34b2c6e8013b1fdd6740cc1d8556c1ae5f3b4fe9a9fec91e3d28939983d1",
+      "destination_sha256": "ec9d34b2c6e8013b1fdd6740cc1d8556c1ae5f3b4fe9a9fec91e3d28939983d1",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification\\__init__.py",
+      "status": "success",
+      "source_sha256": "3ce911393537f286991bdf96ea63ee94e41ecbe516d24959799864b714683992",
+      "destination_sha256": "3ce911393537f286991bdf96ea63ee94e41ecbe516d24959799864b714683992",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification\\__main__.py",
+      "status": "success",
+      "source_sha256": "7815e60d9b2c00c5330e4c616c77b272e38b5187fc9554aa179fa2d4fba987ba",
+      "destination_sha256": "7815e60d9b2c00c5330e4c616c77b272e38b5187fc9554aa179fa2d4fba987ba",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification\\feature_registry.json",
+      "status": "success",
+      "source_sha256": "739683c28e1362bbfde84e9bf1d2f5fc343ac3408fb036582794c1da4cc149f2",
+      "destination_sha256": "739683c28e1362bbfde84e9bf1d2f5fc343ac3408fb036582794c1da4cc149f2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification\\models.py",
+      "status": "success",
+      "source_sha256": "3dd1097ca76638ed98e0c3b5a14f2b082ad32e7969ed8adafe1a9f68caebb082",
+      "destination_sha256": "3dd1097ca76638ed98e0c3b5a14f2b082ad32e7969ed8adafe1a9f68caebb082",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification\\registry.py",
+      "status": "success",
+      "source_sha256": "38a09e85caa9ce74735afbdd1073a07996af09ffbdde3d9041ba4f63fbc35781",
+      "destination_sha256": "38a09e85caa9ce74735afbdd1073a07996af09ffbdde3d9041ba4f63fbc35781",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification\\runner.py",
+      "status": "success",
+      "source_sha256": "e5aa1973ace524db4c9834c0d0aaa194a84d5cad8ae39f4583976c01fcd22dc0",
+      "destination_sha256": "e5aa1973ace524db4c9834c0d0aaa194a84d5cad8ae39f4583976c01fcd22dc0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\src\\alpha_engine\\verification\\traceability_check.py",
+      "status": "success",
+      "source_sha256": "0c2ccc285a8aab9b8d58011a2b7a60fc5702c943774f4f235f6592a972d92d19",
+      "destination_sha256": "0c2ccc285a8aab9b8d58011a2b7a60fc5702c943774f4f235f6592a972d92d19",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\test_plugin_discovery.py",
+      "status": "success",
+      "source_sha256": "dfa6d6501bfb31661af155b045937dc5fb7caf98eb595eb60bd201b09729c74d",
+      "destination_sha256": "dfa6d6501bfb31661af155b045937dc5fb7caf98eb595eb60bd201b09729c74d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\test_root_package.py",
+      "status": "success",
+      "source_sha256": "6d82c43d74ceea9ee30311d8bf31c0f222194175ffb820bdc6a80d4518fca98c",
+      "destination_sha256": "6d82c43d74ceea9ee30311d8bf31c0f222194175ffb820bdc6a80d4518fca98c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\test_runtime_lifecycle.py",
+      "status": "success",
+      "source_sha256": "2e019243accd9e02623d86b3aea4c266ebf1265b45d85146cbd8e37362784dc0",
+      "destination_sha256": "2e019243accd9e02623d86b3aea4c266ebf1265b45d85146cbd8e37362784dc0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\test_runtime_reference.py",
+      "status": "success",
+      "source_sha256": "6e58afca10783e57996ece27d392aab35458e36bf430b6341b9a86e6d92a190c",
+      "destination_sha256": "6e58afca10783e57996ece27d392aab35458e36bf430b6341b9a86e6d92a190c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\test_runtime_server_smoke.py",
+      "status": "success",
+      "source_sha256": "43982fa30c3223288d43fba00dcb05bd2c80a179ab5cb01f1b4e37b668d68c8a",
+      "destination_sha256": "43982fa30c3223288d43fba00dcb05bd2c80a179ab5cb01f1b4e37b668d68c8a",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\verification\\test_traceability.py",
+      "status": "success",
+      "source_sha256": "2bb3c565b53fe1cb86b9a6421a59962cd675f2e9d1d167ab7929201678e0d757",
+      "destination_sha256": "2bb3c565b53fe1cb86b9a6421a59962cd675f2e9d1d167ab7929201678e0d757",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\alpha_engine\\tests\\verification\\test_verifier.py",
+      "status": "success",
+      "source_sha256": "e04b4a516ca2ec700ba7cbdcd16575e114c0b643f0e9b43d3104373fb5fff5d6",
+      "destination_sha256": "e04b4a516ca2ec700ba7cbdcd16575e114c0b643f0e9b43d3104373fb5fff5d6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\pyproject.toml",
+      "status": "success",
+      "source_sha256": "4611abc000682abe37b0aa4ee6fe65239fd67aab72a4db7bc1aae6dc5453ab77",
+      "destination_sha256": "4611abc000682abe37b0aa4ee6fe65239fd67aab72a4db7bc1aae6dc5453ab77",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE\\RUNBOOK.md",
+      "status": "success",
+      "source_sha256": "32c7eae18d9bb8f117b0fcb0558c69b8771aa55185f95fb08b2edc17bb2ad195",
+      "destination_sha256": "32c7eae18d9bb8f117b0fcb0558c69b8771aa55185f95fb08b2edc17bb2ad195",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\apply_manifest.json",
+      "status": "success",
+      "source_sha256": "699c899fe57afc41659cff8ec0b8a62dca2aa5485383851a1f6683670587cfde",
+      "destination_sha256": "699c899fe57afc41659cff8ec0b8a62dca2aa5485383851a1f6683670587cfde",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\authorization_binding.json",
+      "status": "success",
+      "source_sha256": "35dbcfc04f72d7f6dc931c7e5a8fb588df46f2e7c124bf6d8d3d65fa23e06fb9",
+      "destination_sha256": "35dbcfc04f72d7f6dc931c7e5a8fb588df46f2e7c124bf6d8d3d65fa23e06fb9",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\builder_report.md",
+      "status": "success",
+      "source_sha256": "41e8308d421f7a71716668ad06a715b5faae67f00347772e7e76da4c12fe1c11",
+      "destination_sha256": "41e8308d421f7a71716668ad06a715b5faae67f00347772e7e76da4c12fe1c11",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\commands_run.txt",
+      "status": "success",
+      "source_sha256": "8fdfc75bc1c5bed9f7ff5606fc5c327453cb062df11f5a6c5e09449886c4c715",
+      "destination_sha256": "8fdfc75bc1c5bed9f7ff5606fc5c327453cb062df11f5a6c5e09449886c4c715",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\core_compatibility_requests.json",
+      "status": "success",
+      "source_sha256": "ad59b56a73c2f6a9f6ea6e39f1e5a7fbfeee66fa5e924dc6e5c5b78285b31818",
+      "destination_sha256": "ad59b56a73c2f6a9f6ea6e39f1e5a7fbfeee66fa5e924dc6e5c5b78285b31818",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\defect_ledger.json",
+      "status": "success",
+      "source_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "destination_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\deletion_ledger.json",
+      "status": "success",
+      "source_sha256": "c53e4a8c52e512fec7a2f206d746137d0e51c262e238eaa34918667f62180ec9",
+      "destination_sha256": "c53e4a8c52e512fec7a2f206d746137d0e51c262e238eaa34918667f62180ec9",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\limitations\\known_blockers.md",
+      "status": "success",
+      "source_sha256": "61fabdc7309fe7707aa18f1cc20f98fd2ae0dd56470edb41ca79838eb07a3aa9",
+      "destination_sha256": "61fabdc7309fe7707aa18f1cc20f98fd2ae0dd56470edb41ca79838eb07a3aa9",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\README_BATCH.txt",
+      "status": "success",
+      "source_sha256": "6e01af9a71a55d92b9e78503eb7b2ffbc7ed66a1aa9d29a19e0b1ee670ca9e26",
+      "destination_sha256": "6e01af9a71a55d92b9e78503eb7b2ffbc7ed66a1aa9d29a19e0b1ee670ca9e26",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\repository_state\\baseline_manifest.json",
+      "status": "success",
+      "source_sha256": "c812bc09621a7b879263806affefd2bfa6bce05d7fe249ad00e3700a67564502",
+      "destination_sha256": "c812bc09621a7b879263806affefd2bfa6bce05d7fe249ad00e3700a67564502",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\repository_state\\git_status.txt",
+      "status": "success",
+      "source_sha256": "bf7f4ac2852e3b0e041d5fcc0853a96714ed25b833bdece6a70248ab8361d39d",
+      "destination_sha256": "bf7f4ac2852e3b0e041d5fcc0853a96714ed25b833bdece6a70248ab8361d39d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\repository_state\\outgoing_apply_inventory.json",
+      "status": "success",
+      "source_sha256": "e2647b701139db8e107742b2fc710b5b7e7070f2af44c14a388a4b82b97d6300",
+      "destination_sha256": "e2647b701139db8e107742b2fc710b5b7e7070f2af44c14a388a4b82b97d6300",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\repository_state\\package_validation.json",
+      "status": "success",
+      "source_sha256": "cf2b921ed40fbb9438da7787a26be6edd12d82ab51283f4fb484d328273ea85a",
+      "destination_sha256": "cf2b921ed40fbb9438da7787a26be6edd12d82ab51283f4fb484d328273ea85a",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\repository_state\\tracked_changes.patch",
+      "status": "success",
+      "source_sha256": "b077d163f808421bef5c285d3bcf56b62567aef813fce5891b04e4fe752c2c7f",
+      "destination_sha256": "b077d163f808421bef5c285d3bcf56b62567aef813fce5891b04e4fe752c2c7f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\repository_state\\working_git_note.txt",
+      "status": "success",
+      "source_sha256": "a8910fdaf54edde5905c0221a720ba9361170b047c33daac85fbe269397250f8",
+      "destination_sha256": "a8910fdaf54edde5905c0221a720ba9361170b047c33daac85fbe269397250f8",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\SHA256SUMS.txt",
+      "status": "success",
+      "source_sha256": "95ce23c4f898d667ba0de9e59363dc370aad18861eae2755d864c2b301f7860b",
+      "destination_sha256": "95ce23c4f898d667ba0de9e59363dc370aad18861eae2755d864c2b301f7860b",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\source_state.json",
+      "status": "success",
+      "source_sha256": "37419db2c47ef911bc9fe8dbe327af7899e3f8553eae1c5d1736efe651b851c7",
+      "destination_sha256": "37419db2c47ef911bc9fe8dbe327af7899e3f8553eae1c5d1736efe651b851c7",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\arbitrage_45.txt",
+      "status": "success",
+      "source_sha256": "8fde0ea518e985fba9f1c7126e467c496b34b5450a05ccb9b924355a2fa54adf",
+      "destination_sha256": "8fde0ea518e985fba9f1c7126e467c496b34b5450a05ccb9b924355a2fa54adf",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\baseline_core_pytest.txt",
+      "status": "success",
+      "source_sha256": "83a1593c5b5783693fe3006d1f6597bcb4f3a5968f23b59481ee09a0477f910a",
+      "destination_sha256": "83a1593c5b5783693fe3006d1f6597bcb4f3a5968f23b59481ee09a0477f910a",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\baseline_reference_loop.txt",
+      "status": "success",
+      "source_sha256": "bebb956bf39ace89b720811d0239c8a217d1f19b237a4320f37b6ba05dbb1a19",
+      "destination_sha256": "bebb956bf39ace89b720811d0239c8a217d1f19b237a4320f37b6ba05dbb1a19",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\core_latest.txt",
+      "status": "success",
+      "source_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "destination_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\feature_AE-RUN-003_latest.txt",
+      "status": "success",
+      "source_sha256": "a31253cfe1bd1838a4ba810a710f8f6fd1adc7894e7519eaf53c7079ae099c66",
+      "destination_sha256": "a31253cfe1bd1838a4ba810a710f8f6fd1adc7894e7519eaf53c7079ae099c66",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\full_latest.txt",
+      "status": "success",
+      "source_sha256": "e4e5f6112e2a4504682fefc961683da6932a9035ea55731eb8cc697cd8538da8",
+      "destination_sha256": "e4e5f6112e2a4504682fefc961683da6932a9035ea55731eb8cc697cd8538da8",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\mypy_availability.txt",
+      "status": "success",
+      "source_sha256": "60367194b226236f8edbe2529be3f90cf047568ccf9506ea561e72bb114f63eb",
+      "destination_sha256": "60367194b226236f8edbe2529be3f90cf047568ccf9506ea561e72bb114f63eb",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\package_exact_full_validation.txt",
+      "status": "success",
+      "source_sha256": "32befddaf545fec69b2f455dd70ab2784eeef8628216810292a76b552870b989",
+      "destination_sha256": "32befddaf545fec69b2f455dd70ab2784eeef8628216810292a76b552870b989",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\package_exact_quick_validation.txt",
+      "status": "success",
+      "source_sha256": "a1fdadb6b041e7df2f6e3dedaa17b34545e13f3e18710d921aefdee4a92abfec",
+      "destination_sha256": "a1fdadb6b041e7df2f6e3dedaa17b34545e13f3e18710d921aefdee4a92abfec",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\package_exact_wheel_validation.txt",
+      "status": "success",
+      "source_sha256": "bab40387aff8f3e3db8fa57e0127cb4de826ea9dbfa294cb5bfbc524dd266f05",
+      "destination_sha256": "bab40387aff8f3e3db8fa57e0127cb4de826ea9dbfa294cb5bfbc524dd266f05",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\prediction_44.txt",
+      "status": "success",
+      "source_sha256": "113453e1b70a173146c4652295246eceb2b7b0ee93ba0fbef775c40f321446f8",
+      "destination_sha256": "113453e1b70a173146c4652295246eceb2b7b0ee93ba0fbef775c40f321446f8",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\public_markets_39.txt",
+      "status": "success",
+      "source_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "destination_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\qualification_completed.txt",
+      "status": "success",
+      "source_sha256": "ea7693b9a50119f926302d6bb69364bb93496379df9c710e0f5d9184fcdfc90d",
+      "destination_sha256": "ea7693b9a50119f926302d6bb69364bb93496379df9c710e0f5d9184fcdfc90d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\qualification_timeout_attempt.txt",
+      "status": "success",
+      "source_sha256": "95ccfa5a51517fe91da10d6684da2a161dc00a88c899bc4c74f055d1984cb91e",
+      "destination_sha256": "95ccfa5a51517fe91da10d6684da2a161dc00a88c899bc4c74f055d1984cb91e",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\quick_latest.txt",
+      "status": "success",
+      "source_sha256": "ac7a5d0725d055fe1f4203632e05b35f2242251c58a7a4e3f3c6fcce28a9f1b0",
+      "destination_sha256": "ac7a5d0725d055fe1f4203632e05b35f2242251c58a7a4e3f3c6fcce28a9f1b0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\retail_49.txt",
+      "status": "success",
+      "source_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "destination_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\ruff_availability.txt",
+      "status": "success",
+      "source_sha256": "8e82477b3db03a444d99ee30e62c4f5e7cf9fa472ea2b12ab858bf1d603fca2e",
+      "destination_sha256": "8e82477b3db03a444d99ee30e62c4f5e7cf9fa472ea2b12ab858bf1d603fca2e",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\startup_second_instance.txt",
+      "status": "success",
+      "source_sha256": "aefa8a398ad3895bc3bd782625fbe2faead7816f61ea33c1e6238ee5a666d0ad",
+      "destination_sha256": "aefa8a398ad3895bc3bd782625fbe2faead7816f61ea33c1e6238ee5a666d0ad",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\startup_server.txt",
+      "status": "success",
+      "source_sha256": "2002e11ffc78ccfaada731e90ae6424e6d1fe383bf49bf90bb85706ee541af24",
+      "destination_sha256": "2002e11ffc78ccfaada731e90ae6424e6d1fe383bf49bf90bb85706ee541af24",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\startup_status.txt",
+      "status": "success",
+      "source_sha256": "fad27a93269d9652e7221f96dffd35d5ef7faf156eb26233d0579943a48350c2",
+      "destination_sha256": "fad27a93269d9652e7221f96dffd35d5ef7faf156eb26233d0579943a48350c2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\test_results\\startup_stop.txt",
+      "status": "success",
+      "source_sha256": "6a95f9c3717ad3651892a88e2b67f07f5a98f3031d89646ee71817f988c735d7",
+      "destination_sha256": "6a95f9c3717ad3651892a88e2b67f07f5a98f3031d89646ee71817f988c735d7",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003\\raw\\V01-IMPORT-SANITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003\\raw\\V01-IMPORT-SANITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "destination_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003\\raw\\V13-LIFECYCLE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003\\raw\\V13-LIFECYCLE.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003\\verification.json",
+      "status": "success",
+      "source_sha256": "74d2d2b3685850169abcfecffb738be7dd6d237249a6ce5a76fc3f6149cfbc7a",
+      "destination_sha256": "74d2d2b3685850169abcfecffb738be7dd6d237249a6ce5a76fc3f6149cfbc7a",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\feature_AE-RUN-003\\VERIFICATION_REPORT.md",
+      "status": "success",
+      "source_sha256": "b21162de7b2e112ad8ad1fb00c9ce00e505d9e75d1ad6eec8e2e0e6e4b2838f4",
+      "destination_sha256": "b21162de7b2e112ad8ad1fb00c9ce00e505d9e75d1ad6eec8e2e0e6e4b2838f4",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V00-VERIFIER-SELFTEST.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V00-VERIFIER-SELFTEST.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V01-IMPORT-SANITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V01-IMPORT-SANITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "destination_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V03-CORE-TESTS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V03-CORE-TESTS.stdout.txt",
+      "status": "success",
+      "source_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "destination_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V10-PLUGIN-DISCOVERY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V10-PLUGIN-DISCOVERY.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-ARBITRAGE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-ARBITRAGE.stdout.txt",
+      "status": "success",
+      "source_sha256": "5dc922832fd60bb5733a6a21168fbad5cfabd22579d4660d67269aafaaf6894c",
+      "destination_sha256": "5dc922832fd60bb5733a6a21168fbad5cfabd22579d4660d67269aafaaf6894c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-PREDICTION.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-PREDICTION.stdout.txt",
+      "status": "success",
+      "source_sha256": "cd4ead935ecc937cc5ff3a38fbd595131b7dc8945c82acc777d02c69fecc41d6",
+      "destination_sha256": "cd4ead935ecc937cc5ff3a38fbd595131b7dc8945c82acc777d02c69fecc41d6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-PUBLIC-MARKETS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-PUBLIC-MARKETS.stdout.txt",
+      "status": "success",
+      "source_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "destination_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-RETAIL.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V11-RETAIL.stdout.txt",
+      "status": "success",
+      "source_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "destination_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V12-REFERENCE-LOOP.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V12-REFERENCE-LOOP.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V13-LIFECYCLE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V13-LIFECYCLE.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V18-TRACEABILITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\raw\\V18-TRACEABILITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "destination_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\verification.json",
+      "status": "success",
+      "source_sha256": "5cfb71281a32feaa0cf241a8cb4e1aa3a91af34ea31f76d1e6d5a102bc0dfb3b",
+      "destination_sha256": "5cfb71281a32feaa0cf241a8cb4e1aa3a91af34ea31f76d1e6d5a102bc0dfb3b",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\full\\VERIFICATION_REPORT.md",
+      "status": "success",
+      "source_sha256": "b8033c60eff58828e2feaa46967174d85f026ba481265045b53f43d5b2397762",
+      "destination_sha256": "b8033c60eff58828e2feaa46967174d85f026ba481265045b53f43d5b2397762",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V00-VERIFIER-SELFTEST.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V00-VERIFIER-SELFTEST.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V01-IMPORT-SANITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V01-IMPORT-SANITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "destination_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V03-CORE-TESTS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V03-CORE-TESTS.stdout.txt",
+      "status": "success",
+      "source_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "destination_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V10-PLUGIN-DISCOVERY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V10-PLUGIN-DISCOVERY.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-ARBITRAGE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-ARBITRAGE.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d0d75c1bdb670be98205aafb58c4df01e52224bc5ecfabe592a6c05d60167a2",
+      "destination_sha256": "4d0d75c1bdb670be98205aafb58c4df01e52224bc5ecfabe592a6c05d60167a2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-PREDICTION.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-PREDICTION.stdout.txt",
+      "status": "success",
+      "source_sha256": "cd4ead935ecc937cc5ff3a38fbd595131b7dc8945c82acc777d02c69fecc41d6",
+      "destination_sha256": "cd4ead935ecc937cc5ff3a38fbd595131b7dc8945c82acc777d02c69fecc41d6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-PUBLIC-MARKETS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-PUBLIC-MARKETS.stdout.txt",
+      "status": "success",
+      "source_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "destination_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-RETAIL.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V11-RETAIL.stdout.txt",
+      "status": "success",
+      "source_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "destination_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V12-REFERENCE-LOOP.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V12-REFERENCE-LOOP.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V13-LIFECYCLE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V13-LIFECYCLE.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V18-TRACEABILITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\raw\\V18-TRACEABILITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "destination_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\verification.json",
+      "status": "success",
+      "source_sha256": "29c492ca6316a1c8c3dba8ace885b83a28379b9da149680924e848d4648ee8b2",
+      "destination_sha256": "29c492ca6316a1c8c3dba8ace885b83a28379b9da149680924e848d4648ee8b2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_full\\VERIFICATION_REPORT.md",
+      "status": "success",
+      "source_sha256": "dc2a466d011bbe0466e28de67f74c50d275f3f70374d6959566d3e563c461070",
+      "destination_sha256": "dc2a466d011bbe0466e28de67f74c50d275f3f70374d6959566d3e563c461070",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V00-VERIFIER-SELFTEST.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V00-VERIFIER-SELFTEST.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V01-IMPORT-SANITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V01-IMPORT-SANITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "destination_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V03-CORE-TESTS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V03-CORE-TESTS.stdout.txt",
+      "status": "success",
+      "source_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "destination_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V12-REFERENCE-LOOP.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V12-REFERENCE-LOOP.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V13-LIFECYCLE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V13-LIFECYCLE.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V18-TRACEABILITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\raw\\V18-TRACEABILITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "destination_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\verification.json",
+      "status": "success",
+      "source_sha256": "82c2d6824b6c778fc2e27f6cd9e573084fa9142924a9521968b626fa148cd1de",
+      "destination_sha256": "82c2d6824b6c778fc2e27f6cd9e573084fa9142924a9521968b626fa148cd1de",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\package_exact_quick\\VERIFICATION_REPORT.md",
+      "status": "success",
+      "source_sha256": "ea65c9d30511774e054764b978a33c6811efeb5bacf3abb088daa1e334618a7c",
+      "destination_sha256": "ea65c9d30511774e054764b978a33c6811efeb5bacf3abb088daa1e334618a7c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V00-VERIFIER-SELFTEST.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V00-VERIFIER-SELFTEST.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V01-IMPORT-SANITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V01-IMPORT-SANITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "destination_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V03-CORE-TESTS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V03-CORE-TESTS.stdout.txt",
+      "status": "success",
+      "source_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "destination_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V10-PLUGIN-DISCOVERY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V10-PLUGIN-DISCOVERY.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-ARBITRAGE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-ARBITRAGE.stdout.txt",
+      "status": "success",
+      "source_sha256": "8272f3640303eb5624d94cf09cd8c1fc88c86e44a8909b0c612f74fe2cc501f7",
+      "destination_sha256": "8272f3640303eb5624d94cf09cd8c1fc88c86e44a8909b0c612f74fe2cc501f7",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-PREDICTION.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-PREDICTION.stdout.txt",
+      "status": "success",
+      "source_sha256": "cd4ead935ecc937cc5ff3a38fbd595131b7dc8945c82acc777d02c69fecc41d6",
+      "destination_sha256": "cd4ead935ecc937cc5ff3a38fbd595131b7dc8945c82acc777d02c69fecc41d6",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-PUBLIC-MARKETS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-PUBLIC-MARKETS.stdout.txt",
+      "status": "success",
+      "source_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "destination_sha256": "07c2eef926162e0090994bc913805aa08a8b2cbb5b21d2c933b937a10300713f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-RETAIL.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V11-RETAIL.stdout.txt",
+      "status": "success",
+      "source_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "destination_sha256": "34885ca5b1ff763fc403eb9bf08eedee994f23728fbc41b590539facb3650164",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V12-REFERENCE-LOOP.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V12-REFERENCE-LOOP.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V13-LIFECYCLE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V13-LIFECYCLE.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V16-ROOT-PACKAGE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V16-ROOT-PACKAGE.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V18-TRACEABILITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\raw\\V18-TRACEABILITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "destination_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\verification.json",
+      "status": "success",
+      "source_sha256": "0bded53ffd82a1ed4293dc7094a94d7eb2a851730ebc4a5c97573eb4461d5e02",
+      "destination_sha256": "0bded53ffd82a1ed4293dc7094a94d7eb2a851730ebc4a5c97573eb4461d5e02",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\qualification\\VERIFICATION_REPORT.md",
+      "status": "success",
+      "source_sha256": "bb52d73ab6c838dd4d5ed04336e10a7430817a3f505d9a745c22ad8ac84420a5",
+      "destination_sha256": "bb52d73ab6c838dd4d5ed04336e10a7430817a3f505d9a745c22ad8ac84420a5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V00-VERIFIER-SELFTEST.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V00-VERIFIER-SELFTEST.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V01-IMPORT-SANITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V01-IMPORT-SANITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "destination_sha256": "182210181d1cc69014904c7de328d3ef941c366c24c9e594b5a4a9d4f25a6c5d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V03-CORE-TESTS.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V03-CORE-TESTS.stdout.txt",
+      "status": "success",
+      "source_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "destination_sha256": "12784721e0280443291002b595b03384e8588476665647b621a862f07297e08f",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V12-REFERENCE-LOOP.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V12-REFERENCE-LOOP.stdout.txt",
+      "status": "success",
+      "source_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "destination_sha256": "423b1d0e014eb1eab96f4420f7b344c2615be505dd574b756ac884826ca74f2d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V13-LIFECYCLE.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V13-LIFECYCLE.stdout.txt",
+      "status": "success",
+      "source_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "destination_sha256": "4d2df7a96ce4a667da3ccf295f2d16c728a65ed0e861a3baa919f7bb469b02b5",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V18-TRACEABILITY.stderr.txt",
+      "status": "success",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "destination_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\raw\\V18-TRACEABILITY.stdout.txt",
+      "status": "success",
+      "source_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "destination_sha256": "58e6f5261c0f046a38c0a958d4b02f06d192e52e98cd04f74a8c0e03cd2c4098",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\verification.json",
+      "status": "success",
+      "source_sha256": "1c63802f28afb19b568ff1c0bced11cc43b96e78b811bb23a64bc447408fefd0",
+      "destination_sha256": "1c63802f28afb19b568ff1c0bced11cc43b96e78b811bb23a64bc447408fefd0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\quick\\VERIFICATION_REPORT.md",
+      "status": "success",
+      "source_sha256": "e380359486668df699483fe62e4d914dd1b32f8d67044bec1c23b12f5a26d12c",
+      "destination_sha256": "e380359486668df699483fe62e4d914dd1b32f8d67044bec1c23b12f5a26d12c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\EVIDENCE_PACKAGE\\verification\\STARTUP_MILESTONE_LEDGER.json",
+      "status": "success",
+      "source_sha256": "168c41903558c75a0735e1abd5e96a3e5c8427f93c24f15a497bde9a36ea1c81",
+      "destination_sha256": "168c41903558c75a0735e1abd5e96a3e5c8427f93c24f15a497bde9a36ea1c81",
+      "backup_relative_path": null,
+      "details": null
+    }
+  ]
+}
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V00-VERIFIER-SELFTEST.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V01-IMPORT-SANITY.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V03-CORE-TESTS.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V10-PLUGIN-DISCOVERY.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-ARBITRAGE.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PREDICTION.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PUBLIC-MARKETS.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-RETAIL.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V12-REFERENCE-LOOP.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V13-LIFECYCLE.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V18-TRACEABILITY.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V00-VERIFIER-SELFTEST.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V01-IMPORT-SANITY.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V03-CORE-TESTS.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V10-PLUGIN-DISCOVERY.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-ARBITRAGE.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PREDICTION.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PUBLIC-MARKETS.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-RETAIL.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V12-REFERENCE-LOOP.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V13-LIFECYCLE.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V16-ROOT-PACKAGE.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V18-TRACEABILITY.stderr.txt`
+
+- Size: `0 B`
+
+```text
+
+```
+
+### File: `personal_alpha_engine_workspace.egg-info\dependency_links.txt`
+
+- Size: `1 B`
+
+```text
+
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V01-IMPORT-SANITY.stdout.txt`
+
+- Size: `11 B`
+
+```text
+IMPORT_OK
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V01-IMPORT-SANITY.stdout.txt`
+
+- Size: `11 B`
+
+```text
+IMPORT_OK
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V18-TRACEABILITY.stdout.txt`
+
+- Size: `17 B`
+
+```text
+TRACEABILITY_OK
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V18-TRACEABILITY.stdout.txt`
+
+- Size: `17 B`
+
+```text
+TRACEABILITY_OK
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V00-VERIFIER-SELFTEST.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.....                                                                    [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V03-CORE-TESTS.stdout.txt`
+
+- Size: `81 B`
+
+```text
+........................                                                 [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V10-PLUGIN-DISCOVERY.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.                                                                        [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PUBLIC-MARKETS.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.......................................                                  [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-RETAIL.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.................................................                        [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V12-REFERENCE-LOOP.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.                                                                        [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V00-VERIFIER-SELFTEST.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.....                                                                    [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V03-CORE-TESTS.stdout.txt`
+
+- Size: `81 B`
+
+```text
+........................                                                 [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V10-PLUGIN-DISCOVERY.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.                                                                        [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PUBLIC-MARKETS.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.......................................                                  [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-RETAIL.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.................................................                        [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V12-REFERENCE-LOOP.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.                                                                        [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V13-LIFECYCLE.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.....                                                                    [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V16-ROOT-PACKAGE.stdout.txt`
+
+- Size: `81 B`
+
+```text
+.                                                                        [100%]
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-ARBITRAGE.stdout.txt`
+
+- Size: `101 B`
+
+```text
+.............................................                            [100%]
+45 passed in 3.75s
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PREDICTION.stdout.txt`
+
+- Size: `101 B`
+
+```text
+............................................                             [100%]
+44 passed in 0.69s
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-ARBITRAGE.stdout.txt`
+
+- Size: `101 B`
+
+```text
+.............................................                            [100%]
+45 passed in 3.56s
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PREDICTION.stdout.txt`
+
+- Size: `101 B`
+
+```text
+............................................                             [100%]
+44 passed in 0.51s
+```
+
+### File: `personal_alpha_engine_workspace.egg-info\top_level.txt`
+
+- Size: `115 B`
+
+```text
+ae_arbitrage_cross_market
+ae_prediction_markets
+ae_public_markets_quant_options
+ae_retail_resale_flip
+alpha_engine
+```
+
+### File: `personal_alpha_engine_workspace.egg-info\entry_points.txt`
+
+- Size: `158 B`
+
+```text
+[console_scripts]
+alpha = alpha_engine.cli.main:main
+alpha-core = alpha_engine.api.server:main
+alpha-reference-loop = alpha_engine.reference_loop.runner:main
+```
+
+### File: `personal_alpha_engine_workspace.egg-info\requires.txt`
+
+- Size: `181 B`
+
+```text
+pydantic<3,>=2.10
+SQLAlchemy<3,>=2.0
+alembic<2,>=1.14
+fastapi<1,>=0.115
+uvicorn<1,>=0.34
+
+[desktop]
+PySide6<7,>=6.8
+
+[dev]
+pytest<10,>=8
+hypothesis<7,>=6
+mypy<2,>=1.14
+ruff<1,>=0.9
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\FILE_OWNERSHIP.md`
 
 - Size: `656 B`
@@ -57825,6 +64699,41 @@ A plugin must not import `alpha_engine.storage.models`, obtain SQLAlchemy sessio
 A plugin names an exact `core_contract`. Unsupported versions are rejected before entrypoint load. Breaking contract changes require a new major contract version and migration guidance.
 ```
 
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\VERIFICATION_REPORT.md`
+
+- Size: `1.1 KB`
+
+```markdown
+# Alpha Engine Verification Report
+
+- Run: `20260819T032252.064299Z`
+- Tier: `full`
+- Build: `0.1.0`
+- Readiness: **NOT_READY**
+- Totals: `{'PASS': 10, 'FAILED': 1, 'BLOCKED': 0, 'INCOMPLETE': 0, 'SKIPPED': 0}`
+- Builder verification is evidence only; final acceptance belongs to independent review and Primary Development reconciliation.
+
+## Checks
+
+| Check | Status | Required | Layer | Reason |
+|---|---|---:|---|---|
+| `V00-VERIFIER-SELFTEST` | PASS | True | qa-infrastructure |  |
+| `V01-IMPORT-SANITY` | PASS | True | package |  |
+| `V03-CORE-TESTS` | PASS | True | unit-integration |  |
+| `V10-PLUGIN-DISCOVERY` | PASS | True | plugin-contract |  |
+| `V11-ARBITRAGE` | PASS | True | plugin |  |
+| `V11-PREDICTION` | PASS | True | plugin |  |
+| `V11-PUBLIC-MARKETS` | PASS | True | plugin |  |
+| `V11-RETAIL` | PASS | True | plugin |  |
+| `V12-REFERENCE-LOOP` | PASS | True | e2e |  |
+| `V13-LIFECYCLE` | FAILED | True | lifecycle | Command exited with 1 |
+| `V18-TRACEABILITY` | PASS | True | traceability |  |
+
+## Blockers
+
+- `V13-LIFECYCLE`
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\IMPLEMENTATION_NOTES.md`
 
 - Size: `1.4 KB`
@@ -57909,6 +64818,43 @@ The core alone owns persistence of canonical records, operations, budgets, permi
 
 ## Core Compatibility Request
 A plugin unable to implement against these public surfaces must emit a structured request rather than importing private modules or modifying core files.
+```
+
+### File: `.alpha_verification_evidence\20260819T032252.064299Z\raw\V13-LIFECYCLE.stdout.txt`
+
+- Size: `1.6 KB`
+
+```text
+...F.                                                                    [100%]
+================================== FAILURES ===================================
+__________ test_real_headless_start_status_second_instance_and_stop ___________
+
+tmp_path = WindowsPath('C:/Users/nicol/AppData/Local/Temp/pytest-of-nicol/pytest-3/test_real_headless_start_statu0')
+
+    def test_real_headless_start_status_second_instance_and_stop(tmp_path: Path) -> None:
+        profile = tmp_path / "runtime-profile"
+        process = _start(profile, _free_port())
+        try:
+>           discovery = _wait_discovery(profile, process)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_runtime_server_smoke.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+profile = WindowsPath('C:/Users/nicol/AppData/Local/Temp/pytest-of-nicol/pytest-3/test_real_headless_start_statu0/runtime-profile')
+process = <Popen: returncode: 1 args: ['C:\\Program Files\\Python313\\python.exe', '-m...>
+timeout = 10.0
+
+    def _wait_discovery(profile: Path, process: subprocess.Popen[bytes], timeout: float = 10.0) -> dict:
+        deadline = time.monotonic() + timeout
+        while time.monotonic() < deadline:
+            if process.poll() is not None:
+>               raise AssertionError(f"runtime exited early with {process.returncode}")
+E               AssertionError: runtime exited early with 1
+
+tests\test_runtime_server_smoke.py:24: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_runtime_server_smoke.py::test_real_headless_start_status_second_instance_and_stop
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\docs\IMPLEMENTATION_NOTES.md`
@@ -58001,6 +64947,54 @@ The Kalshi implementation was aligned to current official API documentation show
 - separate production/demo environments.
 
 Production promotion still requires central source-terms and credential qualification.
+```
+
+### File: `.alpha_verification_evidence\20260819T032341.571603Z\VERIFICATION_REPORT.md`
+
+- Size: `2.5 KB`
+
+```markdown
+# Alpha Engine Verification Report
+
+- Run: `20260819T032341.571603Z`
+- Tier: `qualification`
+- Build: `0.1.0`
+- Readiness: **NOT_QUALIFIED**
+- Totals: `{'PASS': 12, 'BLOCKED': 5, 'SKIPPED': 1, 'INCOMPLETE': 1, 'FAILED': 0}`
+- Builder verification is evidence only; final acceptance belongs to independent review and Primary Development reconciliation.
+
+## Checks
+
+| Check | Status | Required | Layer | Reason |
+|---|---|---:|---|---|
+| `V00-VERIFIER-SELFTEST` | PASS | True | qa-infrastructure |  |
+| `V01-IMPORT-SANITY` | PASS | True | package |  |
+| `V03-CORE-TESTS` | PASS | True | unit-integration |  |
+| `V10-PLUGIN-DISCOVERY` | PASS | True | plugin-contract |  |
+| `V11-ARBITRAGE` | PASS | True | plugin |  |
+| `V11-PREDICTION` | PASS | True | plugin |  |
+| `V11-PUBLIC-MARKETS` | PASS | True | plugin |  |
+| `V11-RETAIL` | PASS | True | plugin |  |
+| `V12-REFERENCE-LOOP` | PASS | True | e2e |  |
+| `V13-LIFECYCLE` | PASS | True | lifecycle |  |
+| `V18-TRACEABILITY` | PASS | True | traceability |  |
+| `V05-MIGRATION-AUTHORITY` | BLOCKED | True | migration | Core still uses development create_all bootstrap; numbered release migrations and upgrade/recovery evidence are not implemented. |
+| `V06-WORKER-SUPERVISION` | BLOCKED | True | workers-recovery | Central worker supervisor/lease execution is not yet implemented; scheduler rows are not sufficient proof. |
+| `V10-PLUGIN-ACTIVATION` | BLOCKED | True | plugin-runtime | Delivered cylinders have mixed manifest/contract shapes and duplicate Prediction Markets implementations; no universal frozen host activation path is qualified yet. |
+| `V13-DESKTOP-SMOKE` | BLOCKED | True | ui-smoke | Desktop PySide6/target-machine smoke was not executed in this builder environment. |
+| `V15-TARGET-RESOURCE` | BLOCKED | True | resource | Target-machine resource qualification has not been executed; no pass thresholds are fabricated. |
+| `V16-ROOT-PACKAGE` | PASS | True | packaging |  |
+| `V17-LIVE-SOURCE` | SKIPPED | False | live-provider | No sanctioned live provider/rights path was authorized for this deterministic builder run. |
+| `V19-ACCEPTED-SCOPE-MATRIX` | INCOMPLETE | True | readiness | Executable traceability is established for this convergence pass, but the cumulative 392-feature registry has not yet been fully populated into the verifier. |
+
+## Blockers
+
+- `V05-MIGRATION-AUTHORITY`
+- `V06-WORKER-SUPERVISION`
+- `V10-PLUGIN-ACTIVATION`
+- `V13-DESKTOP-SMOKE`
+- `V15-TARGET-RESOURCE`
+- `V19-ACCEPTED-SCOPE-MATRIX`
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\README_BATCH.txt`
@@ -58181,6 +65175,140 @@ These are not replaced by placeholders or a shadow central system:
 6. Central Hub scheduling, operation registration, canonical persistence, Radar/review, real dashboard wiring, and paper ledger/outcome persistence; these remain core-owned and must not be duplicated here.
 
 The next implementation pass should use the exact repository baseline and frozen PDK to wire these existing cylinder functions into the host, then add remaining qualified official source adapters rather than redesigning the domain logic.
+```
+
+### File: `_update_logs\update_log_20260818_231434_593578.txt`
+
+- Size: `2.8 KB`
+
+```text
+LISS AR App Update Log
+Timestamp: 20260818_231434_593578
+Package folder: C:\Users\nicol\Downloads\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE
+App folder: C:\Users\nicol\Documents\Alpha Engine
+Backup folder: C:\Users\nicol\Documents\Alpha Engine\_update_backups\20260818_231434_593578
+Update mode: 2 - Complete package update
+Copy verification: size and SHA-256
+Destination installation: verified temporary file plus atomic replace
+
+CREATED DIRECTORY: alpha_engine\docs\runtime
+CREATED DIRECTORY: alpha_engine\tests\verification
+CREATED DIRECTORY: alpha_engine\src\alpha_engine\runtime
+CREATED DIRECTORY: alpha_engine\src\alpha_engine\verification
+REPLACED: alpha_engine\README.md
+REPLACED: alpha_engine\scripts\verify\verify_all.py
+REPLACED: alpha_engine\src\alpha_engine\api\server.py
+REPLACED: alpha_engine\src\alpha_engine\bootstrap\__init__.py
+REPLACED: alpha_engine\src\alpha_engine\cli\main.py
+REPLACED: alpha_engine\src\alpha_engine\desktop\main.py
+REPLACED: alpha_engine\src\alpha_engine\health\service.py
+REPLACED: alpha_engine\src\alpha_engine\operations\service.py
+REPLACED: alpha_engine\src\alpha_engine\reference_loop\runner.py
+CREATED: alpha_engine\src\alpha_engine\bootstrap\lifecycle.py
+CREATED: alpha_engine\src\alpha_engine\plugin_host\discovery.py
+CREATED: alpha_engine\tests\test_plugin_discovery.py
+CREATED: alpha_engine\tests\test_root_package.py
+CREATED: alpha_engine\tests\test_runtime_lifecycle.py
+CREATED: alpha_engine\tests\test_runtime_reference.py
+CREATED: alpha_engine\tests\test_runtime_server_smoke.py
+CREATED: pyproject.toml
+CREATED: RUNBOOK.md
+CREATED: alpha_engine\docs\runtime\DEFECT_LEDGER.json
+CREATED: alpha_engine\docs\runtime\PROVIDER_SERVICE_DECISIONS.json
+CREATED: alpha_engine\docs\runtime\PURPOSE_TRACEABILITY.json
+CREATED: alpha_engine\src\alpha_engine\runtime\__init__.py
+CREATED: alpha_engine\src\alpha_engine\runtime\application.py
+CREATED: alpha_engine\src\alpha_engine\runtime\control.py
+CREATED: alpha_engine\src\alpha_engine\verification\__init__.py
+CREATED: alpha_engine\src\alpha_engine\verification\__main__.py
+CREATED: alpha_engine\src\alpha_engine\verification\feature_registry.json
+CREATED: alpha_engine\src\alpha_engine\verification\models.py
+CREATED: alpha_engine\src\alpha_engine\verification\registry.py
+CREATED: alpha_engine\src\alpha_engine\verification\runner.py
+CREATED: alpha_engine\src\alpha_engine\verification\traceability_check.py
+CREATED: alpha_engine\tests\verification\test_traceability.py
+CREATED: alpha_engine\tests\verification\test_verifier.py
+
+Rollback safety notes:
+- Restore replaced files only from this update's backup folder.
+- Delete created files only when listed in the rollback manifest.
+- Remove created folders only when they are empty.
+- Never delete unlisted files or folders.
+```
+
+### File: `RUNBOOK.md`
+
+- Size: `2.9 KB`
+
+```markdown
+# Personal Alpha Engine — Source Development Runbook
+
+The repository root is the authoritative source-development doorway. The historical nested `alpha_engine/` project remains the core component source tree, but normal development installation and runtime commands should be invoked from the repository root.
+
+## Requirements
+
+- Python 3.12 or newer.
+- No provider credentials are required for deterministic demo or verification.
+- Desktop use requires the optional PySide6 extra.
+
+## Install from the repository root
+
+```bash
+python -m pip install -e ".[dev,desktop]"
+```
+
+For headless/core development only:
+
+```bash
+python -m pip install -e ".[dev]"
+```
+
+## Supported operator/developer doorway
+
+```bash
+alpha start
+alpha demo
+alpha status
+alpha verify quick
+alpha verify feature AE-RUN-003
+alpha verify full
+alpha qualify
+alpha stop
+```
+
+Useful development options:
+
+```bash
+alpha start --headless --profile ./profiles/dev --port 8765
+alpha demo --reset --seed-only --profile ./profiles/demo
+alpha demo --headless --profile ./profiles/demo --port 8766
+```
+
+`alpha demo` is offline and deterministic. It uses the same composed Central Hub service authorities as normal runtime and never requires live provider credentials. `--reset` destroys only the explicitly selected demo profile and refuses to operate while a runtime discovery record is present.
+
+## Runtime profiles
+
+Default profile: `~/.alpha_engine/default` (or `ALPHA_PROFILE` when set).
+
+Default demo profile: `~/.alpha_engine/demo`.
+
+A profile contains its SQLite database, artifact store, cache, exports, backups, logs, and bounded runtime discovery files. The runtime lock/discovery files are removed on clean shutdown. A dead-process stale lock is reconciled on the next start and reported in status.
+
+## Verification evidence
+
+`alpha verify ...` writes a timestamped directory under `.alpha_verification_evidence/` at the repository root. Each run retains:
+
+- `verification.json`;
+- `VERIFICATION_REPORT.md`;
+- per-check stdout/stderr under `raw/`.
+
+Verification is non-fail-fast. Independent checks continue after failures. Missing prerequisites are reported as `BLOCKED`; zero-test collection and verifier exceptions are not green.
+
+## Current known convergence boundaries
+
+The root package now installs the central core plus the four standalone plugin distributions under `plugins/`. Historical root `src/` cylinder trees are deliberately **not** silently installed as production candidates because they contain unfrozen/duplicate integration shapes (including the duplicate Prediction Markets implementation). `alpha verify full` exposes those compatibility facts instead of choosing a winner implicitly.
+
+Numbered core migrations, worker subprocess supervision, a frozen universal plugin PDK activation path, full original-purpose traceability, and opt-in live-provider qualification remain unfinished convergence work. Their absence must remain visible in qualification rather than being converted into false READY claims.
 ```
 
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\CENTRAL_HUB_INTEGRATION_REQUESTS.md`
@@ -59099,6 +66227,507 @@ These are shared/core changes required for full production integration.  This pl
 - **Expected contract:** accept `ae.meta_opportunity_discovery` as canonical ID, with migration alias only if an installed prior identity exists.
 - **Likely central files:** accepted feature catalog/design contract/PDK identity registry.
 - **Cylinder expectation afterward:** no code rename unless Primary Development chooses the alternate ID.
+```
+
+### File: `personal_alpha_engine_workspace.egg-info\SOURCES.txt`
+
+- Size: `17.4 KB`
+
+```text
+pyproject.toml
+alpha_engine/src/alpha_engine/__init__.py
+alpha_engine/src/alpha_engine/api/__init__.py
+alpha_engine/src/alpha_engine/api/server.py
+alpha_engine/src/alpha_engine/artifacts/__init__.py
+alpha_engine/src/alpha_engine/artifacts/store.py
+alpha_engine/src/alpha_engine/audit/__init__.py
+alpha_engine/src/alpha_engine/bootstrap/__init__.py
+alpha_engine/src/alpha_engine/bootstrap/lifecycle.py
+alpha_engine/src/alpha_engine/bootstrap/profile.py
+alpha_engine/src/alpha_engine/budgets/__init__.py
+alpha_engine/src/alpha_engine/budgets/service.py
+alpha_engine/src/alpha_engine/cli/__init__.py
+alpha_engine/src/alpha_engine/cli/main.py
+alpha_engine/src/alpha_engine/config/__init__.py
+alpha_engine/src/alpha_engine/config/service.py
+alpha_engine/src/alpha_engine/contracts/__init__.py
+alpha_engine/src/alpha_engine/contracts/plugin.py
+alpha_engine/src/alpha_engine/data_queries/__init__.py
+alpha_engine/src/alpha_engine/data_queries/gateway.py
+alpha_engine/src/alpha_engine/desktop/__init__.py
+alpha_engine/src/alpha_engine/desktop/main.py
+alpha_engine/src/alpha_engine/evaluation/__init__.py
+alpha_engine/src/alpha_engine/evaluation/service.py
+alpha_engine/src/alpha_engine/evidence/__init__.py
+alpha_engine/src/alpha_engine/evidence/service.py
+alpha_engine/src/alpha_engine/health/__init__.py
+alpha_engine/src/alpha_engine/health/service.py
+alpha_engine/src/alpha_engine/kernel/__init__.py
+alpha_engine/src/alpha_engine/kernel/errors.py
+alpha_engine/src/alpha_engine/kernel/ids.py
+alpha_engine/src/alpha_engine/kernel/serialization.py
+alpha_engine/src/alpha_engine/kernel/time.py
+alpha_engine/src/alpha_engine/kernel/values.py
+alpha_engine/src/alpha_engine/learning/__init__.py
+alpha_engine/src/alpha_engine/learning/service.py
+alpha_engine/src/alpha_engine/notifications/__init__.py
+alpha_engine/src/alpha_engine/notifications/service.py
+alpha_engine/src/alpha_engine/observations/__init__.py
+alpha_engine/src/alpha_engine/observations/service.py
+alpha_engine/src/alpha_engine/operations/__init__.py
+alpha_engine/src/alpha_engine/operations/outbox.py
+alpha_engine/src/alpha_engine/operations/scheduler.py
+alpha_engine/src/alpha_engine/operations/service.py
+alpha_engine/src/alpha_engine/opportunities/__init__.py
+alpha_engine/src/alpha_engine/opportunities/service.py
+alpha_engine/src/alpha_engine/outcomes/__init__.py
+alpha_engine/src/alpha_engine/outcomes/service.py
+alpha_engine/src/alpha_engine/permissions/__init__.py
+alpha_engine/src/alpha_engine/permissions/service.py
+alpha_engine/src/alpha_engine/plugin_host/__init__.py
+alpha_engine/src/alpha_engine/plugin_host/discovery.py
+alpha_engine/src/alpha_engine/plugin_host/pdk.py
+alpha_engine/src/alpha_engine/plugin_host/registry.py
+alpha_engine/src/alpha_engine/providers/__init__.py
+alpha_engine/src/alpha_engine/providers/registry.py
+alpha_engine/src/alpha_engine/radar/__init__.py
+alpha_engine/src/alpha_engine/radar/service.py
+alpha_engine/src/alpha_engine/ranking/__init__.py
+alpha_engine/src/alpha_engine/ranking/service.py
+alpha_engine/src/alpha_engine/reference_loop/__init__.py
+alpha_engine/src/alpha_engine/reference_loop/fixture.py
+alpha_engine/src/alpha_engine/reference_loop/runner.py
+alpha_engine/src/alpha_engine/registries/__init__.py
+alpha_engine/src/alpha_engine/registries/service.py
+alpha_engine/src/alpha_engine/reviews/__init__.py
+alpha_engine/src/alpha_engine/reviews/service.py
+alpha_engine/src/alpha_engine/runtime/__init__.py
+alpha_engine/src/alpha_engine/runtime/application.py
+alpha_engine/src/alpha_engine/runtime/control.py
+alpha_engine/src/alpha_engine/signals/__init__.py
+alpha_engine/src/alpha_engine/signals/service.py
+alpha_engine/src/alpha_engine/simulation/__init__.py
+alpha_engine/src/alpha_engine/simulation/service.py
+alpha_engine/src/alpha_engine/storage/__init__.py
+alpha_engine/src/alpha_engine/storage/bootstrap.py
+alpha_engine/src/alpha_engine/storage/db.py
+alpha_engine/src/alpha_engine/storage/models.py
+alpha_engine/src/alpha_engine/storage/uow.py
+alpha_engine/src/alpha_engine/verification/__init__.py
+alpha_engine/src/alpha_engine/verification/__main__.py
+alpha_engine/src/alpha_engine/verification/feature_registry.json
+alpha_engine/src/alpha_engine/verification/models.py
+alpha_engine/src/alpha_engine/verification/registry.py
+alpha_engine/src/alpha_engine/verification/runner.py
+alpha_engine/src/alpha_engine/verification/traceability_check.py
+personal_alpha_engine_workspace.egg-info/PKG-INFO
+personal_alpha_engine_workspace.egg-info/SOURCES.txt
+personal_alpha_engine_workspace.egg-info/dependency_links.txt
+personal_alpha_engine_workspace.egg-info/entry_points.txt
+personal_alpha_engine_workspace.egg-info/requires.txt
+personal_alpha_engine_workspace.egg-info/top_level.txt
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/canonical.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/configuration.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/registration.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/application/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/application/operations.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/application/service.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/contracts/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/contracts/dto.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/contracts/host.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/detectors/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/detectors/arbitrage.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/diagnostics/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/diagnostics/health.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/costs.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/legs.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/liquidity.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/payoff.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/relationships.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/settlement.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/domain/states.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/learning/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/learning/recommendations.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/normalization/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/normalization/fx.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/normalization/quotes.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/normalization/terms.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/outcomes/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/outcomes/evaluator.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/paper/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/paper/simulator.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/paper/translator.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/persistence/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/persistence/memory.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/persistence/repositories.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/presentation/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/presentation/descriptors.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/presentation/matrix.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/providers/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/providers/base.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/providers/fixture.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/resolution/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/resolution/resolver.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/scoring/__init__.py
+plugins/ae_arbitrage_cross_market/src/ae_arbitrage_cross_market/scoring/features.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/contracts.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/errors.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/manifest.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/plugin.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/serialization.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/application/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/application/reference_loop.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/cli/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/cli/descriptors.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/config/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/config/schema.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/detectors/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/detectors/opportunities.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/detectors/signals.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/diagnostics/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/diagnostics/health.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/domain/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/domain/enums.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/domain/models.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/domain/pricing.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/fixtures/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/fixtures/reference.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/integration/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/integration/central.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/normalization/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/normalization/kalshi.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/normalization/rules.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/operations/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/operations/handlers.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/paper/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/paper/fill_policy.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/paper/translator.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/persistence/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/persistence/memory.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/persistence/ports.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/providers/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/providers/base.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/providers/fixture.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/providers/kalshi.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/resolution/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/resolution/relations.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/scoring/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/scoring/features.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/settlement/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/settlement/evaluator.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/ui/__init__.py
+plugins/ae_prediction_markets/src/ae_prediction_markets/ui/descriptors.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/__init__.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/cli.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/config.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/contracts.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/contributions.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/corporate_actions.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/detectors.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/diagnostics.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/errors.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/features.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/fixtures.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/manifest.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/models.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/normalization.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/operations.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/options.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/outcomes.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/paper.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/persistence.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/point_in_time.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/providers.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/qualification.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/research.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/rights.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/scoring.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/security_master.py
+plugins/ae_public_markets_quant_options/src/ae_public_markets_quant_options/service.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/config.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/contracts.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/manifest.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/serialization.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/cli/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/cli/descriptors.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/diagnostics/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/diagnostics/health.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/domain/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/domain/economics.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/domain/lifecycle.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/domain/models.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/identity/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/identity/gtin.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/identity/resolver.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/integration/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/integration/host_bridge.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/normalization/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/normalization/normalizer.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/operations/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/operations/descriptors.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/operations/handlers.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/opportunities/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/opportunities/detector.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/outcomes/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/outcomes/evaluator.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/paper/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/paper/simulation.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/persistence/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/persistence/repositories.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/providers/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/providers/base.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/providers/fixture.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/providers/manual_import.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/scoring/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/scoring/features.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/signals/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/signals/detectors.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/ui/__init__.py
+plugins/ae_retail_resale_flip/src/ae_retail_resale_flip/ui/descriptors.py
+```
+
+### File: `_update_logs\update_log_20260818_230320_077647.txt`
+
+- Size: `30.7 KB`
+
+```text
+LISS AR App Update Log
+Timestamp: 20260818_230320_077647
+Package folder: C:\Users\nicol\Downloads\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18
+App folder: C:\Users\nicol\Documents\Alpha Engine
+Backup folder: C:\Users\nicol\Documents\Alpha Engine\_update_backups\20260818_230320_077647
+Update mode: 2 - Complete package update
+Copy verification: size and SHA-256
+Destination installation: verified temporary file plus atomic replace
+
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\limitations
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\repository_state
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\docs
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\scripts
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\docs\runtime
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\scripts\verify
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\verification
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003\raw
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\api
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\bootstrap
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\cli
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\desktop
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\health
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\operations
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\plugin_host
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\reference_loop
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\runtime
+CREATED DIRECTORY: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\docs\runtime\DEFECT_LEDGER.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\docs\runtime\PROVIDER_SERVICE_DECISIONS.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\docs\runtime\PURPOSE_TRACEABILITY.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\README.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\scripts\verify\verify_all.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\api\server.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\bootstrap\__init__.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\bootstrap\lifecycle.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\cli\main.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\desktop\main.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\health\service.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\operations\service.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\plugin_host\discovery.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\reference_loop\runner.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\runtime\__init__.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\runtime\application.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\runtime\control.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification\__init__.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification\__main__.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification\feature_registry.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification\models.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification\registry.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification\runner.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\src\alpha_engine\verification\traceability_check.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\test_plugin_discovery.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\test_root_package.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\test_runtime_lifecycle.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\test_runtime_reference.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\test_runtime_server_smoke.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\verification\test_traceability.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\alpha_engine\tests\verification\test_verifier.py
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\pyproject.toml
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE\RUNBOOK.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\apply_manifest.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\authorization_binding.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\builder_report.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\commands_run.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\core_compatibility_requests.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\defect_ledger.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\deletion_ledger.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\limitations\known_blockers.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\README_BATCH.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\repository_state\baseline_manifest.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\repository_state\git_status.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\repository_state\outgoing_apply_inventory.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\repository_state\package_validation.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\repository_state\tracked_changes.patch
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\repository_state\working_git_note.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\SHA256SUMS.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\source_state.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\arbitrage_45.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\baseline_core_pytest.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\baseline_reference_loop.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\core_latest.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\feature_AE-RUN-003_latest.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\full_latest.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\mypy_availability.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\package_exact_full_validation.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\package_exact_quick_validation.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\package_exact_wheel_validation.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\prediction_44.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\public_markets_39.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\qualification_completed.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\qualification_timeout_attempt.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\quick_latest.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\retail_49.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\ruff_availability.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\startup_second_instance.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\startup_server.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\startup_status.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\test_results\startup_stop.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003\raw\V01-IMPORT-SANITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003\raw\V01-IMPORT-SANITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003\raw\V13-LIFECYCLE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003\raw\V13-LIFECYCLE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003\verification.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\feature_AE-RUN-003\VERIFICATION_REPORT.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V00-VERIFIER-SELFTEST.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V00-VERIFIER-SELFTEST.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V01-IMPORT-SANITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V01-IMPORT-SANITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V03-CORE-TESTS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V03-CORE-TESTS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V10-PLUGIN-DISCOVERY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V10-PLUGIN-DISCOVERY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-ARBITRAGE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-ARBITRAGE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-PREDICTION.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-PREDICTION.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-PUBLIC-MARKETS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-PUBLIC-MARKETS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-RETAIL.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V11-RETAIL.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V12-REFERENCE-LOOP.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V12-REFERENCE-LOOP.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V13-LIFECYCLE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V13-LIFECYCLE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V18-TRACEABILITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\raw\V18-TRACEABILITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\verification.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\full\VERIFICATION_REPORT.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V00-VERIFIER-SELFTEST.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V00-VERIFIER-SELFTEST.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V01-IMPORT-SANITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V01-IMPORT-SANITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V03-CORE-TESTS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V03-CORE-TESTS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V10-PLUGIN-DISCOVERY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V10-PLUGIN-DISCOVERY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-ARBITRAGE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-ARBITRAGE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-PREDICTION.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-PREDICTION.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-PUBLIC-MARKETS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-PUBLIC-MARKETS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-RETAIL.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V11-RETAIL.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V12-REFERENCE-LOOP.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V12-REFERENCE-LOOP.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V13-LIFECYCLE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V13-LIFECYCLE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V18-TRACEABILITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\raw\V18-TRACEABILITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\verification.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_full\VERIFICATION_REPORT.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V00-VERIFIER-SELFTEST.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V00-VERIFIER-SELFTEST.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V01-IMPORT-SANITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V01-IMPORT-SANITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V03-CORE-TESTS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V03-CORE-TESTS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V12-REFERENCE-LOOP.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V12-REFERENCE-LOOP.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V13-LIFECYCLE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V13-LIFECYCLE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V18-TRACEABILITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\raw\V18-TRACEABILITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\verification.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\package_exact_quick\VERIFICATION_REPORT.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V00-VERIFIER-SELFTEST.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V00-VERIFIER-SELFTEST.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V01-IMPORT-SANITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V01-IMPORT-SANITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V03-CORE-TESTS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V03-CORE-TESTS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V10-PLUGIN-DISCOVERY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V10-PLUGIN-DISCOVERY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-ARBITRAGE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-ARBITRAGE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-PREDICTION.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-PREDICTION.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-PUBLIC-MARKETS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-PUBLIC-MARKETS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-RETAIL.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V11-RETAIL.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V12-REFERENCE-LOOP.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V12-REFERENCE-LOOP.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V13-LIFECYCLE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V13-LIFECYCLE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V16-ROOT-PACKAGE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V16-ROOT-PACKAGE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V18-TRACEABILITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\raw\V18-TRACEABILITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\verification.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\qualification\VERIFICATION_REPORT.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V00-VERIFIER-SELFTEST.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V00-VERIFIER-SELFTEST.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V01-IMPORT-SANITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V01-IMPORT-SANITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V03-CORE-TESTS.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V03-CORE-TESTS.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V12-REFERENCE-LOOP.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V12-REFERENCE-LOOP.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V13-LIFECYCLE.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V13-LIFECYCLE.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V18-TRACEABILITY.stderr.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\raw\V18-TRACEABILITY.stdout.txt
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\verification.json
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\quick\VERIFICATION_REPORT.md
+CREATED: Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\EVIDENCE_PACKAGE\verification\STARTUP_MILESTONE_LEDGER.json
+
+Rollback safety notes:
+- Restore replaced files only from this update's backup folder.
+- Delete created files only when listed in the rollback manifest.
+- Remove created folders only when they are empty.
+- Never delete unlisted files or folders.
 ```
 
 ### File: `_update_logs\update_log_20260817_231705_534208.txt`
@@ -60093,6 +67722,30 @@ Rollback safety notes:
 1;asldkf
 ```
 
+### File: `personal_alpha_engine_workspace.egg-info\PKG-INFO`
+
+- Size: `639 B`
+
+```text
+Metadata-Version: 2.4
+Name: personal-alpha-engine-workspace
+Version: 0.1.0
+Summary: Authoritative source-development workspace for the Personal Alpha Engine
+Requires-Python: >=3.12
+Requires-Dist: pydantic<3,>=2.10
+Requires-Dist: SQLAlchemy<3,>=2.0
+Requires-Dist: alembic<2,>=1.14
+Requires-Dist: fastapi<1,>=0.115
+Requires-Dist: uvicorn<1,>=0.34
+Provides-Extra: desktop
+Requires-Dist: PySide6<7,>=6.8; extra == "desktop"
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"
+Requires-Dist: hypothesis<7,>=6; extra == "dev"
+Requires-Dist: mypy<2,>=1.14; extra == "dev"
+Requires-Dist: ruff<1,>=0.9; extra == "dev"
+```
+
 ### File: `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\FILE_HASHES.sha256`
 
 - Size: `7.0 KB`
@@ -60261,6 +67914,8 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `alpha_engine\pyproject.toml`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\README.md`
 - `src\alpha_engine\plugins\political_insider_institutional\README.md`
+- `pyproject.toml`
+- `_update_backups\20260818_231434_593578\alpha_engine\README.md`
 - `alpha_engine\README.md`
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\README.md`
 - `plugins\ae_public_markets_quant_options\README.md`
@@ -60286,10 +67941,10 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\resource\__init__.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\security\__init__.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\unit\__init__.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\bootstrap\__init__.py`
 - `alpha_engine\src\alpha_engine\api\__init__.py`
 - `alpha_engine\src\alpha_engine\artifacts\__init__.py`
 - `alpha_engine\src\alpha_engine\audit\__init__.py`
-- `alpha_engine\src\alpha_engine\bootstrap\__init__.py`
 - `alpha_engine\src\alpha_engine\budgets\__init__.py`
 - `alpha_engine\src\alpha_engine\cli\__init__.py`
 - `alpha_engine\src\alpha_engine\config\__init__.py`
@@ -60400,6 +68055,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `src\alpha_engine_plugins\meta_opportunity_discovery\cli\__init__.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\application\__init__.py`
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\application\__init__.py`
+- `alpha_engine\src\alpha_engine\verification\__init__.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\paper\__init__.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\scoring\__init__.py`
 - `src\alpha_engine\plugins\political_insider_institutional\paper\__init__.py`
@@ -60450,6 +68106,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `tests\plugins\political_insider_institutional\conftest.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\graph\__init__.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\graph\__init__.py`
+- `alpha_engine\scripts\verify\verify_all.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\discovery\__init__.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\discovery\__init__.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\signals\__init__.py`
@@ -60466,6 +68123,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\providers\__init__.py`
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\providers\__init__.py`
 - `alpha_engine\tests\test_reference_loop.py`
+- `alpha_engine\src\alpha_engine\bootstrap\__init__.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\model_assist\__init__.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\model_assist\__init__.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\plugin.py`
@@ -60480,7 +68138,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\providers\base.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\__init__.py`
 - `src\alpha_engine\plugins\political_insider_institutional\__init__.py`
-- `alpha_engine\scripts\verify\verify_all.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\scripts\verify\verify_all.py`
 - `alpha_engine\src\alpha_engine\kernel\time.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\cli\descriptors.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\cli\descriptors.py`
@@ -60500,10 +68158,11 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\__init__.py`
 - `_update_backups\20260817_231705_534208\tests\prediction_markets\test_fixture_catalog.py`
 - `tests\prediction_markets\test_fixture_catalog.py`
-- `alpha_engine\src\alpha_engine\cli\main.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\cli\main.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\__init__.py`
 - `src\alpha_engine_prediction_markets\__init__.py`
-- `alpha_engine\src\alpha_engine\health\service.py`
+- `alpha_engine\src\alpha_engine\verification\__main__.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\health\service.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\persistence\repository.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\persistence\repository.py`
 - `alpha_engine\tests\test_plugin_contract.py`
@@ -60562,6 +68221,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\providers\base.py`
 - `src\alpha_engine_prediction_markets\providers\base.py`
 - `alpha_engine\tests\test_permissions_budget.py`
+- `alpha_engine\tests\test_plugin_discovery.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\unit\test_canonical.py`
 - `plugins\ae_arbitrage_cross_market\tests\unit\test_canonical.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\tests\test_relations.py`
@@ -60572,7 +68232,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\diagnostics.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_retail_resale_flip\tests\unit\test_config_serialization.py`
 - `plugins\ae_retail_resale_flip\tests\unit\test_config_serialization.py`
-- `alpha_engine\src\alpha_engine\desktop\main.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\desktop\main.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\tests\test_security_master.py`
 - `plugins\ae_public_markets_quant_options\tests\test_security_master.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\ui\descriptors.py`
@@ -60655,6 +68315,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_retail_resale_flip\tests\unit\test_normalization.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\providers\base.py`
 - `plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\providers\base.py`
+- `alpha_engine\src\alpha_engine\verification\models.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\tests\test_service_manifest_diagnostics.py`
 - `plugins\ae_public_markets_quant_options\tests\test_service_manifest_diagnostics.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\unit\test_configuration_learning.py`
@@ -60692,9 +68353,11 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `alpha_engine\src\alpha_engine\operations\scheduler.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\manifest.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\manifest.py`
+- `alpha_engine\tests\test_runtime_reference.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\manifest.py`
 - `src\alpha_engine_prediction_markets\manifest.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\tests\test_detectors.py`
+- `alpha_engine\tests\test_root_package.py`
 - `plugins\ae_prediction_markets\tests\test_detectors.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\errors.py`
 - `src\alpha_engine_prediction_markets\errors.py`
@@ -60732,7 +68395,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\providers\fixture.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\lifecycle\reevaluate.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\lifecycle\reevaluate.py`
-- `alpha_engine\src\alpha_engine\operations\service.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\operations\service.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\paper\translator.py`
 - `src\alpha_engine\plugins\political_insider_institutional\paper\translator.py`
 - `_update_backups\20260817_231705_534208\tests\plugins\political_insider_institutional\test_models_rules.py`
@@ -60778,7 +68441,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `src\alpha_engine_plugins\meta_opportunity_discovery\outcomes\evaluator.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\failure_injection\test_negative_invariants.py`
 - `plugins\ae_arbitrage_cross_market\tests\failure_injection\test_negative_invariants.py`
-- `alpha_engine\src\alpha_engine\api\server.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\api\server.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\outcomes\evaluator.py`
 - `plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\outcomes\evaluator.py`
 - `_update_backups\20260817_231705_534208\tests\plugins\political_insider_institutional\test_normalization.py`
@@ -60789,6 +68452,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\domain\enums.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\paper\translator.py`
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\paper\translator.py`
+- `alpha_engine\tests\verification\test_traceability.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\tests\test_paper.py`
 - `plugins\ae_prediction_markets\tests\test_paper.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\persistence\memory.py`
@@ -60806,6 +68470,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\errors.py`
 - `plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\outcomes\evaluator.py`
 - `alpha_engine\src\alpha_engine\contracts\plugin.py`
+- `alpha_engine\src\alpha_engine\verification\traceability_check.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\qualification.py`
 - `plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\qualification.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\config\schema.py`
@@ -60818,6 +68483,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `src\alpha_engine_prediction_markets\diagnostics.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\tests\test_fixture_catalog.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\tests\test_fixture_catalog.py`
+- `alpha_engine\tests\test_runtime_lifecycle.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\tests\integration\test_operations_matrix.py`
 - `plugins\ae_arbitrage_cross_market\tests\integration\test_operations_matrix.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\tests\test_options.py`
@@ -60899,6 +68565,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\paper.py`
 - `plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\paper.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_retail_resale_flip\tests\unit\test_economics.py`
+- `alpha_engine\src\alpha_engine\desktop\main.py`
 - `plugins\ae_retail_resale_flip\tests\unit\test_economics.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\detectors\opportunities.py`
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\detectors\opportunities.py`
@@ -60928,12 +68595,14 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `tests\prediction_markets\test_normalization.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\domain\identity.py`
 - `src\alpha_engine\plugins\political_insider_institutional\domain\identity.py`
+- `alpha_engine\src\alpha_engine\operations\service.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\config.py`
 - `src\alpha_engine_prediction_markets\config.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\research.py`
 - `plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\research.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\model_assist\validator.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\model_assist\validator.py`
+- `alpha_engine\tests\test_runtime_server_smoke.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\presentation.py`
 - `src\alpha_engine_prediction_markets\presentation.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\operations\handlers.py`
@@ -60962,12 +68631,14 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `tests\prediction_markets\test_domain_and_config.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_retail_resale_flip\tests\unit\test_opportunity_scoring.py`
 - `plugins\ae_retail_resale_flip\tests\unit\test_opportunity_scoring.py`
+- `alpha_engine\src\alpha_engine\health\service.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\scoring\features.py`
 - `src\alpha_engine\plugins\political_insider_institutional\scoring\features.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\opportunities.py`
 - `src\alpha_engine_prediction_markets\opportunities.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_retail_resale_flip\tests\integration\test_pipeline.py`
 - `plugins\ae_retail_resale_flip\tests\integration\test_pipeline.py`
+- `alpha_engine\tests\verification\test_verifier.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\providers\fixture.py`
 - `src\alpha_engine_prediction_markets\providers\fixture.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\plugin.py`
@@ -60986,13 +68657,15 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\contracts.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\normalization\public_records.py`
 - `src\alpha_engine\plugins\political_insider_institutional\normalization\public_records.py`
-- `alpha_engine\src\alpha_engine\reference_loop\runner.py`
+- `_update_backups\20260818_231434_593578\alpha_engine\src\alpha_engine\reference_loop\runner.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\normalization.py`
 - `plugins\ae_public_markets_quant_options\src\ae_public_markets_quant_options\normalization.py`
+- `alpha_engine\src\alpha_engine\bootstrap\lifecycle.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\opportunities\candidates.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\opportunities\candidates.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\fixtures.py`
 - `src\alpha_engine_prediction_markets\fixtures.py`
+- `alpha_engine\src\alpha_engine\api\server.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\engine.py`
 - `src\alpha_engine_prediction_markets\engine.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\operations\service.py`
@@ -61001,6 +68674,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `tests\prediction_markets\test_relations_signals_scoring.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\scoring.py`
 - `src\alpha_engine_prediction_markets\scoring.py`
+- `alpha_engine\src\alpha_engine\plugin_host\discovery.py`
 - `_update_backups\20260817_231705_534208\tests\prediction_markets\test_integration_contracts.py`
 - `tests\prediction_markets\test_integration_contracts.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\domain\economics.py`
@@ -61024,6 +68698,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `src\alpha_engine_plugins\meta_opportunity_discovery\contracts.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\normalization\sec_ownership.py`
 - `src\alpha_engine\plugins\political_insider_institutional\normalization\sec_ownership.py`
+- `alpha_engine\src\alpha_engine\cli\main.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\providers\kalshi.py`
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\providers\kalshi.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\adapters\core_boundary.py`
@@ -61042,6 +68717,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_retail_resale_flip\src\ae_retail_resale_flip\opportunities\detector.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\fixtures\fake_data.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\fixtures\fake_data.py`
+- `alpha_engine\src\alpha_engine\reference_loop\runner.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\domain\models.py`
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\domain\models.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\contracts.py`
@@ -61058,10 +68734,12 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_arbitrage_cross_market\tests\integration\test_fixtures.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\discovery\engine.py`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\discovery\engine.py`
+- `alpha_engine\src\alpha_engine\verification\registry.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\src\ae_prediction_markets\normalization\kalshi.py`
 - `plugins\ae_prediction_markets\src\ae_prediction_markets\normalization\kalshi.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\domain.py`
 - `src\alpha_engine_prediction_markets\domain.py`
+- `alpha_engine\src\alpha_engine\verification\runner.py`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\detectors\arbitrage.py`
 - `plugins\ae_arbitrage_cross_market\src\ae_arbitrage_cross_market\detectors\arbitrage.py`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_prediction_markets\normalization.py`
@@ -61084,21 +68762,80 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `plugins\ae_retail_resale_flip\tests\fixtures\golden_scenarios.json`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\OWNERSHIP_MANIFEST.json`
 - `plugins\ae_prediction_markets\OWNERSHIP_MANIFEST.json`
+- `alpha_engine\src\alpha_engine\verification\feature_registry.json`
+- `.alpha_verification_evidence\20260819T032252.064299Z\verification.json`
+- `_update_logs\rollback_manifest_20260818_231434_593578.json`
+- `.alpha_verification_evidence\20260819T032341.571603Z\verification.json`
 - `alpha_engine\_update_logs\rollback_manifest_20260806_225438_757305.json`
+- `_update_logs\rollback_manifest_20260818_230320_077647.json`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V00-VERIFIER-SELFTEST.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V01-IMPORT-SANITY.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V03-CORE-TESTS.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V10-PLUGIN-DISCOVERY.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-ARBITRAGE.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PREDICTION.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PUBLIC-MARKETS.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-RETAIL.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V12-REFERENCE-LOOP.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V13-LIFECYCLE.stderr.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V18-TRACEABILITY.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V00-VERIFIER-SELFTEST.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V01-IMPORT-SANITY.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V03-CORE-TESTS.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V10-PLUGIN-DISCOVERY.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-ARBITRAGE.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PREDICTION.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PUBLIC-MARKETS.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-RETAIL.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V12-REFERENCE-LOOP.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V13-LIFECYCLE.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V16-ROOT-PACKAGE.stderr.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V18-TRACEABILITY.stderr.txt`
+- `personal_alpha_engine_workspace.egg-info\dependency_links.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V01-IMPORT-SANITY.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V01-IMPORT-SANITY.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V18-TRACEABILITY.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V18-TRACEABILITY.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V00-VERIFIER-SELFTEST.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V03-CORE-TESTS.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V10-PLUGIN-DISCOVERY.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PUBLIC-MARKETS.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-RETAIL.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V12-REFERENCE-LOOP.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V00-VERIFIER-SELFTEST.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V03-CORE-TESTS.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V10-PLUGIN-DISCOVERY.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PUBLIC-MARKETS.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-RETAIL.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V12-REFERENCE-LOOP.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V13-LIFECYCLE.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V16-ROOT-PACKAGE.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-ARBITRAGE.stdout.txt`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V11-PREDICTION.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-ARBITRAGE.stdout.txt`
+- `.alpha_verification_evidence\20260819T032341.571603Z\raw\V11-PREDICTION.stdout.txt`
+- `personal_alpha_engine_workspace.egg-info\top_level.txt`
+- `personal_alpha_engine_workspace.egg-info\entry_points.txt`
+- `personal_alpha_engine_workspace.egg-info\requires.txt`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\FILE_OWNERSHIP.md`
 - `plugins\ae_arbitrage_cross_market\docs\FILE_OWNERSHIP.md`
 - `alpha_engine\docs\decisions\ADR-0001-implementation-freeze.md`
 - `alpha_engine\docs\architecture\CYLINDER_CONNECTION_GUIDE.md`
 - `alpha_engine\docs\contracts\PLUGIN_DEVELOPMENT_KIT_1.0_DRAFT.md`
+- `.alpha_verification_evidence\20260819T032252.064299Z\VERIFICATION_REPORT.md`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\IMPLEMENTATION_NOTES.md`
 - `plugins\ae_arbitrage_cross_market\docs\IMPLEMENTATION_NOTES.md`
 - `alpha_engine\docs\contracts\CORE_DESIGN_CONTRACT_1.0_DRAFT.md`
+- `.alpha_verification_evidence\20260819T032252.064299Z\raw\V13-LIFECYCLE.stdout.txt`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\docs\IMPLEMENTATION_NOTES.md`
 - `plugins\ae_prediction_markets\docs\IMPLEMENTATION_NOTES.md`
+- `.alpha_verification_evidence\20260819T032341.571603Z\VERIFICATION_REPORT.md`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\README_BATCH.txt`
 - `plugins\ae_prediction_markets\README_BATCH.txt`
 - `_update_backups\20260817_231705_534208\src\alpha_engine\plugins\political_insider_institutional\IMPLEMENTATION_STATUS.md`
 - `src\alpha_engine\plugins\political_insider_institutional\IMPLEMENTATION_STATUS.md`
+- `_update_logs\update_log_20260818_231434_593578.txt`
+- `RUNBOOK.md`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\CENTRAL_HUB_INTEGRATION_REQUESTS.md`
 - `plugins\ae_prediction_markets\CENTRAL_HUB_INTEGRATION_REQUESTS.md`
 - `_update_backups\20260817_231705_534208\plugins\ae_arbitrage_cross_market\docs\CENTRAL_HUB_INTEGRATION_REQUESTS.md`
@@ -61110,6 +68847,8 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `src\alpha_engine_prediction_markets\CENTRAL_HUB_INTEGRATION_REQUESTS.md`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\CENTRAL_HUB_INTEGRATION_REQUESTS.md`
 - `src\alpha_engine_plugins\meta_opportunity_discovery\CENTRAL_HUB_INTEGRATION_REQUESTS.md`
+- `personal_alpha_engine_workspace.egg-info\SOURCES.txt`
+- `_update_logs\update_log_20260818_230320_077647.txt`
 - `_update_logs\update_log_20260817_231705_534208.txt`
 - `_update_logs\update_log_20260809_010424_745545.txt`
 - `_update_backups\20260817_231705_534208\src\alpha_engine_plugins\meta_opportunity_discovery\py.typed`
@@ -61117,6 +68856,7 @@ c0582ff1f1ffb9d703e54cf9c8a84215f09ef948bb8374b6062cabcc5722b6c6  tests/test_res
 - `src\alpha_engine_plugins\meta_opportunity_discovery\py.typed`
 - `src\alpha_engine_prediction_markets\py.typed`
 - `text1`
+- `personal_alpha_engine_workspace.egg-info\PKG-INFO`
 - `_update_backups\20260817_231705_534208\plugins\ae_prediction_markets\FILE_HASHES.sha256`
 - `plugins\ae_prediction_markets\FILE_HASHES.sha256`
 

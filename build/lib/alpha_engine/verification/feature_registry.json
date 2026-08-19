@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "features": [
+    {
+      "feature_id": "AE-RUN-001",
+      "disposition": "PARTIAL",
+      "owner": "core.bootstrap",
+      "checks": ["V01-IMPORT-SANITY", "V13-LIFECYCLE"],
+      "notes": "Authoritative composed local runtime and lifecycle lease implemented; worker subprocess supervision remains outside this pass."
+    },
+    {
+      "feature_id": "AE-RUN-002",
+      "disposition": "PARTIAL",
+      "owner": "core.runtime.reference_demo",
+      "checks": ["V12-REFERENCE-LOOP"],
+      "notes": "Deterministic composed demo seed implemented; full live desktop read-model binding remains incomplete."
+    },
+    {
+      "feature_id": "AE-RUN-003",
+      "disposition": "IMPLEMENTED",
+      "owner": "core.health",
+      "checks": ["V13-LIFECYCLE"],
+      "notes": "Local mandatory readiness now checks SQLite integrity and writable artifact/runtime directories instead of hard-coded READY."
+    },
+    {
+      "feature_id": "AE-RUN-004",
+      "disposition": "PARTIAL",
+      "owner": "developer_experience",
+      "checks": ["V01-IMPORT-SANITY", "V18-TRACEABILITY"],
+      "notes": "Runbook and Python source-development doorway added; physical repository re-home is not complete."
+    },
+    {
+      "feature_id": "AE-VER-001",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.verification",
+      "checks": ["V00-VERIFIER-SELFTEST", "V18-TRACEABILITY"],
+      "notes": "Canonical non-fail-fast Python harness with retained raw evidence."
+    },
+    {
+      "feature_id": "AE-VER-002",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.verification",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "Quick, feature, full, and qualification selection over shared check specs."
+    },
+    {
+      "feature_id": "AE-VER-003",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.traceability",
+      "checks": ["V18-TRACEABILITY"],
+      "notes": "Executable feature-to-check registry and validation."
+    },
+    {
+      "feature_id": "AE-VER-004",
+      "disposition": "PARTIAL",
+      "owner": "all_builders",
+      "checks": ["V03-CORE-TESTS", "V18-TRACEABILITY"],
+      "notes": "Enforcement exists for registered current features; cumulative 392-feature population remains incomplete."
+    },
+    {
+      "feature_id": "AE-VER-005",
+      "disposition": "IMPLEMENTED",
+      "owner": "core.bootstrap.qa",
+      "checks": ["V13-LIFECYCLE"],
+      "notes": "Lease, stale-lock, second-instance, health, publish and clean-release behavior are directly tested."
+    },
+    {
+      "feature_id": "AE-VER-006",
+      "disposition": "PARTIAL",
+      "owner": "core.reference_demo",
+      "checks": ["V12-REFERENCE-LOOP"],
+      "notes": "Reference loop now uses composed services and is idempotent in-profile; HTTP-hosted replay test remains future work."
+    },
+    {
+      "feature_id": "AE-VER-007",
+      "disposition": "PARTIAL",
+      "owner": "core.plugin_host.qa",
+      "checks": ["V10-PLUGIN-DISCOVERY", "V11-ARBITRAGE", "V11-PREDICTION", "V11-PUBLIC-MARKETS", "V11-RETAIL"],
+      "notes": "Central discovery reports duplicate/incompatible candidates and full verifier executes standalone cylinder suites; activation through a frozen universal PDK remains blocked."
+    },
+    {
+      "feature_id": "AE-VER-013",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.diagnostics",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "JSON, Markdown, and per-check raw outputs retained in timestamped evidence directories."
+    },
+    {
+      "feature_id": "AE-VER-015",
+      "disposition": "IMPLEMENTED",
+      "owner": "qa.infrastructure",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "Self-tests cover continuation, timeout, blocking, missing tools, zero tests, evidence, and aggregation."
+    },
+    {
+      "feature_id": "AE-VER-016",
+      "disposition": "PARTIAL",
+      "owner": "qa.release",
+      "checks": ["V00-VERIFIER-SELFTEST", "V18-TRACEABILITY"],
+      "notes": "Required FAILED/BLOCKED/INCOMPLETE states drive readiness; full accepted-scope population is not yet complete."
+    },
+    {
+      "feature_id": "AE-PURPOSE-GAP-001",
+      "disposition": "PARTIAL",
+      "owner": "core.qa",
+      "checks": ["V18-TRACEABILITY"],
+      "notes": "Supplement/runtime traceability is executable; original source-purpose statement population requires the full source catalog."
+    },
+    {
+      "feature_id": "AE-PURPOSE-GAP-002",
+      "disposition": "PARTIAL",
+      "owner": "core.bootstrap",
+      "checks": ["V01-IMPORT-SANITY", "V13-LIFECYCLE"],
+      "notes": "Explicit composition root exists for core authorities; canonical plugin activation remains incomplete."
+    },
+    {
+      "feature_id": "AE-PURPOSE-GAP-033",
+      "disposition": "PARTIAL",
+      "owner": "qa",
+      "checks": ["V18-TRACEABILITY", "V00-VERIFIER-SELFTEST"],
+      "notes": "Readiness matrix machinery exists but does not yet represent every 392-feature/purpose/provider/migration acceptance item."
+    },
+    {
+      "feature_id": "AE-GAP-001",
+      "disposition": "PARTIAL",
+      "owner": "repository.integration",
+      "checks": ["V01-IMPORT-SANITY", "V10-PLUGIN-DISCOVERY"],
+      "notes": "Root split is now explicit in tooling and diagnostics but physical package-root reconciliation is not complete."
+    },
+    {
+      "feature_id": "AE-FTR-QA-005",
+      "disposition": "ACCEPTED",
+      "owner": "core.qa",
+      "checks": ["V03-CORE-TESTS", "V12-REFERENCE-LOOP"],
+      "notes": "Existing reference loop preserved and strengthened through composition."
+    },
+    {
+      "feature_id": "AE-FTR-QA-009",
+      "disposition": "IMPLEMENTED",
+      "owner": "core.qa",
+      "checks": ["V00-VERIFIER-SELFTEST"],
+      "notes": "Non-fail-fast verifier implemented."
+    }
+  ]
+}

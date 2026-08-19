@@ -1,0 +1,30 @@
+...F.                                                                    [100%]
+================================== FAILURES ===================================
+__________ test_real_headless_start_status_second_instance_and_stop ___________
+
+tmp_path = WindowsPath('C:/Users/nicol/AppData/Local/Temp/pytest-of-nicol/pytest-3/test_real_headless_start_statu0')
+
+    def test_real_headless_start_status_second_instance_and_stop(tmp_path: Path) -> None:
+        profile = tmp_path / "runtime-profile"
+        process = _start(profile, _free_port())
+        try:
+>           discovery = _wait_discovery(profile, process)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_runtime_server_smoke.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+profile = WindowsPath('C:/Users/nicol/AppData/Local/Temp/pytest-of-nicol/pytest-3/test_real_headless_start_statu0/runtime-profile')
+process = <Popen: returncode: 1 args: ['C:\\Program Files\\Python313\\python.exe', '-m...>
+timeout = 10.0
+
+    def _wait_discovery(profile: Path, process: subprocess.Popen[bytes], timeout: float = 10.0) -> dict:
+        deadline = time.monotonic() + timeout
+        while time.monotonic() < deadline:
+            if process.poll() is not None:
+>               raise AssertionError(f"runtime exited early with {process.returncode}")
+E               AssertionError: runtime exited early with 1
+
+tests\test_runtime_server_smoke.py:24: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_runtime_server_smoke.py::test_real_headless_start_status_second_instance_and_stop
