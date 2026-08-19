@@ -1,0 +1,4 @@
+[console_scripts]
+alpha = alpha_engine.cli.main:main
+alpha-core = alpha_engine.api.server:main
+alpha-reference-loop = alpha_engine.reference_loop.runner:main

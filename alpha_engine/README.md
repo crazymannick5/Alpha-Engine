@@ -1,3 +1,5 @@
+> **Repository-root convergence note (2026-08-18):** the repository-root `pyproject.toml` and `RUNBOOK.md` are now the authoritative source-development install/runtime doorway. This nested project remains the Central Hub component source/configuration and its lower-level commands are retained for compatibility and focused testing.
+
 # Personal Alpha Engine — Central Hub Draft
 
 This repository is a substantial CORE-only implementation candidate derived from the accepted architecture draft. It deliberately contains no production cylinder. The deterministic reference loop proves acquisition/fixture -> normalization -> evidence -> signal -> opportunity -> ranking -> radar/review -> decision -> paper action -> outcome -> evaluation -> learning recommendation.
@@ -16,6 +18,3 @@ This repository is a substantial CORE-only implementation candidate derived from
 ```bash
 python -m alpha_engine.reference_loop.runner --db ./alpha_demo.sqlite3 --artifacts ./artifacts
 pytest
-```
-
-The reference loop is synthetic and is not investment, market, political, or commercial advice.

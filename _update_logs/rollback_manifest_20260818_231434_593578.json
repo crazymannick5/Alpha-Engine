@@ -1,0 +1,354 @@
+{
+  "format": "update-package-rollback-manifest-v1",
+  "timestamp": "20260818_231434_593578",
+  "package_folder": "C:\\Users\\nicol\\Downloads\\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\\APPLY_PACKAGE",
+  "app_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine",
+  "backup_folder": "C:\\Users\\nicol\\Documents\\Alpha Engine\\_update_backups\\20260818_231434_593578",
+  "update_mode": {
+    "number": "2",
+    "name": "Complete package update",
+    "include_new_files_in_existing_folders": true,
+    "include_new_files_requiring_folders": true
+  },
+  "rollback_guidance": [
+    "Restore each successful replaced_file record from its backup path.",
+    "Delete successful created_file records only after confirming they were created by this update.",
+    "Remove successful created_directory records only when they are empty.",
+    "Never delete unlisted files or directories during rollback."
+  ],
+  "operations": [
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\docs\\runtime",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\tests\\verification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_directory",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification",
+      "status": "success",
+      "source_sha256": null,
+      "destination_sha256": null,
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\README.md",
+      "status": "success",
+      "source_sha256": "bf4ccbf8fc9dd77aa5b40c3f5354e975a837ce69e30f4b11dc231a04200bc6a0",
+      "destination_sha256": "bf4ccbf8fc9dd77aa5b40c3f5354e975a837ce69e30f4b11dc231a04200bc6a0",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\README.md",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\scripts\\verify\\verify_all.py",
+      "status": "success",
+      "source_sha256": "25f3a94d33bb9ad92d53672b942a56659acf16b326b6d8485be3356bc1bc48f5",
+      "destination_sha256": "25f3a94d33bb9ad92d53672b942a56659acf16b326b6d8485be3356bc1bc48f5",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\scripts\\verify\\verify_all.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\api\\server.py",
+      "status": "success",
+      "source_sha256": "bf8faff1a4dbbf20bb7380cb50274f1efdd95768a6264d2ab81e7a804ea5fced",
+      "destination_sha256": "bf8faff1a4dbbf20bb7380cb50274f1efdd95768a6264d2ab81e7a804ea5fced",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\api\\server.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\bootstrap\\__init__.py",
+      "status": "success",
+      "source_sha256": "254333f615c5695fa841d1792f9c1cb371979c9739902ae65a31a1a572637b28",
+      "destination_sha256": "254333f615c5695fa841d1792f9c1cb371979c9739902ae65a31a1a572637b28",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\bootstrap\\__init__.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\cli\\main.py",
+      "status": "success",
+      "source_sha256": "fdfddd2e7fa3e731c4e28cd26bee7d8a6635a81ce1a2975d672059c09798de51",
+      "destination_sha256": "fdfddd2e7fa3e731c4e28cd26bee7d8a6635a81ce1a2975d672059c09798de51",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\cli\\main.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\desktop\\main.py",
+      "status": "success",
+      "source_sha256": "da25a79ae5c0c979132fdef5fa3fb2961b056aa9ca8b9c80fcbcf3efae6d7705",
+      "destination_sha256": "da25a79ae5c0c979132fdef5fa3fb2961b056aa9ca8b9c80fcbcf3efae6d7705",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\desktop\\main.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\health\\service.py",
+      "status": "success",
+      "source_sha256": "e8f8cbc18703e8585f582a919efebab085bfe93abd367d667bc87ce2354f9b08",
+      "destination_sha256": "e8f8cbc18703e8585f582a919efebab085bfe93abd367d667bc87ce2354f9b08",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\health\\service.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\operations\\service.py",
+      "status": "success",
+      "source_sha256": "e1b49d6abb7ede16609d9fccb8354af5508649783f50f921088217f23c456054",
+      "destination_sha256": "e1b49d6abb7ede16609d9fccb8354af5508649783f50f921088217f23c456054",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\operations\\service.py",
+      "details": null
+    },
+    {
+      "action": "replaced_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\reference_loop\\runner.py",
+      "status": "success",
+      "source_sha256": "fbdcd8221a09484a2c44c17b00467bd02a6ca168fd5b8db2fda14009749b5cee",
+      "destination_sha256": "fbdcd8221a09484a2c44c17b00467bd02a6ca168fd5b8db2fda14009749b5cee",
+      "backup_relative_path": "_update_backups\\20260818_231434_593578\\alpha_engine\\src\\alpha_engine\\reference_loop\\runner.py",
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\bootstrap\\lifecycle.py",
+      "status": "success",
+      "source_sha256": "1ce9ed02e39265520319231f509706ebdd5de385815ec83e6dda110639364921",
+      "destination_sha256": "1ce9ed02e39265520319231f509706ebdd5de385815ec83e6dda110639364921",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\plugin_host\\discovery.py",
+      "status": "success",
+      "source_sha256": "2bc95b5e32bc17c6b11c4fa09e7540f9093318ebb0cab0812223b27dccb073e7",
+      "destination_sha256": "2bc95b5e32bc17c6b11c4fa09e7540f9093318ebb0cab0812223b27dccb073e7",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_plugin_discovery.py",
+      "status": "success",
+      "source_sha256": "dfa6d6501bfb31661af155b045937dc5fb7caf98eb595eb60bd201b09729c74d",
+      "destination_sha256": "dfa6d6501bfb31661af155b045937dc5fb7caf98eb595eb60bd201b09729c74d",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_root_package.py",
+      "status": "success",
+      "source_sha256": "6d82c43d74ceea9ee30311d8bf31c0f222194175ffb820bdc6a80d4518fca98c",
+      "destination_sha256": "6d82c43d74ceea9ee30311d8bf31c0f222194175ffb820bdc6a80d4518fca98c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_runtime_lifecycle.py",
+      "status": "success",
+      "source_sha256": "2e019243accd9e02623d86b3aea4c266ebf1265b45d85146cbd8e37362784dc0",
+      "destination_sha256": "2e019243accd9e02623d86b3aea4c266ebf1265b45d85146cbd8e37362784dc0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_runtime_reference.py",
+      "status": "success",
+      "source_sha256": "6e58afca10783e57996ece27d392aab35458e36bf430b6341b9a86e6d92a190c",
+      "destination_sha256": "6e58afca10783e57996ece27d392aab35458e36bf430b6341b9a86e6d92a190c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\test_runtime_server_smoke.py",
+      "status": "success",
+      "source_sha256": "43982fa30c3223288d43fba00dcb05bd2c80a179ab5cb01f1b4e37b668d68c8a",
+      "destination_sha256": "43982fa30c3223288d43fba00dcb05bd2c80a179ab5cb01f1b4e37b668d68c8a",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "pyproject.toml",
+      "status": "success",
+      "source_sha256": "4611abc000682abe37b0aa4ee6fe65239fd67aab72a4db7bc1aae6dc5453ab77",
+      "destination_sha256": "4611abc000682abe37b0aa4ee6fe65239fd67aab72a4db7bc1aae6dc5453ab77",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "RUNBOOK.md",
+      "status": "success",
+      "source_sha256": "32c7eae18d9bb8f117b0fcb0558c69b8771aa55185f95fb08b2edc17bb2ad195",
+      "destination_sha256": "32c7eae18d9bb8f117b0fcb0558c69b8771aa55185f95fb08b2edc17bb2ad195",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\docs\\runtime\\DEFECT_LEDGER.json",
+      "status": "success",
+      "source_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "destination_sha256": "2792142147230c13faf1c660591a8699f7d141c714b856a30aa58236b6f7e4f2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\docs\\runtime\\PROVIDER_SERVICE_DECISIONS.json",
+      "status": "success",
+      "source_sha256": "9ed63c89d854dbecb30d53f3d431a4fa445975cc137679b10a9011c8b63fc63c",
+      "destination_sha256": "9ed63c89d854dbecb30d53f3d431a4fa445975cc137679b10a9011c8b63fc63c",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\docs\\runtime\\PURPOSE_TRACEABILITY.json",
+      "status": "success",
+      "source_sha256": "56659cac2f8d6be09096316febe83e3fe8cfd362a9db91fc0d97153e61539c64",
+      "destination_sha256": "56659cac2f8d6be09096316febe83e3fe8cfd362a9db91fc0d97153e61539c64",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime\\__init__.py",
+      "status": "success",
+      "source_sha256": "779a4df98adb75dc60e61cda7585893a2dfcc2f6364c0191be76ecffc4e92791",
+      "destination_sha256": "779a4df98adb75dc60e61cda7585893a2dfcc2f6364c0191be76ecffc4e92791",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime\\application.py",
+      "status": "success",
+      "source_sha256": "890a776ee750508e70a72bd276165bff7dcaf407ee0fb2aeef263f6ff4182e69",
+      "destination_sha256": "890a776ee750508e70a72bd276165bff7dcaf407ee0fb2aeef263f6ff4182e69",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\runtime\\control.py",
+      "status": "success",
+      "source_sha256": "ec9d34b2c6e8013b1fdd6740cc1d8556c1ae5f3b4fe9a9fec91e3d28939983d1",
+      "destination_sha256": "ec9d34b2c6e8013b1fdd6740cc1d8556c1ae5f3b4fe9a9fec91e3d28939983d1",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\__init__.py",
+      "status": "success",
+      "source_sha256": "3ce911393537f286991bdf96ea63ee94e41ecbe516d24959799864b714683992",
+      "destination_sha256": "3ce911393537f286991bdf96ea63ee94e41ecbe516d24959799864b714683992",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\__main__.py",
+      "status": "success",
+      "source_sha256": "7815e60d9b2c00c5330e4c616c77b272e38b5187fc9554aa179fa2d4fba987ba",
+      "destination_sha256": "7815e60d9b2c00c5330e4c616c77b272e38b5187fc9554aa179fa2d4fba987ba",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\feature_registry.json",
+      "status": "success",
+      "source_sha256": "739683c28e1362bbfde84e9bf1d2f5fc343ac3408fb036582794c1da4cc149f2",
+      "destination_sha256": "739683c28e1362bbfde84e9bf1d2f5fc343ac3408fb036582794c1da4cc149f2",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\models.py",
+      "status": "success",
+      "source_sha256": "3dd1097ca76638ed98e0c3b5a14f2b082ad32e7969ed8adafe1a9f68caebb082",
+      "destination_sha256": "3dd1097ca76638ed98e0c3b5a14f2b082ad32e7969ed8adafe1a9f68caebb082",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\registry.py",
+      "status": "success",
+      "source_sha256": "38a09e85caa9ce74735afbdd1073a07996af09ffbdde3d9041ba4f63fbc35781",
+      "destination_sha256": "38a09e85caa9ce74735afbdd1073a07996af09ffbdde3d9041ba4f63fbc35781",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\runner.py",
+      "status": "success",
+      "source_sha256": "e5aa1973ace524db4c9834c0d0aaa194a84d5cad8ae39f4583976c01fcd22dc0",
+      "destination_sha256": "e5aa1973ace524db4c9834c0d0aaa194a84d5cad8ae39f4583976c01fcd22dc0",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\src\\alpha_engine\\verification\\traceability_check.py",
+      "status": "success",
+      "source_sha256": "0c2ccc285a8aab9b8d58011a2b7a60fc5702c943774f4f235f6592a972d92d19",
+      "destination_sha256": "0c2ccc285a8aab9b8d58011a2b7a60fc5702c943774f4f235f6592a972d92d19",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\verification\\test_traceability.py",
+      "status": "success",
+      "source_sha256": "2bb3c565b53fe1cb86b9a6421a59962cd675f2e9d1d167ab7929201678e0d757",
+      "destination_sha256": "2bb3c565b53fe1cb86b9a6421a59962cd675f2e9d1d167ab7929201678e0d757",
+      "backup_relative_path": null,
+      "details": null
+    },
+    {
+      "action": "created_file",
+      "relative_path": "alpha_engine\\tests\\verification\\test_verifier.py",
+      "status": "success",
+      "source_sha256": "e04b4a516ca2ec700ba7cbdcd16575e114c0b643f0e9b43d3104373fb5fff5d6",
+      "destination_sha256": "e04b4a516ca2ec700ba7cbdcd16575e114c0b643f0e9b43d3104373fb5fff5d6",
+      "backup_relative_path": null,
+      "details": null
+    }
+  ]
+}

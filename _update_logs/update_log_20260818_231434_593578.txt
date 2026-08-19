@@ -1,0 +1,52 @@
+LISS AR App Update Log
+Timestamp: 20260818_231434_593578
+Package folder: C:\Users\nicol\Downloads\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\Alpha_Engine_CORE_AE-CORE-CONVERGENCE-RUNTIME-VERIFY-R01_2026-08-18\APPLY_PACKAGE
+App folder: C:\Users\nicol\Documents\Alpha Engine
+Backup folder: C:\Users\nicol\Documents\Alpha Engine\_update_backups\20260818_231434_593578
+Update mode: 2 - Complete package update
+Copy verification: size and SHA-256
+Destination installation: verified temporary file plus atomic replace
+
+CREATED DIRECTORY: alpha_engine\docs\runtime
+CREATED DIRECTORY: alpha_engine\tests\verification
+CREATED DIRECTORY: alpha_engine\src\alpha_engine\runtime
+CREATED DIRECTORY: alpha_engine\src\alpha_engine\verification
+REPLACED: alpha_engine\README.md
+REPLACED: alpha_engine\scripts\verify\verify_all.py
+REPLACED: alpha_engine\src\alpha_engine\api\server.py
+REPLACED: alpha_engine\src\alpha_engine\bootstrap\__init__.py
+REPLACED: alpha_engine\src\alpha_engine\cli\main.py
+REPLACED: alpha_engine\src\alpha_engine\desktop\main.py
+REPLACED: alpha_engine\src\alpha_engine\health\service.py
+REPLACED: alpha_engine\src\alpha_engine\operations\service.py
+REPLACED: alpha_engine\src\alpha_engine\reference_loop\runner.py
+CREATED: alpha_engine\src\alpha_engine\bootstrap\lifecycle.py
+CREATED: alpha_engine\src\alpha_engine\plugin_host\discovery.py
+CREATED: alpha_engine\tests\test_plugin_discovery.py
+CREATED: alpha_engine\tests\test_root_package.py
+CREATED: alpha_engine\tests\test_runtime_lifecycle.py
+CREATED: alpha_engine\tests\test_runtime_reference.py
+CREATED: alpha_engine\tests\test_runtime_server_smoke.py
+CREATED: pyproject.toml
+CREATED: RUNBOOK.md
+CREATED: alpha_engine\docs\runtime\DEFECT_LEDGER.json
+CREATED: alpha_engine\docs\runtime\PROVIDER_SERVICE_DECISIONS.json
+CREATED: alpha_engine\docs\runtime\PURPOSE_TRACEABILITY.json
+CREATED: alpha_engine\src\alpha_engine\runtime\__init__.py
+CREATED: alpha_engine\src\alpha_engine\runtime\application.py
+CREATED: alpha_engine\src\alpha_engine\runtime\control.py
+CREATED: alpha_engine\src\alpha_engine\verification\__init__.py
+CREATED: alpha_engine\src\alpha_engine\verification\__main__.py
+CREATED: alpha_engine\src\alpha_engine\verification\feature_registry.json
+CREATED: alpha_engine\src\alpha_engine\verification\models.py
+CREATED: alpha_engine\src\alpha_engine\verification\registry.py
+CREATED: alpha_engine\src\alpha_engine\verification\runner.py
+CREATED: alpha_engine\src\alpha_engine\verification\traceability_check.py
+CREATED: alpha_engine\tests\verification\test_traceability.py
+CREATED: alpha_engine\tests\verification\test_verifier.py
+
+Rollback safety notes:
+- Restore replaced files only from this update's backup folder.
+- Delete created files only when listed in the rollback manifest.
+- Remove created folders only when they are empty.
+- Never delete unlisted files or folders.

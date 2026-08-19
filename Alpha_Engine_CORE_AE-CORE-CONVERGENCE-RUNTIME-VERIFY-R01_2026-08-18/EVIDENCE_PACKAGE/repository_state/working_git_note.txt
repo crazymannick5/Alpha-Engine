@@ -1,1 +1,0 @@
-A temporary Git repository was initialized only to track the reconstructed snapshot and compute diffs/hashes. Commit 03a064f... is builder-local and is NOT the owner repository history or an accepted campaign commit.
